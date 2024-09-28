@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 9.0.0.final using JasperReports Library version 6.21.0-4f56c4f36cd19e17675219a9ac4692d5f0f13b06  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Parking Space Agreement" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isTitleNewPage="true" uuid="ced95029-b569-4027-895c-af2843a4e088">
+	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true"/>
+	<style name="SubTitle" forecolor="#736343" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<style name="Row" mode="Transparent">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#E6DAC3"/>
+		</conditionalStyle>
+	</style>
+	<parameter name="agreement_date" class="java.lang.String"/>
+	<parameter name="parking_amount" class="java.lang.String"/>
+	<parameter name="effective_date" class="java.lang.String"/>
+	<parameter name="lessor" class="java.lang.String"/>
+	<parameter name="lessee" class="java.lang.String"/>
+	<parameter name="parking_adress" class="java.lang.String"/>
+	<parameter name="payment_method" class="java.lang.String"/>
+	<parameter name="payment_day" class="java.lang.String"/>
+	<parameter name="notice_period" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<detail>
+		<band height="802">
+			<staticText>
+				<reportElement style="Title" x="0" y="2" width="555" height="48" uuid="1a652692-054a-40f3-ade5-68d8da36626d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="24"/>
+				</textElement>
+				<text><![CDATA[PARKING SPACE AGREEMENT]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="2" y="50" width="551" height="2" uuid="3e7a53fc-d746-4193-a6fb-ce4b602916f0"/>
+			</rectangle>
+			<textField>
+				<reportElement x="0" y="60" width="554" height="64" uuid="cae2add2-218c-4d45-85f8-fb4a3e8507db"/>
+				<textElement textAlignment="Justified">
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA["This Parking Space Rental Agreement (hereinafter referred to as the \"Agreement\") is made and effective " + $P{effective_date} + " (the “Effective Date”), and is entered into"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="108" width="150" height="38" uuid="343ca5f2-20ee-41be-bd33-c1b5745f6a0e"/>
+				<box>
+					<pen lineStyle="Dotted"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" BY AND BETWEEN :"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="150" y="108" width="405" height="38" uuid="5aeb0530-839e-4236-85aa-9c6afe678259"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Dotted"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA["  "+$P{lessor}+", hereinafter referred to as the ''Lessor''."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="146" width="150" height="40" uuid="712685b2-b6b5-4570-b3b5-921cb54e2b5e"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Dotted"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" AND :"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="150" y="146" width="405" height="40" uuid="78dd12df-c33d-4a28-a765-53c2791e30f8"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Dotted"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA["  "+$P{lessee} +", hereinafter referred to as the ''Lessee'', \n  collectively referred to as the ''Parties''."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="210" width="100" height="20" uuid="7f52861e-0f55-415c-bd89-ab8da274fddd"/>
+				<textElement>
+					<font size="13" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Lease Term"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="230" width="555" height="170" uuid="e302edad-a2b8-4903-aebf-0851c6899d54"/>
+				<textElement textAlignment="Justified">
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA["The Lessor agrees to provide the Lessee with the use of the parking space situated at "+$P{parking_adress}+" (''Parking Space'' ) under the terms and conditions stated in this Agreement.\n\nThis Agreement will begin on  " +$P{effective_date} + ", and will continue on a month-to-month basis unless terminated by either party with at least "+$P{notice_period}+" days’ written notice to the other party.\n\nAt the end of each monthly term, if neither party provides a termination notice as specified above, this Agreement will automatically renew for an additional month, and the same terms and conditions will apply, including the "+$P{parking_amount}+" Rupees per month."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="420" width="100" height="20" uuid="a020bb13-099c-4b7f-9ff8-dd16d65ed998"/>
+				<textElement>
+					<font size="13" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Fees"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="440" width="555" height="120" uuid="75abc97f-1511-4a26-9c3f-e7e70f427454"/>
+				<textElement textAlignment="Justified">
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Lessee will pay "+$P{parking_amount}+" Rupees per month for the exclusive use of the parking space.\n\nPayment shall be made on or before the first day of each month, commencing from the Effective Date of this Agreement.\n\nPayment shall be made by "+$P{payment_method}+". The Lessor shall provide the Lessee with the necessary payment details and instructions for remitting the monthly fee."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="580" width="100" height="20" uuid="094e2f4f-1103-4f21-9ea0-ad089bc544eb"/>
+				<textElement>
+					<font size="13" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Subletting"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="600" width="555" height="40" uuid="6bc26b7f-3063-46b2-a624-7d2e4abb6fe8"/>
+				<textElement textAlignment="Justified">
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA["The Lessee is not authorised to sublet the Parking Space without receiving written consent from the Lessor in advance."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="660" width="100" height="20" uuid="76a5ac75-3394-42e6-b610-5a4f5527548b"/>
+				<textElement>
+					<font size="13" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Maintenance"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="680" width="555" height="40" uuid="669a0ef8-a4d1-4a30-ae2d-64b49a58f0e2"/>
+				<textElement textAlignment="Justified">
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA["The Lessee is responsible for keeping the vehicle they are using in good condition and free of hazardous leaks. Repairs on the vehicle will not be allowed in the Parking Space."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="418" y="760" width="70" height="30" uuid="dc57b054-72c6-4cd9-b074-a7309296addf"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="488" y="760" width="65" height="30" uuid="811463d6-f4bf-4508-bfaf-6975cef10492"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[" of " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="790">
+			<textField>
+				<reportElement x="0" y="10" width="180" height="20" uuid="4d5fc188-e737-41b0-9891-e089b12c233e"/>
+				<textElement>
+					<font size="13" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Insurance and Registration"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="30" width="555" height="50" uuid="0d6043c0-dca1-474e-b87c-237eb8e55e13"/>
+				<textElement textAlignment="Justified">
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA["The Lessee is responsible for ensuring that their insurance coverage for the vehicle using the parking space is both up-to-date and legally compliant with all applicable laws and regulations. Legal insurance coverage shall meet the following criteria:"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="20" y="90" width="535" height="250" uuid="b526e069-b7d8-4010-b069-30f35662afa8"/>
+				<textElement textAlignment="Justified">
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA["1. Minimum Coverage: The insurance policy must provide at least the minimumcoverage required by the state or country where the vehicle is registered and the parking space is located.\n\n2. Valid Policy: The insurance policy must be valid and in force throughout the duration of this Agreement. The Lessee must promptly renew the policy as needed to maintain continuous coverage.\n\n3. Compliance with Local Laws: The insurance policy must comply with all local laws and regulations related to vehicle insurance, including but not limited to liability coverage, uninsured motorist coverage, and any additional coverage required by local authorities.\n\n4. Proof of Coverage: The Lessee must provide proof of insurance coverage to the Lessor upon request and at regular intervals as specified by the Lessor during the term of this Agreement."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="340" width="555" height="40" uuid="7de10193-f51b-49cd-b775-d938aa5d56c3"/>
+				<textElement textAlignment="Justified">
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA["The Lessee acknowledges that failure to maintain insurance coverage that meets these criteria may result in a breach of this Agreement and may lead to termination of the lease."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="400" width="180" height="20" uuid="d9aa3835-e6b1-48fc-b6bf-0529e169a005"/>
+				<textElement>
+					<font size="13" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Damage and Use of Space"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="420" width="555" height="70" uuid="237d4411-b772-4a41-b5a5-5d7c43d275cb"/>
+				<textElement textAlignment="Justified">
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA["The Parking Space is only to be used as designated, a space for parking vehicles with updated  insurance and registration, as is specified in this agreement. The Lessee shall exercise reasonable care in using the Parking Space and shall not engage in any activities that may cause damage to the parking space or other property."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="510" width="278" height="20" uuid="ffc98943-def9-477c-acc1-213923940bc3"/>
+				<textElement>
+					<font size="13" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Reporting and Handling Damage:"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="530" width="555" height="70" uuid="c922bfcf-24b1-4d14-8834-9478cbbe4ccc"/>
+				<textElement textAlignment="Justified">
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA["In the event that the Lessee or their vehicle causes any damage to the Parking Space, surrounding property, or the Lessor's property, the Lessee shall promptly report such damage to the Lessor. The Lessee and Lessor shall then jointly inspect the damage to assess its extent and determine any necessary repairs or compensation."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="620" width="278" height="20" uuid="abfb6688-d88a-4392-9c2a-e2823476363e"/>
+				<textElement>
+					<font size="13" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Responsibility for Repairs:"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="640" width="555" height="70" uuid="f60649a0-6eeb-4e68-8e5b-dc820717c914"/>
+				<textElement textAlignment="Justified">
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA["If the damage is determined to be the responsibility of the Lessee, the Lessee shall be responsible for the cost of repairs or restoration. The Lessor shall obtain estimates for the repairs, and the Lessee shall reimburse the Lessor for these costs within 30 days  of receiving the invoice."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="418" y="760" width="70" height="30" uuid="733f2c00-ff82-4ae8-a006-744a8efa3072"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="488" y="760" width="65" height="30" uuid="49083e6f-95f7-400c-a5ab-c5c9f084f713"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[" of " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="802">
+			<textField>
+				<reportElement x="0" y="110" width="210" height="20" uuid="1ece8ad5-bedb-43f6-ac33-48c75cadff7a"/>
+				<textElement>
+					<font size="13" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Governing Law"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="39" width="555" height="50" uuid="b9dd0e4b-0ebc-4c87-b0f5-eff0440dc260"/>
+				<textElement textAlignment="Justified">
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Failure to promptly report any damage or accidents involving the Lessee's vehicle while using the Parking Space may result in the Lessee being held fully liable for all associated repair costs."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="144" width="500" height="90" uuid="435596e8-1801-48d7-8768-fc52c5123482"/>
+				<textElement textAlignment="Justified">
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA["This Agreement shall be governed by India law where the Parking Space is located.\n\nWitness Whereof, the Parties agree to execute the agreement on the day and date mentioned herein."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="19" width="210" height="20" uuid="81068ae6-6fe4-40ac-81bc-5b4105de2207"/>
+				<textElement>
+					<font size="13" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Failure to Report Damage:"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="245" width="60" height="30" uuid="64efd0c0-b799-4b9a-91b0-f139e0b83327"/>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Lessor:"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="275" width="60" height="30" uuid="b08ea7dc-b52b-47da-b270-8206a05fe2d4"/>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Lessee:"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1" y="305" width="60" height="30" uuid="99868dc9-6fdc-474c-b8d7-afa0fefe0427"/>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Date:"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="61" y="245" width="179" height="30" uuid="e3811297-2ba0-48e5-856f-6e66e1e9032c"/>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{lessor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="61" y="275" width="179" height="30" uuid="4a58d246-c3ba-4933-9203-6f47ba016a19"/>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{lessee}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="255" y="245" width="59" height="30" uuid="7130c3ae-fe4a-4188-a05d-01b0c9e30341"/>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Sign:"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="255" y="275" width="59" height="30" uuid="3597f427-e41c-46d8-8ed4-082899262ebf"/>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Sign:"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="317" y="245" width="182" height="30" uuid="b16c754f-a0b6-42c9-b4d9-410d09373fd1"/>
+				<textElement verticalAlignment="Middle">
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA["___________________________________"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="317" y="275" width="182" height="30" uuid="9a6c0156-cd40-4ff7-82cd-f456198c6bc0"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA["___________________________________"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="418" y="759" width="70" height="30" uuid="8e77df4e-912a-456c-9f82-1d69823dab66"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="488" y="759" width="65" height="30" uuid="ae541891-fe92-47d6-a3fd-0ead6a0e7734"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[" of " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="61" y="305" width="169" height="30" uuid="0b09eaa1-e0ea-4d27-8478-3ffc99521253"/>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{agreement_date}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
