@@ -1,0 +1,246 @@
+<html>
+<head>
+  <title></title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <style type="text/css">
+    a {text-decoration: none}
+  </style>
+  <script>
+  function addData(rows,id) {
+            // Get input values
+     var table=document.getElementById(id); 
+     for (var i = 1; i <= rows; i++) {
+      var row = table.insertRow(i);
+      for (var j=0 ; j<6; j++){
+        var cell1 = row.insertCell(j);
+        var div1 = document.createElement('div');
+        if(j==0)
+          div1.innerText = "Name";
+        if(j==1)
+          div1.innerText = "Father Name";
+        if(j==2)
+          div1.innerText = "Pan";
+        if(j==3)
+          div1.innerText = "Age";
+        if(j==4)
+          div1.innerText = "Caste";
+        if(j==5)
+          div1.innerText = "Address";
+        cell1.appendChild(div1);
+        div1.contentEditable = true;
+      }
+  }
+}
+
+function getListfromtable(id,rows)
+{
+            // Get input values
+     var table=document.getElementById(id); 
+     const sellorList=[];
+     for (var i = 1; i <= rows; i++) {
+      var row = table.rows[i];
+      let dictionary = {};
+      for (var j=0 ; j<6; j++){
+        var cell1 = row.cells[j];
+        if(j==0)
+          dictionary["seller_name"] =  cell1.textContent;
+        if(j==1)
+          dictionary["seller_fathhus"]  =  cell1.textContent;
+        if(j==2)
+          dictionary["seller_age"]  =  cell1.textContent;
+        if(j==3)
+          dictionary["seller_pan"]  =  cell1.textContent;
+        if(j==4)
+          dictionary["seller_caste"]  =  cell1.textContent;
+        if(j==5)
+          dictionary["seller_address"]  =  cell1.textContent;
+      }
+    sellorList[i-1]=dictionary;
+  }
+  return sellorList;
+}
+
+function getListfromtablePurchaser(id,rows)
+{
+            // Get input values
+     var table=document.getElementById(id); 
+     const purchaserList=[];
+     for (var i = 1; i <= rows; i++) {
+      var row = table.rows[i];
+      let dictionary = {};
+      for (var j=0 ; j<6; j++){
+        var cell1 = row.cells[j];
+      
+        if(j==0)
+          dictionary["purchaser_name"] =  cell1.textContent;
+        if(j==1)
+          dictionary["purchaser_father"]  =  cell1.textContent;
+        if(j==2)
+          dictionary["purchaser_age"]  =  cell1.textContent;
+        if(j==3)
+          dictionary["purchaser_caste"]  =  cell1.textContent;
+        if(j==4)
+          dictionary["purchaser_pan"]  =  cell1.textContent;
+        if(j==5)
+          dictionary["purchaser_address"]  =  cell1.textContent;
+      }
+    purchaserList[i-1]=dictionary;
+  }
+  return purchaserList;
+}
+window.onload = function() {
+	
+	const url=new URLSearchParams(parent.window.location.search)
+	
+	seller_type = url.get("seller_type");
+	purchaser_type = url.get("purchaser_type");
+	property_type = url.get("property_type");
+	sellerNbr = url.get("sellerNbr");
+	purchaserNbr = url.get("purchaserNbr");
+	if(seller_type==="person")
+	  document.getElementById('builder_seller').style.display = 'none';
+	else
+	document.getElementById('person_seller').style.display = 'none';
+	
+	if(purchaser_type==="person")
+	document.getElementById('builder_purchaser').style.display = 'none';
+	else
+	document.getElementById('person_purchaser').style.display = 'none';
+	
+	if(property_type==="land"){
+	document.getElementById('apartment1').style.display = 'none';
+	document.getElementById('apartment').style.display = 'none';
+  }
+	else{
+	document.getElementById('land').style.display = 'none';
+	document.getElementById('land1').style.display = 'none';
+  }
+
+  if(seller_type==="person")
+	   addData(sellerNbr,"sellers")
+	  
+	if(purchaser_type==="person")
+    addData(purchaserNbr,"purchasers")
+	
+};
+
+window.addEventListener("DOMContentLoaded", (event) => {
+    const el = document.getElementById('myform');
+    if (el) {
+      el.addEventListener('submit', async function(event) {
+      event.preventDefault(); // Prevent the default form submission
+    
+      const form = event.target;
+      const formData = new FormData(form);
+    
+        // Convert FormData to JSON
+      const jsonData = {};
+      formData.forEach((value, key) => {
+      jsonData[key] = value;
+      
+      });
+	  jsonData["purchaser_type"]=purchaser_type
+	  jsonData["seller_type"]=seller_type
+	  jsonData["type_of_property"]=property_type
+	  
+	
+	  jsonData["sellers"]=getListfromtable("sellers",sellerNbr);
+	  jsonData["purchasers"]=getListfromtablePurchaser("purchasers",purchaserNbr);
+ 
+  try {
+      const response =await fetch('http://127.0.0.1:5000/generateSDD', {
+        method: "POST",
+        mode:"cors",
+        headers: {
+      "Content-Type": "application/json",
+	  "accept": "application/json"
+    },
+    
+        body: JSON.stringify(jsonData)
+      })
+      if(response.ok){
+        //parent.document.getElementById("preview").style.visibility="visible";
+        const targetFrame=window.parent.document.getElementById('preview').contentWindow;
+        targetFrame.postMessage('changeStyle', '*');
+      }
+          } catch (error) {
+        console.error('Error:', error);
+          }
+      });
+    }
+    });
+    </script>	
+</head>
+<body text="#000000" link="#000000" alink="#000000" vlink="#000000">
+<form id="myform" method="post">
+<div style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 14px; line-height: 1.2578125; font-weight: bold; text-decoration: underline;">DEED OF SALE</div>
+<br>
+<div style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 12px; line-height: 1.2578125;">This DEED OF SALE is made and executed on this <input type="text" name='day'> day of <input type="text" name='month'>, Two Thousand <input type="text" name='year'></div>
+<br>
+<br>
+<br>
+<div style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 12px; line-height: 1.2578125; font-weight: bold;">BETWEEN</div>
+<br>
+<div id="person_seller" >
+<table name="sellers" id="sellers">
+<tr>
+<td >Name</td>
+<td>Father's Name</td>
+<td>Age</td>
+<td>Caste</td>
+<td>Pan</td>
+<td>Address</td>
+
+
+</table>
+</div>
+<br>
+<div id="builder_seller" >
+
+<div style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 12px; line-height: 1.2578125;">Builder <input type="text" name="seller_builder_name"/> , Registered with registration number : <input type="text" name="seller_builder_reg_num"/> , having its registered office at full address <input type="text" name="seller_builder_fulladdress"/>(hereinafter referred to as the “SELLER”).</div>
+
+</div>
+<br>
+<div style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 12px; line-height: 1.2578125;">hereinafter called the &quot;SELLER&quot; (which expression shall mean and include his legal heirs, successors, successors-in-interest, executors, administrators, legal representatives and assigns) of the &nbsp;ONE PART.<br/></div>
+<br>
+<div style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 14px; line-height: 1.2578125; font-weight: bold;">AND</div>
+<br>
+<div id="person_purchaser" >
+<table name="purchasers" id="purchasers">
+<tr>
+<td >Name</td>
+<td>Father's Name</td>
+<td>Age</td>
+<td>Caste</td>
+<td>Pan</td>
+<td>Address</td>
+
+
+</table>
+</div>
+<br>
+<div id="builder_purchaser" >
+
+<div style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 12px; line-height: 1.2578125;">Builder <input type="text" name="purchaser_builder_name"/> , Registered with registration number : <input type="text" name="purchaser_builder_reg_num"/> , having its registered office at full address <input type="text" name="purchaser_builder_fulladdress"/>(hereinafter referred to as the “PURCHASER”).</div>
+
+</div>
+<br>
+<div style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 12px; line-height: 1.2578125;">hereinafter called the &quot;PURCHASER&quot; (which expression shall mean and include his legal heirs, successors, successors-in-interest, executors, administrators, legal representatives and assigns) of the &nbsp;OTHER PART.<br/>The &nbsp;SELLER and the PURCHASER are hereinafter referred collectively as parties and individually as party.<br/></div>
+<br>
+<div id="apartment" style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 12px; line-height: 1.2578125;">WHEREAS the SELLER herein is the  owner of immovable property being Flat / Apartment No.<input type="text" name="flatnumber"/> on the <input type="text" name="floorno"/> Floor of the building known as <input type="text" name="society"/> situated at <input type="text" name="location"/> and bearing Corporation No.<input type="text" name="corporation"/>,<input type="text" name="road"/>Road, Division No.<input type="text" name="division"/>, with a super built-up area of <input type="text" name="supersqfeet"/> sq.ft. together with  <input type="text" name="percentage"/> % share of undivided interest in the land equivalent to <input type="text" name="landsqfeet"/> sq.ft. along with common areas and facilities including car parking lot in the basement, which Flat / Apartment is morefully described in the schedule hereunder and hereinafter called the SCHEDULE PROPERTY</div>
+<br>
+<div id="land" style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 12px; line-height: 1.2578125;">WHEREAS the SELLER is the  owner, in possession and enjoyment of the piece and parcel of <input type="text" name='land'></input> land measuring about <input type="text" name='land_size'></input> decimal, lying and situated in R.S. Plot Number <input type="text" name='rs_plotnum'></input>, corresponding L.R. Plot Number <input type="text" name='lr_plotnum'></input>, Recorded in R.S. Khatian Number <input type="text" name='rs_khaitnanum'></input> and L.R. Khatian Number <input type="text" name='lr_khaitannum'></input>, at Mouza <input type="text" name='moza'></input>, J.L. Number <input type="text" name='jlnum'></input>, Touzi Number <input type="text" name='touzinum'></input>, under Police Station <input type="text" name='policastation'></input>, Registration Sub-District <input type="text" name='subdistrict'></input>, in the district of <input type="text" name='district'></input>, more fully and particularly described in the schedule here under written and hereafter referred to as the SCHEDULE PROPERTY</div>
+<br>
+<div style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 12px; line-height: 1; *line-height: normal;">ANDWHEREAS the SCHEDULE PROPERTY was the self acquired property of deceased father of the SELLER and he purchased the same from Sri <input type="text" name='previous_owner'></input>, son of <input type="text" name='father_previous_owner'></input> of <input type="text" name='father_previous_owner_det'></input>, by virtue of a Sale Deed dated <input type="text" name='previous_sale_deed'>, registered in the office of the <input type="text" name='reg_office'></input>, in Book 1, &nbsp;Volume No. <input type="text" name='volume'></input>, Pages <input type="text" name='frompage'></input> to <input type="text" name='topage'></input>, Being Number <input type="text" name='beingno'> for the Year <input type="text" name='year_prev_saledeed'>.<br/>ANDWHEREAS the said _______ died in-estate on <input type="text" name='inestate'> leaving behind his only son namely, Sri ______, the SELLER herein, as the only legal heir.<br/>ANDWHEREAS the SELLER herein, as the only legal heirs of the deceased __________, have become the absolute owner of the SCHEDULE PROPERTY since the death of his father <input type="text" name='seller_father_deathdate'> on and he has been enjoying the same with absolute right, title and interest sice then and he has clear and marketable title to the SCHEDULE PROPERTY.<br/>ANDWHEREAS the SELLER being in need of funds to meet his personal commitments and family expenses have decided to sell the SCHEDULE PROPERTY and the PURCHASER has agreed to purchase the same.<br/>ANDWHEREAS the SELLER agreed to sell, convey and transfer the SCHEDULE PROPERTY to the PURCHASER for a total consideration of &nbsp;Rs.<input type="text" name='amount'></input> (Rupees &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;_________) only and the PURCHASER herein agreed to purchase the same for the aforesaid consideration and to that effect the parties entered into an agreement on the <input type="text" name='agreement_date'></input> .<br/>NOW THIS DEED OF SALE WITNESSETH:<br/>1.	THAT in pursuance of the aforesaid agreement and in consideration of a sum of Rs.________ (Rupees &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<input type="text" name='recieved_money'></input>) only received by the SELLER in cash/cheque/bankdraft and upon receipt of the said entire consideration of Rs._________________________ (Rupees &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<input type="text" name='amount_in_words'></input>) only (the SELLER doth hereby admit, acknowledge, acquit, release and discharge the PURCHASER from making further payment thereof) the SELLER doth hereby sells, conveys, transfers, and assigns unto and to the use of the PURCHASER the SCHEDULE PROPERTY together with the water ways, easements, advantages and appurtenances, and all estate, rights, title and interest of the SELLER to and upon the SCHEDULE PROPERTY TO HAVE AND TO HOLD the SCHEDULE PROPERTY hereby conveyed unto the PURCHASER absolutely and forever.<br/>2.	THAT THE SELLER DOTH HEREBY COVENANT WITH THE PURCHASER AS FOLLOWS:<br/>i.	That the SCHEDULE PROPERTY shall be quietly and peacefully entered into and held and enjoyed by the PURCHASER without any interference, interruption, or disturbance from the SELLER or any person claiming through or under him.<br/>ii.	That the SELLER have absolute &nbsp;right, title and full power to sell, convey and transfer unto the PURCHASER by way of absolute sale and that the SELLER have not done anything or knowingly suffered anything whereby their right and power to sell and convey the SCHEDULE PROPERTY to the PURCHASER is diminished. <br/>iii.	That the property is not subjected to any encumbrances, mortgages, charges, lien, attachments, claim, demand, acquisition proceedings by Government or any kind whatsoever and should thereby and the SELLER shall discharge the same from and out of his own fund and keep the PURCHASER indemnified.<br/>iv.	That the SELLER hereby declares with the PURCHASER that the SELLER have paid all the taxes, rates and other outgoings due to local bodies, revenue, urban and other authorities in respect of the SCHEDULE PROPERTY up to the date of execution of this sale deed and the PURCHASER shall bear and pay the same hereafter. &nbsp;If any arrears are found due for the earlier period, the same shall be discharged/borne by the SELLER.<br/>.	That the SELLER have handed over the vacant possession of the SCHEDULE PROPERTY to the PURCHASER on &nbsp;<input type="text" name='property_handover_date'></input> and delivered the connected original title document in respect of the SCHEDULE PROPERTY hereby conveyed on the date of execution of these presents.
+<br>vi.	That the SELLER will at all times and at the cost of the PURCHASER execute, register or cause to be done, all such acts and deeds for perfecting the title to the PURCHASER in the property hereby sold and conveyed herein.
+<br>vii.	That the SELLER do hereby covenants and assures that the PURCHASER is entitled to have mutation of his name in all public records, local body and also obtain all documents in the name of the PURCHASER and undertakes to execute any deed in this respect.
+</div>
+<div style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 12px; line-height: 1.2578125; font-weight: bold;">SCHEDULE OF PROPERTY</div>
+
+<div id="apartment1" style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 12px; line-height: 1.2578125;">&quot;Flat / Apartment No.______ on the _______Floor of the building known as ________________situated at _________________and bearing Corporation No.________, _________________Road, Division No._____, with a super built-up area of _____ sq.ft. together with _____% share of undivided interest in the land equivalent to _______ sq.ft. along with common areas and facilities including car parking lot in the basement,butted and bounded by:&quot;</div></td>
+<div id="land1" style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 12px; line-height: 1.2578125;">&quot;The piece and parcel of __________ land measuring about __________ decimal, lying and situated in R.S. Plot Number _______, corresponding L.R. Plot Number ________, Recorded in R.S. Khatian Number _________ and L.R. Khatian Number ____________</input>, at Mouza ___________, J.L. Number ________________, Touzi Number ________________, under Police Station ___________________, Registration Sub-District _________, in the district of ______,</div></td>
+<div style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 12px; line-height: 1; *line-height: normal;">On the North	:<input type="text" name='onNorth'></input><br/>On the South	:<input type="text" name='onSouth'></input><br/>On the East	:<input type="text" name='onEast'></input><br/>On the West	:<input type="text" name='onWest'></input><br/>&nbsp;	 IN WITNESS WHEREOF the SELLER and the PURCHASER have set their signatures on the day month and year first above written.<br/></div></td>
+<div style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 12px; line-height: 1; *line-height: normal;">SELLER		______________________________	<br/>&nbsp;						 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br/>PURCHASER &nbsp; &nbsp; &nbsp;______________________________<br/>						 &nbsp; &nbsp; &nbsp; &nbsp;<br/>WITNESSES:<br/><br/>1.<input type="text" name='witness1'></input><br/><br/>2.<input type="text" name='witness2'></input> <br/></div>
+<div><input type="submit"></input></div>
+</form>
+</body>
