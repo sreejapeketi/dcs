@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 9.0.0.final using JasperReports Library version 6.21.0-4f56c4f36cd19e17675219a9ac4692d5f0f13b06  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="One_And_The_Same_Person_Affidavit" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8c1dc753-4041-40fd-a856-166da5e7790b">
+	<parameter name="name_real" class="java.lang.String"/>
+	<parameter name="verification_state" class="java.lang.String"/>
+	<parameter name="guardian_name" class="java.lang.String"/>
+	<parameter name="verification_day" class="java.lang.String"/>
+	<parameter name="name_2" class="java.lang.String"/>
+	<parameter name="adress" class="java.lang.String"/>
+	<parameter name="name_1" class="java.lang.String"/>
+	<parameter name="relation" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<detail>
+		<band height="620" splitType="Stretch">
+			<textField>
+				<reportElement x="180" y="-8" width="201" height="40" uuid="d5ad467e-5b6f-4736-b923-7d4f24d327b9"/>
+				<textElement textAlignment="Center">
+					<font size="24" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["AFFIDAVIT"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="3" y="41" width="547" height="69" uuid="7a8b4afd-5091-488f-b7fe-36123dcae3c5"/>
+				<textElement textAlignment="Justified">
+					<font size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA["I, "+$P{name_real}+" "+$P{relation}+" of "+$P{guardian_name}+" R/O "+$P{adress}+" hereby solemnly affirm and declare as under: "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="30" y="113" width="520" height="230" uuid="12f2d957-bb2b-457f-a717-ee1047a19bb0"/>
+				<textElement textAlignment="Justified">
+					<font size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA["1. That I am the citizen of India.\n\n2. That I hereby declare that my name mentioned in some documents written as "+$P{name_1}+" and in some documents name written as "+$P{name_2}+".\n\n3. I hereby declare that both the name pertain to the one and same person i.e "+$P{name_real}+"(REAL NAME)\n\n4. That my real NAME IS "+$P{name_real}+".\n\n5. That it is my true and correct statement."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="420" y="380" width="134" height="25" uuid="46ee0379-2240-4dcb-a5ed-9bf15ffaa257"/>
+				<textElement textAlignment="Right">
+					<font size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA["DEPONENT"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="3" y="460" width="547" height="130" uuid="21336839-6af7-4a80-985e-57f3c46820d7"/>
+				<textElement textAlignment="Justified">
+					<font size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Verified at "+$P{verification_state}+" on "+$P{verification_day}+" that the contents of the above said affidavit are true and correct to the best of my knowledge and belief and nothing has been concealed therein."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="420" y="590" width="134" height="25" uuid="6100a168-45b6-4945-b1ec-03240919beff"/>
+				<textElement textAlignment="Right">
+					<font size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA["DEPONENT"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="3" y="430" width="167" height="25" uuid="2698c919-0463-4745-a55b-693f76f3c2fd"/>
+				<textElement textAlignment="Left">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Verification:"]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
