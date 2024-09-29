@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title>Page 1</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+    .new-style {
+               visibility: visible;
+           }
+    /*.old-style{
+        visibility: hidden ;
+    }  */     
+
+   </style>
+   <script>
+       window.addEventListener('message', function(event) {
+           if (event.data === 'changeStyle') {
+               document.getElementById('content').classList.toggle('new-style');
+           }
+       });
+   </script>
+</head>
+<body>
+
+<object class="old-style" id="content" data="Office_Sharing_Agreement.pdf"  type="application/pdf" width="100%" height="100%">
+  <p>Alternative text - include a link <a href="../app/reports/Office_Sharing_Agreement.pdf">Preview</a></p>
+</object>
+
+</body>
+</html>

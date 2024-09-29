@@ -101,5 +101,36 @@ class PSRRequest(Schema):
    payment_day=fields.Str(default='')
    notice_period=fields.Str(default='')
 
+class OSADRequest(Schema):
+   day=fields.Str(default='')
+   year=fields.Str(default='')
+   Place_A=fields.Str(default='')
+   place_B=fields.Str(default='')
+   bearing_no=fields.Str(default='')
+   situate_at=fields.Str(default='')
+   period_of_month=fields.Str(default='')
+   comming_from=fields.Str(default='')
+   ending_on=fields.Str(default='')
+   rupess=fields.Str(default='')
+   rupess_in_words=fields.Str(default='')
+   week_day=fields.Str(default='')
+   date_of_day=fields.Str(default='')
+   per_day=fields.Str(default='')
+   per_anum=fields.Str(default='')
+   deposite_rs=fields.Str(default='')
+   deposite_rs_words=fields.Str(default='')
+   signature_of_licensee=fields.Str(default='')
+   abc_signature=fields.Str(default='')
+   date_of_signature=fields.Str(default='')
+   receipt_rs=fields.Str(default='')
+   receipt_rs_in_words=fields.Str(default='')
+   cheque_no=fields.Str(default='')
+   cheque_dated=fields.Str(default='')
+   cheque_branch=fields.Str(default='')
+   witness1=fields.Str(default='')
+   witness2=fields.Str(default='')
+
+
 class APIResponse(Schema):
    message=fields.String(default="")
+

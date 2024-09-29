@@ -1,0 +1,1642 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+  <title></title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <style type="text/css">
+    a {text-decoration: none}
+  </style>
+   <script>
+
+    window.addEventListener("DOMContentLoaded", (event) => {
+    const el = document.getElementById('myform');
+    if (el) {
+      el.addEventListener('submit', async function(event) {
+      event.preventDefault(); // Prevent the default form submission
+    
+      const form = event.target;
+      const formData = new FormData(form);
+    
+        // Convert FormData to JSON
+      const jsonData = {};
+      formData.forEach((value, key) => {
+      jsonData[key] = value;
+      
+      }
+      );
+      try {
+      const response =await fetch('http://127.0.0.1:5000/generateOSAD', {
+        method: "POST",
+        mode:"cors",
+        headers: {
+      "Content-Type": "application/json",
+    "accept": "application/json"
+    
+    
+    
+    
+    },
+    
+        body: JSON.stringify(jsonData)
+      })
+      if(response.ok){
+        //parent.document.getElementById("preview").style.visibility="visible";
+        const targetFrame=window.parent.document.getElementById('preview').contentWindow;
+        targetFrame.postMessage('changeStyle', '*');
+      }
+          } catch (error) {
+        console.error('Error:', error);
+          }
+      });
+    }
+    });
+    </script>	
+</head>
+<body text="#000000" link="#000000" alink="#000000" vlink="#000000">
+  <form id="myform" method="post">
+    <table role="none" width="100%" cellpadding="0" cellspacing="0" border="0">
+      <tr><td width="50%">&nbsp;</td><td align="center">
+      
+      <table id="JR_PAGE_ANCHOR_0_1" role="none" class="jrPage" data-jr-height="842" cellpadding="0" cellspacing="0" border="0" style="empty-cells: show; width: 595px; border-collapse: collapse; background-color: white;">
+      <style type="text/css">
+        #JR_PAGE_ANCHOR_0_1 th {font-weight: normal;}
+        #JR_PAGE_ANCHOR_0_1 ul {list-style-type: disc; padding-inline-start: 40px; margin: 0px;}
+        #JR_PAGE_ANCHOR_0_1 ol {list-style-type: decimal; padding-inline-start: 40px; margin: 0px;}
+      </style>
+      <tr role="none" valign="top" style="height:0">
+      <td style="width:27px"></td>
+      <td style="width:1px"></td>
+      <td style="width:1px"></td>
+      <td style="width:1px"></td>
+      <td style="width:1px"></td>
+      <td style="width:99px"></td>
+      <td style="width:30px"></td>
+      <td style="width:62px"></td>
+      <td style="width:105px"></td>
+      <td style="width:4px"></td>
+      <td style="width:57px"></td>
+      <td style="width:9px"></td>
+      <td style="width:8px"></td>
+      <td style="width:45px"></td>
+      <td style="width:17px"></td>
+      <td style="width:3px"></td>
+      <td style="width:65px"></td>
+      <td style="width:4px"></td>
+      <td style="width:3px"></td>
+      <td style="width:7px"></td>
+      <td style="width:5px"></td>
+      <td style="width:2px"></td>
+      <td style="width:5px"></td>
+      <td style="width:34px"></td>
+      </tr>
+      <tr valign="top" style="height:30px">
+      <td colspan="24">
+      </td>
+      </tr>
+      <tr valign="top" style="height:20px">
+      <td colspan="7">
+      </td>
+      <td colspan="7" style="text-indent: 0px;  vertical-align: middle;text-align: center;">
+      <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 10px; line-height: 1.2578125;">Office Sharing Agreement &nbsp;</span></td>
+      <td colspan="10">
+      </td>
+      </tr>
+      <tr valign="top" style="height:5px">
+      <td colspan="24">
+      </td>
+      </tr>
+      <tr valign="top" style="height:20px">
+      <td colspan="8">
+      </td>
+      <td colspan="5" style="text-indent: 0px; text-align: left;">
+      <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 10px; line-height: 1.2578125;">COWORKING SPACE AGREEMENT</span></td>
+      <td colspan="11">
+      </td>
+      </tr>
+      <tr valign="top" style="height:33px">
+      <td colspan="24">
+      </td>
+      </tr>
+      <tr valign="top" style="height:61px">
+      <td colspan="5">
+      </td>
+      <td colspan="14">
+      <div style="width: 100%; height: 100%; position: relative;">
+      <div style="position: absolute; overflow: hidden; width: 100%; height: 100%; ">
+      <table cellpadding="0" cellspacing="0" border="0" style="empty-cells: show; width: 100%; border-collapse: collapse;">
+      <tr role="none" valign="top" style="height:0">
+      <td style="width:390px"></td>
+      <td style="width:121px"></td>
+      </tr>
+      <tr valign="top" style="height:20px">
+      <td style="pointer-events: auto; text-indent: 0px; text-align: left;">
+      <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;">THE PARTIES: this Co-Working Space Agreement (hereinafter 'Agreement') </span></td>
+      <td>
+      </td>
+      </tr>
+      </table>
+      </div>
+      <div style="position: relative; width: 100%; height: 100%; pointer-events: none; ">
+      <table cellpadding="0" cellspacing="0" border="0" style="empty-cells: show; width: 100%; border-collapse: collapse;">
+      <tr role="none" valign="top" style="height:0">
+      <td style="width:511px"></td>
+      </tr>
+      <tr valign="top" style="height:1px">
+      <td>
+      </td>
+      </tr>
+      <tr valign="top" style="height:60px">
+      <td>
+      <div style="width: 100%; height: 100%; position: relative;">
+      <div style="position: absolute; overflow: hidden; width: 100%; height: 100%; ">
+      <table cellpadding="0" cellspacing="0" border="0" style="empty-cells: show; width: 100%; border-collapse: collapse;">
+      <tr role="none" valign="top" style="height:0">
+      <td style="width:360px"></td>
+      <td style="width:30px"></td>
+      <td style="width:88px"></td>
+      </tr>
+      <tr valign="top" style="height:20px">
+      <td>
+      </td>
+      <td style="pointer-events: auto; text-indent: 0px; text-align: left;">
+      <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;"><input type="text"style="width:30px;height:11px;font-size: 11px;" name='day'></input></span></td>
+      <td>
+      </td>
+      </tr>
+      </table>
+      </div>
+      <div style="position: relative; width: 100%; height: 100%; pointer-events: none; ">
+  <table cellpadding="0" cellspacing="0" border="0" style="empty-cells: show; width: 100%; border-collapse: collapse;">
+  <tr role="none" valign="top" style="height:0">
+  <td style="width:511px"></td>
+  </tr>
+  <tr valign="top" style="height:1px">
+  <td>
+  </td>
+  </tr>
+  <tr valign="top" style="height:59px">
+  <td>
+  <div style="width: 100%; height: 100%; position: relative;">
+  <div style="position: absolute; overflow: hidden; width: 100%; height: 100%; ">
+  <table cellpadding="0" cellspacing="0" border="0" style="empty-cells: show; width: 100%; border-collapse: collapse;">
+  <tr role="none" valign="top" style="height:0">
+  <td style="width:427px"></td>
+  <td style="width:40px"></td>
+  <td style="width:4px"></td>
+  <td style="width:40px"></td>
+  </tr>
+  <tr valign="top" style="height:1px">
+  <td colspan="3">
+  </td>
+  <td rowspan="2" style="pointer-events: auto; text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;"><input type="text"style="width:50px;height:11px;font-size: 11px;" name='year'></input></span></td>
+  </tr>
+  <tr valign="top" style="height:19px">
+  <td>
+  </td>
+  <td rowspan="2" style="pointer-events: auto; text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;">Day of </span></td>
+  <td>
+  </td>
+  </tr>
+  <tr valign="top" style="height:1px">
+  <td>
+  </td>
+  <td colspan="2">
+  </td>
+  </tr>
+  </table>
+  </div>
+  <div style="position: relative; width: 100%; height: 100%; pointer-events: none; ">
+  <table cellpadding="0" cellspacing="0" border="0" style="empty-cells: show; width: 100%; border-collapse: collapse;">
+  <tr role="none" valign="top" style="height:0">
+  <td style="width:479px"></td>
+  <td style="width:29px"></td>
+  <td style="width:3px"></td>
+  </tr>
+  <tr valign="top" style="height:19px">
+  <td colspan="3">
+  </td>
+  </tr>
+  <tr valign="top" style="height:3px">
+  <td rowspan="3">
+  <div style="width: 100%; height: 100%; position: relative;">
+  <div style="position: absolute; overflow: hidden; width: 100%; height: 100%; ">
+  <table cellpadding="0" cellspacing="0" border="0" style="empty-cells: show; width: 100%; border-collapse: collapse;">
+  <tr role="none" valign="top" style="height:0">
+  <td style="width:99px"></td>
+  <td style="width:380px"></td>
+  </tr>
+  <tr valign="top" style="height:20px">
+  <td style="pointer-events: auto; text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;">is by and between:</span></td>
+  <td>
+  </td>
+  </tr>
+  </table>
+  </div>
+  <div style="position: relative; width: 100%; height: 100%; pointer-events: none; ">
+  <table cellpadding="0" cellspacing="0" border="0" style="empty-cells: show; width: 100%; border-collapse: collapse;">
+  <tr role="none" valign="top" style="height:0">
+  <td style="width:2px"></td>
+  <td style="width:477px"></td>
+  </tr>
+  <tr valign="top" style="height:2px">
+  <td colspan="2">
+  </td>
+  </tr>
+  <tr valign="top" style="height:38px">
+  <td>
+  </td>
+  <td>
+  <div style="width: 100%; height: 100%; position: relative;">
+  <div style="position: absolute; overflow: hidden; width: 100%; height: 100%; ">
+  <table cellpadding="0" cellspacing="0" border="0" style="empty-cells: show; width: 100%; border-collapse: collapse;">
+  <tr role="none" valign="top" style="height:0">
+  <td style="width:97px"></td>
+  <td style="width:380px"></td>
+  </tr>
+  <tr valign="top" style="height:20px">
+  <td>
+  </td>
+  <td style="pointer-events: auto; text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;">ABC. PVT. LTD. (HEREINAFTER 'Licensor') having its Principal business at </span></td>
+  </tr>
+  </table>
+  </div>
+  <div style="position: relative; width: 100%; height: 100%; pointer-events: none; ">
+  <table cellpadding="0" cellspacing="0" border="0" style="empty-cells: show; width: 100%; border-collapse: collapse;">
+  <tr role="none" valign="top" style="height:0">
+  <td style="width:291px"></td>
+  <td style="width:186px"></td>
+  </tr>
+  <tr valign="top" style="height:18px">
+  <td colspan="2">
+  </td>
+  </tr>
+  <tr valign="top" style="height:20px">
+  <td>
+  <div style="width: 100%; height: 100%; position: relative;">
+  <div style="position: absolute; overflow: hidden; width: 100%; height: 100%; ">
+  <table cellpadding="0" cellspacing="0" border="0" style="empty-cells: show; width: 100%; border-collapse: collapse;">
+  <tr role="none" valign="top" style="height:0">
+  <td style="width:72px"></td>
+  <td style="width:219px"></td>
+  </tr>
+  <tr valign="top" style="height:20px">
+  <td style="pointer-events: auto; text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;"><input type="text"style="width:50px;height:11px;font-size: 11px;" name='Place_A'></input></span></td>
+  <td>
+  </td>
+  </tr>
+  </table>
+  </div>
+  <div style="position: relative; width: 100%; height: 100%; pointer-events: none; ">
+  <table cellpadding="0" cellspacing="0" border="0" style="empty-cells: show; width: 100%; border-collapse: collapse;">
+  <tr role="none" valign="top" style="height:0">
+  <td style="width:67px"></td>
+  <td style="width:224px"></td>
+  </tr>
+  <tr valign="top" style="height:20px">
+  <td>
+  </td>
+  <td>
+  <div style="width: 100%; height: 100%; position: relative;">
+  <div style="position: absolute; overflow: hidden; width: 100%; height: 100%; ">
+  <table cellpadding="0" cellspacing="0" border="0" style="empty-cells: show; width: 100%; border-collapse: collapse;">
+  <tr role="none" valign="top" style="height:0">
+  <td style="width:143px"></td>
+  <td style="width:81px"></td>
+  </tr>
+  <tr valign="top" style="height:20px">
+  <td style="pointer-events: auto; text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;">XYZ (hereinafter 'Licensee') </span></td>
+  <td>
+  </td>
+  </tr>
+  </table>
+  </div>
+  <div style="position: relative; width: 100%; height: 100%; pointer-events: none; ">
+  <table cellpadding="0" cellspacing="0" border="0" style="empty-cells: show; width: 100%; border-collapse: collapse;">
+  <tr role="none" valign="top" style="height:0">
+  <td style="width:142px"></td>
+  <td style="width:82px"></td>
+  </tr>
+  <tr valign="top" style="height:20px">
+  <td>
+  </td>
+  <td style="pointer-events: auto; text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;"><input type="text"style="width:50px;height:11px;font-size: 11px;" name='place_B'></input></span></td>
+  </tr>
+  </table>
+  </div>
+  </div>
+  </td>
+  </tr>
+  </table>
+  </div>
+  </div>
+  </td>
+  <td>
+  </td>
+  </tr>
+  </table>
+  </div>
+  </div>
+  </td>
+  </tr>
+  </table>
+  </div>
+  </div>
+  </td>
+  <td colspan="2">
+  </td>
+  </tr>
+  <tr valign="top" style="height:20px">
+  <td style="pointer-events: auto; text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;">And</span></td>
+  <td>
+  </td>
+  </tr>
+  <tr valign="top" style="height:17px">
+  <td colspan="2">
+  </td>
+  </tr>
+  </table>
+  </div>
+  </div>
+  </td>
+  </tr>
+  </table>
+  </div>
+  </div>
+  </td>
+  </tr>
+  </table>
+  </div>
+  </div>
+  </td>
+  <td colspan="5">
+  </td>
+  </tr>
+  <tr valign="top" style="height:1px">
+  <td colspan="24">
+  </td>
+  </tr>
+  <tr valign="top" style="height:20px">
+  <td colspan="4">
+  </td>
+  <td colspan="2" style="text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 10px; line-height: 1.2578125;">WHEREAS: -</span></td>
+  <td colspan="18">
+  </td>
+  </tr>
+  <tr valign="top" style="height:2px">
+  <td colspan="2">
+  </td>
+  <td colspan="7" rowspan="5">
+  <div style="width: 100%; height: 100%; position: relative;">
+  <div style="position: absolute; overflow: hidden; width: 100%; height: 100%; ">
+  <table cellpadding="0" cellspacing="0" border="0" style="empty-cells: show; width: 100%; border-collapse: collapse;">
+  <tr role="none" valign="top" style="height:0">
+  <td style="width:1px"></td>
+  <td style="width:298px"></td>
+  </tr>
+  <tr valign="top" style="height:20px">
+  <td>
+  </td>
+  <td style="pointer-events: auto; text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;">a.The Licensor is the absolute owner of the premises bearing </span></td>
+  </tr>
+  </table>
+  </div>
+  <div style="position: relative; width: 100%; height: 100%; pointer-events: none; ">
+  <table cellpadding="0" cellspacing="0" border="0" style="empty-cells: show; width: 100%; border-collapse: collapse;">
+  <tr role="none" valign="top" style="height:0">
+  <td style="width:219px"></td>
+  <td style="width:80px"></td>
+  </tr>
+  <tr valign="top" style="height:17px">
+  <td colspan="2">
+  </td>
+  </tr>
+  <tr valign="top" style="height:20px">
+  <td style="pointer-events: auto; text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;">(hereinafter referred to as &quot;the said </span></td>
+  <td>
+  </td>
+  </tr>
+  </table>
+  </div>
+  </div>
+  </td>
+  <td colspan="15">
+  </td>
+  </tr>
+  <tr valign="top" style="height:1px">
+  <td colspan="2">
+  </td>
+  <td>
+  </td>
+  <td colspan="2" rowspan="2" style="text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;"><input type="text"style="width:40px;height:11px;font-size: 11px;" name='bearing_no'></input></span></td>
+  <td colspan="12">
+  </td>
+  </tr>
+  <tr valign="top" style="height:19px">
+  <td colspan="2">
+  </td>
+  <td>
+  </td>
+  <td colspan="3" rowspan="2" style="text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;">and situate at </span></td>
+  <td>
+  </td>
+  <td colspan="4" rowspan="2" style="text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;"><input type="text"style="width:50px;height:11px;font-size: 11px;" name='situate_at'></input></span></td>
+  <td colspan="4">
+  </td>
+  </tr>
+  <tr valign="top" style="height:1px">
+  <td colspan="2">
+  </td>
+  <td colspan="3">
+  </td>
+  <td>
+  </td>
+  <td colspan="4">
+  </td>
+  </tr>
+  <tr valign="top" style="height:14px">
+  <td colspan="2">
+  </td>
+  <td colspan="15">
+  </td>
+  </tr>
+  <tr valign="top" style="height:2px">
+  <td colspan="24">
+  </td>
+  </tr>
+  <tr valign="top" style="height:36px">
+  <td colspan="2">
+  </td>
+  <td colspan="20" style="text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;">b.The Licensee has approached the Licensor with a request to allow it to make use of the said premises by way of pure and simple License and without claiming any other rights therein upon the terms and conditions </span></td>
+  <td colspan="2">
+  </td>
+  </tr>
+  <tr valign="top" style="height:1px">
+  <td colspan="24">
+  </td>
+  </tr>
+  <tr valign="top" style="height:20px">
+  <td colspan="2">
+  </td>
+  <td colspan="9" style="text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125; font-weight: bold;">IT IS HEREBY AGREED BY AND BETWEEN THE PARTIES HERETO </span></td>
+  <td colspan="13">
+  </td>
+  </tr>
+  <tr valign="top" style="height:2px">
+  <td colspan="24">
+  </td>
+  </tr>
+  <tr valign="top" style="height:58px">
+  <td>
+  </td>
+  <td colspan="21">
+  <div style="width: 100%; height: 100%; position: relative;">
+  <div style="position: absolute; overflow: hidden; width: 100%; height: 100%; ">
+  <table cellpadding="0" cellspacing="0" border="0" style="empty-cells: show; width: 100%; border-collapse: collapse;">
+  <tr role="none" valign="top" style="height:0">
+  <td style="width:529px"></td>
+  </tr>
+  <tr valign="top" style="height:20px">
+  <td style="pointer-events: auto; text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;">1.The Licensor hereby grants, the Leave and License to the Licensee to use and occupy the said premises </span></td>
+  </tr>
+  </table>
+  </div>
+  <div style="position: relative; width: 100%; height: 100%; pointer-events: none; ">
+  <table cellpadding="0" cellspacing="0" border="0" style="empty-cells: show; width: 100%; border-collapse: collapse;">
+  <tr role="none" valign="top" style="height:0">
+  <td style="width:4px"></td>
+  <td style="width:72px"></td>
+  <td style="width:2px"></td>
+  <td style="width:76px"></td>
+  <td style="width:143px"></td>
+  <td style="width:168px"></td>
+  <td style="width:10px"></td>
+  <td style="width:54px"></td>
+  </tr>
+  <tr valign="top" style="height:18px">
+  <td colspan="8">
+  </td>
+  </tr>
+  <tr valign="top" style="height:2px">
+  <td colspan="5" rowspan="3" style="pointer-events: auto; text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;">&nbsp;along with fixtures and furniture lying therein for a period of </span></td>
+  <td colspan="3">
+  </td>
+  </tr>
+  <tr valign="top" style="height:1px">
+  <td rowspan="3">
+  <div style="width: 100%; height: 100%; position: relative;">
+  <div style="position: absolute; overflow: hidden; width: 100%; height: 100%; ">
+  <table cellpadding="0" cellspacing="0" border="0" style="empty-cells: show; width: 100%; border-collapse: collapse;">
+  <tr role="none" valign="top" style="height:0">
+  <td style="width:43px"></td>
+  <td style="width:125px"></td>
+  </tr>
+  <tr valign="top" style="height:20px">
+  <td style="pointer-events: auto; text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;"><input type="text"style="width:25px;height:11px;font-size: 11px;" name='period_of_month'></input></span></td>
+  <td>
+  </td>
+  </tr>
+  </table>
+  </div>
+  <div style="position: relative; width: 100%; height: 100%; pointer-events: none; ">
+  <table cellpadding="0" cellspacing="0" border="0" style="empty-cells: show; width: 100%; border-collapse: collapse;">
+  <tr role="none" valign="top" style="height:0">
+  <td style="width:33px"></td>
+  <td style="width:135px"></td>
+  </tr>
+  <tr valign="top" style="height:20px">
+  <td>
+  </td>
+  <td style="pointer-events: auto; text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;">months commencing from </span></td>
+  </tr>
+  </table>
+  </div>
+  </div>
+  </td>
+  <td colspan="2">
+  </td>
+  </tr>
+  <tr valign="top" style="height:17px">
+  <td>
+  </td>
+  <td rowspan="3" style="pointer-events: auto; text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;"><input type="text"style="width:50px;height:11px;font-size: 11px;" name='comming_from'></input></span></td>
+  </tr>
+  <tr valign="top" style="height:2px">
+  <td>
+  </td>
+  <td rowspan="3" style="pointer-events: auto; text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;">and ending on </span></td>
+  <td>
+  </td>
+  <td rowspan="3" style="pointer-events: auto; text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;"><input type="text"style="width:50px;height:11px;font-size: 11px;" name='ending_on'></input></span></td>
+  <td>
+  </td>
+  <td>
+  </td>
+  </tr>
+  <tr valign="top" style="height:1px">
+  <td>
+  </td>
+  <td>
+  </td>
+  <td colspan="3">
+  </td>
+  </tr>
+  <tr valign="top" style="height:17px">
+  <td>
+  </td>
+  <td>
+  </td>
+  <td colspan="4">
+  </td>
+  </tr>
+  </table>
+  </div>
+  </div>
+  </td>
+  <td colspan="2">
+  </td>
+  </tr>
+  <tr valign="top" style="height:3px">
+  <td colspan="24">
+  </td>
+  </tr>
+  <tr valign="top" style="height:78px">
+  <td colspan="3">
+  </td>
+  <td colspan="19">
+  <div style="width: 100%; height: 100%; position: relative;">
+  <div style="position: absolute; overflow: hidden; width: 100%; height: 100%; ">
+  <table cellpadding="0" cellspacing="0" border="0" style="empty-cells: show; width: 100%; border-collapse: collapse;">
+  <tr role="none" valign="top" style="height:0">
+  <td style="width:1px"></td>
+  <td style="width:526px"></td>
+  </tr>
+  <tr valign="top" style="height:20px">
+  <td>
+  </td>
+  <td style="pointer-events: auto; text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;">2.In consideration of the grant of the license to use the said premises as aforesaid, the Licensee shall pay to </span></td>
+  </tr>
+  </table>
+  </div>
+  <div style="position: relative; width: 100%; height: 100%; pointer-events: none; ">
+  <table cellpadding="0" cellspacing="0" border="0" style="empty-cells: show; width: 100%; border-collapse: collapse;">
+  <tr role="none" valign="top" style="height:0">
+  <td style="width:527px"></td>
+  </tr>
+  <tr valign="top" style="height:18px">
+  <td>
+  </td>
+  </tr>
+  <tr valign="top" style="height:60px">
+  <td>
+  <div style="width: 100%; height: 100%; position: relative;">
+  <div style="position: absolute; overflow: hidden; width: 100%; height: 100%; ">
+  <table cellpadding="0" cellspacing="0" border="0" style="empty-cells: show; width: 100%; border-collapse: collapse;">
+  <tr role="none" valign="top" style="height:0">
+  <td style="width:220px"></td>
+  <td style="width:307px"></td>
+  </tr>
+  <tr valign="top" style="height:1px">
+  <td colspan="2">
+  </td>
+  </tr>
+  <tr valign="top" style="height:20px">
+  <td style="pointer-events: auto; text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;">&nbsp;the Licensor a License fee at the rate of Rs. </span></td>
+  <td>
+  </td>
+  </tr>
+  </table>
+  </div>
+  <div style="position: relative; width: 100%; height: 100%; pointer-events: none; ">
+  <table cellpadding="0" cellspacing="0" border="0" style="empty-cells: show; width: 100%; border-collapse: collapse;">
+  <tr role="none" valign="top" style="height:0">
+  <td style="width:2px"></td>
+  <td style="width:525px"></td>
+  </tr>
+  <tr valign="top" style="height:60px">
+  <td>
+  </td>
+  <td>
+  <div style="width: 100%; height: 100%; position: relative;">
+  <div style="position: absolute; overflow: hidden; width: 100%; height: 100%; ">
+  <table cellpadding="0" cellspacing="0" border="0" style="empty-cells: show; width: 100%; border-collapse: collapse;">
+  <tr role="none" valign="top" style="height:0">
+  <td style="width:218px"></td>
+  <td style="width:61px"></td>
+  <td style="width:246px"></td>
+  </tr>
+  <tr valign="top" style="height:20px">
+  <td>
+  </td>
+  <td style="pointer-events: auto; text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;"><input type="text"style="width:50px;height:11px;font-size: 11px;" name='rupess'></input></span></td>
+  <td>
+  </td>
+  </tr>
+  </table>
+  </div>
+  <div style="position: relative; width: 100%; height: 100%; pointer-events: none; ">
+  <table cellpadding="0" cellspacing="0" border="0" style="empty-cells: show; width: 100%; border-collapse: collapse;">
+  <tr role="none" valign="top" style="height:0">
+  <td style="width:525px"></td>
+  </tr>
+  <tr valign="top" style="height:1px">
+  <td>
+  </td>
+  </tr>
+  <tr valign="top" style="height:59px">
+  <td>
+  <div style="width: 100%; height: 100%; position: relative;">
+  <div style="position: absolute; overflow: hidden; width: 100%; height: 100%; ">
+  <table cellpadding="0" cellspacing="0" border="0" style="empty-cells: show; width: 100%; border-collapse: collapse;">
+  <tr role="none" valign="top" style="height:0">
+  <td style="width:338px"></td>
+  <td style="width:127px"></td>
+  <td style="width:60px"></td>
+  </tr>
+  <tr valign="top" style="height:1px">
+  <td colspan="3">
+  </td>
+  </tr>
+  <tr valign="top" style="height:20px">
+  <td>
+  </td>
+  <td style="pointer-events: auto; text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;"><input type="text"style="width:110px;height:11px;font-size: 11px;" name='rupess_in_words'></input></span></td>
+  <td>
+  </td>
+  </tr>
+  </table>
+  </div>
+  <div style="position: relative; width: 100%; height: 100%; pointer-events: none; ">
+  <table cellpadding="0" cellspacing="0" border="0" style="empty-cells: show; width: 100%; border-collapse: collapse;">
+  <tr role="none" valign="top" style="height:0">
+  <td style="width:345px"></td>
+  <td style="width:3px"></td>
+  <td style="width:44px"></td>
+  <td style="width:5px"></td>
+  <td style="width:71px"></td>
+  <td style="width:43px"></td>
+  <td style="width:14px"></td>
+  </tr>
+  <tr valign="top" style="height:20px">
+  <td rowspan="3">
+  <div style="width: 100%; height: 100%; position: relative;">
+  <div style="position: absolute; overflow: hidden; width: 100%; height: 100%; ">
+  <table cellpadding="0" cellspacing="0" border="0" style="empty-cells: show; width: 100%; border-collapse: collapse;">
+  <tr role="none" valign="top" style="height:0">
+  <td style="width:159px"></td>
+  <td style="width:186px"></td>
+  </tr>
+  <tr valign="top" style="height:19px">
+  <td colspan="2">
+  </td>
+  </tr>
+  <tr valign="top" style="height:20px">
+  <td style="pointer-events: auto; text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;">per month commencing from the </span></td>
+  <td>
+  </td>
+  </tr>
+  </table>
+  </div>
+  <div style="position: relative; width: 100%; height: 100%; pointer-events: none; ">
+  <table cellpadding="0" cellspacing="0" border="0" style="empty-cells: show; width: 100%; border-collapse: collapse;">
+  <tr role="none" valign="top" style="height:0">
+  <td style="width:1px"></td>
+  <td style="width:68px"></td>
+  <td style="width:2px"></td>
+  <td style="width:274px"></td>
+  </tr>
+  <tr valign="top" style="height:39px">
+  <td colspan="3">
+  </td>
+  <td rowspan="2">
+  <div style="width: 100%; height: 100%; position: relative;">
+  <div style="position: absolute; overflow: hidden; width: 100%; height: 100%; ">
+  <table cellpadding="0" cellspacing="0" border="0" style="empty-cells: show; width: 100%; border-collapse: collapse;">
+  <tr role="none" valign="top" style="height:0">
+  <td style="width:92px"></td>
+  <td style="width:76px"></td>
+  <td style="width:106px"></td>
+  </tr>
+  <tr valign="top" style="height:19px">
+  <td colspan="3">
+  </td>
+  </tr>
+  <tr valign="top" style="height:20px">
+  <td>
+  </td>
+  <td style="pointer-events: auto; text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;"><input type="text"style="width:60px;height:11px;font-size: 11px;" name='week_day'></input></span></td>
+  <td>
+  </td>
+  </tr>
+  </table>
+  </div>
+  <div style="position: absolute; overflow: hidden; width: 100%; height: 100%; pointer-events: none; ">
+  <table cellpadding="0" cellspacing="0" border="0" style="empty-cells: show; width: 100%; border-collapse: collapse;">
+  <tr role="none" valign="top" style="height:0">
+  <td style="width:162px"></td>
+  <td style="width:40px"></td>
+  <td style="width:72px"></td>
+  </tr>
+  <tr valign="top" style="height:19px">
+  <td colspan="3">
+  </td>
+  </tr>
+  <tr valign="top" style="height:20px">
+  <td>
+  </td>
+  <td style="pointer-events: auto; text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;">day of </span></td>
+  <td>
+  </td>
+  </tr>
+  </table>
+  </div>
+  <div style="position: absolute; overflow: hidden; width: 100%; height: 100%; pointer-events: none; ">
+  <table cellpadding="0" cellspacing="0" border="0" style="empty-cells: show; width: 100%; border-collapse: collapse;">
+  <tr role="none" valign="top" style="height:0">
+  <td style="width:196px"></td>
+  <td style="width:78px"></td>
+  </tr>
+  <tr valign="top" style="height:19px">
+  <td colspan="2">
+  </td>
+  </tr>
+  <tr valign="top" style="height:20px">
+  <td>
+  </td>
+  <td style="pointer-events: auto; text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;"><input type="text"style="width:70px;height:11px;font-size: 11px;" name='date_of_day'></input></span></td>
+  </tr>
+  </table>
+  </div>
+  <div style="position: relative; width: 100%; height: 100%; pointer-events: none; ">
+  <table cellpadding="0" cellspacing="0" border="0" style="empty-cells: show; width: 100%; border-collapse: collapse;">
+  <tr role="none" valign="top" style="height:0">
+  <td style="width:202px"></td>
+  <td style="width:6px"></td>
+  <td style="width:64px"></td>
+  <td style="width:2px"></td>
+  </tr>
+  <tr valign="top" style="height:20px">
+  <td colspan="2">
+  </td>
+  <td style="pointer-events: auto; text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;">/- (Rupees </span></td>
+  <td>
+  </td>
+  </tr>
+  <tr valign="top" style="height:18px">
+  <td colspan="4">
+  </td>
+  </tr>
+  <tr valign="top" style="height:20px">
+  <td style="pointer-events: auto; text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;">day of every licensed month in advance).</span></td>
+  <td colspan="3">
+  </td>
+  </tr>
+  </table>
+  </div>
+  </div>
+  </td>
+  </tr>
+  <tr valign="top" style="height:19px">
+  <td>
+  </td>
+  <td rowspan="2" style="pointer-events: auto; text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;"><input type="text"style="width:50px;height:11px;font-size: 11px;" name='per_day'></input></span></td>
+  <td>
+  </td>
+  </tr>
+  <tr valign="top" style="height:1px">
+  <td>
+  </td>
+  <td colspan="2">
+  </td>
+  </tr>
+  </table>
+  </div>
+  </div>
+  </td>
+  <td colspan="4">
+  </td>
+  <td style="pointer-events: auto; text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;">only) </span></td>
+  <td>
+  </td>
+  </tr>
+  <tr valign="top" style="height:20px">
+  <td>
+  </td>
+  <td style="pointer-events: auto; text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;">2023-24</span></td>
+  <td>
+  </td>
+  <td colspan="3" style="pointer-events: auto; text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;">(payable on or before the </span></td>
+  </tr>
+  <tr valign="top" style="height:19px">
+  <td colspan="6">
+  </td>
+  </tr>
+  </table>
+  </div>
+  </div>
+  </td>
+  </tr>
+  </table>
+  </div>
+  </div>
+  </td>
+  </tr>
+  </table>
+  </div>
+  </div>
+  </td>
+  </tr>
+  </table>
+  </div>
+  </div>
+  </td>
+  <td colspan="2">
+  </td>
+  </tr>
+  <tr valign="top" style="height:5px">
+  <td colspan="24">
+  </td>
+  </tr>
+  <tr valign="top" style="height:60px">
+  <td>
+  </td>
+  <td colspan="22">
+  <div style="width: 100%; height: 100%; position: relative;">
+  <div style="position: absolute; overflow: hidden; width: 100%; height: 100%; ">
+  <table cellpadding="0" cellspacing="0" border="0" style="empty-cells: show; width: 100%; border-collapse: collapse;">
+  <tr role="none" valign="top" style="height:0">
+  <td style="width:253px"></td>
+  <td style="width:281px"></td>
+  </tr>
+  <tr valign="top" style="height:20px">
+  <td style="pointer-events: auto; text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;">3.In the event of any delay, it shall carry interest @ </span></td>
+  <td>
+  </td>
+  </tr>
+  </table>
+  </div>
+  <div style="position: relative; width: 100%; height: 100%; pointer-events: none; ">
+  <table cellpadding="0" cellspacing="0" border="0" style="empty-cells: show; width: 100%; border-collapse: collapse;">
+  <tr role="none" valign="top" style="height:0">
+  <td style="width:4px"></td>
+  <td style="width:530px"></td>
+  </tr>
+  <tr valign="top" style="height:2px">
+  <td colspan="2">
+  </td>
+  </tr>
+  <tr valign="top" style="height:58px">
+  <td>
+  </td>
+  <td>
+  <div style="width: 100%; height: 100%; position: relative;">
+  <div style="position: absolute; overflow: hidden; width: 100%; height: 100%; ">
+  <table cellpadding="0" cellspacing="0" border="0" style="empty-cells: show; width: 100%; border-collapse: collapse;">
+  <tr role="none" valign="top" style="height:0">
+  <td style="width:252px"></td>
+  <td style="width:66px"></td>
+  <td style="width:212px"></td>
+  </tr>
+  <tr valign="top" style="height:20px">
+  <td>
+  </td>
+  <td style="pointer-events: auto; text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;"><input type="text"style="width:50px;height:11px;font-size: 11px;" name='per_anum'></input></span></td>
+  <td>
+  </td>
+  </tr>
+  </table>
+  </div>
+  <div style="position: relative; width: 100%; height: 100%; pointer-events: none; ">
+  <table cellpadding="0" cellspacing="0" border="0" style="empty-cells: show; width: 100%; border-collapse: collapse;">
+  <tr role="none" valign="top" style="height:0">
+  <td style="width:530px"></td>
+  </tr>
+  <tr valign="top" style="height:2px">
+  <td>
+  </td>
+  </tr>
+  <tr valign="top" style="height:56px">
+  <td>
+  <div style="width: 100%; height: 100%; position: relative;">
+  <div style="position: absolute; overflow: hidden; width: 100%; height: 100%; ">
+  <table cellpadding="0" cellspacing="0" border="0" style="empty-cells: show; width: 100%; border-collapse: collapse;">
+  <tr role="none" valign="top" style="height:0">
+  <td style="width:321px"></td>
+  <td style="width:209px"></td>
+  </tr>
+  <tr valign="top" style="height:20px">
+  <td>
+  </td>
+  <td style="pointer-events: auto; text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;">per annum. In addition to the said monthly </span></td>
+  </tr>
+  </table>
+  </div>
+  <div style="position: relative; width: 100%; height: 100%; pointer-events: none; ">
+  <table cellpadding="0" cellspacing="0" border="0" style="empty-cells: show; width: 100%; border-collapse: collapse;">
+  <tr role="none" valign="top" style="height:0">
+  <td style="width:495px"></td>
+  <td style="width:35px"></td>
+  </tr>
+  <tr valign="top" style="height:16px">
+  <td colspan="2">
+  </td>
+  </tr>
+  <tr valign="top" style="height:40px">
+  <td>
+  <div style="width: 100%; height: 100%; position: relative;">
+  <div style="position: absolute; overflow: hidden; width: 100%; height: 100%; ">
+  <table cellpadding="0" cellspacing="0" border="0" style="empty-cells: show; width: 100%; border-collapse: collapse;">
+  <tr role="none" valign="top" style="height:0">
+  <td style="width:414px"></td>
+  <td style="width:81px"></td>
+  </tr>
+  <tr valign="top" style="height:1px">
+  <td colspan="2">
+  </td>
+  </tr>
+  <tr valign="top" style="height:20px">
+  <td style="pointer-events: auto; text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;">compensation, the Licensee shall on or before execution hereof deposit a sum of Rs. </span></td>
+  <td>
+  </td>
+  </tr>
+  </table>
+  </div>
+  <div style="position: relative; width: 100%; height: 100%; pointer-events: none; ">
+  <table cellpadding="0" cellspacing="0" border="0" style="empty-cells: show; width: 100%; border-collapse: collapse;">
+  <tr role="none" valign="top" style="height:0">
+  <td style="width:56px"></td>
+  <td style="width:7px"></td>
+  <td style="width:126px"></td>
+  <td style="width:14px"></td>
+  <td style="width:217px"></td>
+  <td style="width:34px"></td>
+  <td style="width:41px"></td>
+  </tr>
+  <tr valign="top" style="height:20px">
+  <td colspan="5">
+  </td>
+  <td colspan="2" style="pointer-events: auto; text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;"><input type="text"style="width:50px;height:11px;font-size: 11px;" name='deposite_rs'></input></span></td>
+  </tr>
+  <tr valign="top" style="height:20px">
+  <td style="pointer-events: auto; text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;">/- (Rupees </span></td>
+  <td>
+  </td>
+  <td style="pointer-events: auto; text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;"><input type="text"style="width:110px;height:11px;font-size: 11px;" name='deposite_rs_words'></input></span></td>
+  <td>
+  </td>
+  <td colspan="2" style="pointer-events: auto; text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;">only) with the Licensor as interest free Security</span></td>
+  <td>
+  </td>
+  </tr>
+  </table>
+  </div>
+  </div>
+  </td>
+  <td>
+  </td>
+  </tr>
+  </table>
+  </div>
+  </div>
+  </td>
+  </tr>
+  </table>
+  </div>
+  </div>
+  </td>
+  </tr>
+  </table>
+  </div>
+  </div>
+  </td>
+  <td>
+  </td>
+  </tr>
+  <tr valign="top" style="height:8px">
+  <td colspan="24">
+  </td>
+  </tr>
+  <tr valign="top" style="height:60px">
+  <td colspan="2">
+  </td>
+  <td colspan="15" style="text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;">deposit for due performance of this agreement by the Licensee. The said deposit will be returned to the Licensee without interest and after deducting amount, if any, payable by the Licensee to the Licensor under this agreement and only on its handing over the keys of the said premises to the Licensor on expiry of this agreement by.</span></td>
+  <td colspan="7">
+  </td>
+  </tr>
+  <tr valign="top" style="height:2px">
+  <td colspan="24">
+  </td>
+  </tr>
+  <tr valign="top" style="height:37px">
+  <td colspan="5">
+  </td>
+  <td colspan="16" style="text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;">4.Efflux of time or on earlier determination of the License hereby granted. The Licensee shall not be obliged to vacate the premises and pay any compensation for the use thereof until the return of the deposit.</span></td>
+  <td colspan="3">
+  </td>
+  </tr>
+  <tr valign="top" style="height:47px">
+  <td colspan="5">
+  </td>
+  <td colspan="15" style="text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;">5.In addition to the payment of the aforesaid license fee, the Licensee shall also bear and pay the actual maintenance charges, taxes, (including any increase thereof), other outgoings and electricity charges in respect of the Licensed premises.</span></td>
+  <td colspan="4">
+  </td>
+  </tr>
+  <tr valign="top" style="height:4px">
+  <td colspan="24">
+  </td>
+  </tr>
+  <tr valign="top" style="height:29px">
+  <td colspan="5">
+  </td>
+  <td colspan="13" style="text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;">6.The Licensee shall also bear and pay all expenses for repairs and maintenance charges to keep the licensed premises in good and tidy condition.</span></td>
+  <td colspan="6">
+  </td>
+  </tr>
+  <tr valign="top" style="height:8px">
+  <td colspan="24">
+  </td>
+  </tr>
+  <tr valign="top" style="height:89px">
+  <td colspan="5">
+  </td>
+  <td colspan="15" style="text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;">7.The Leave and License granted hereunder is strictly for the use of the Licensee during the period of the License period and for its Office work only. The Licensee shall not induct any other person in the said premises or allow any other person to use or occupy the said licensed premises or any part thereof for any purpose. It is expressly agreed that the license granted to the Licensee to use the said premises is purely personal to the Licensee and shall in no case exclude the Licensor or its agents, servants, representatives etc. from looking after the said premises.</span></td>
+  <td colspan="4">
+  </td>
+  </tr>
+  <tr valign="top" style="height:66px">
+  <td colspan="24">
+  </td>
+  </tr>
+  </table>
+  <br/>
+  <br/>
+  
+  <table id="JR_PAGE_ANCHOR_0_2" role="none" class="jrPage" data-jr-height="842" cellpadding="0" cellspacing="0" border="0" style="empty-cells: show; width: 595px; border-collapse: collapse; background-color: white;">
+  <style type="text/css">
+    #JR_PAGE_ANCHOR_0_2 th {font-weight: normal;}
+    #JR_PAGE_ANCHOR_0_2 ul {list-style-type: disc; padding-inline-start: 40px; margin: 0px;}
+    #JR_PAGE_ANCHOR_0_2 ol {list-style-type: decimal; padding-inline-start: 40px; margin: 0px;}
+  </style>
+  <tr role="none" valign="top" style="height:0">
+  <td style="width:30px"></td>
+  <td style="width:2px"></td>
+  <td style="width:1px"></td>
+  <td style="width:1px"></td>
+  <td style="width:1px"></td>
+  <td style="width:2px"></td>
+  <td style="width:8px"></td>
+  <td style="width:1px"></td>
+  <td style="width:1px"></td>
+  <td style="width:2px"></td>
+  <td style="width:1px"></td>
+  <td style="width:3px"></td>
+  <td style="width:27px"></td>
+  <td style="width:10px"></td>
+  <td style="width:20px"></td>
+  <td style="width:20px"></td>
+  <td style="width:7px"></td>
+  <td style="width:13px"></td>
+  <td style="width:3px"></td>
+  <td style="width:57px"></td>
+  <td style="width:10px"></td>
+  <td style="width:2px"></td>
+  <td style="width:5px"></td>
+  <td style="width:9px"></td>
+  <td style="width:1px"></td>
+  <td style="width:99px"></td>
+  <td style="width:4px"></td>
+  <td style="width:1px"></td>
+  <td style="width:26px"></td>
+  <td style="width:21px"></td>
+  <td style="width:17px"></td>
+  <td style="width:59px"></td>
+  <td style="width:3px"></td>
+  <td style="width:59px"></td>
+  <td style="width:16px"></td>
+  <td style="width:2px"></td>
+  <td style="width:1px"></td>
+  <td style="width:1px"></td>
+  <td style="width:49px"></td>
+  </tr>
+  <tr valign="top" style="height:29px">
+  <td colspan="39">
+  </td>
+  </tr>
+  <tr valign="top" style="height:61px">
+  <td colspan="9">
+  </td>
+  <td colspan="29" style="text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;">8.The Licensee shall use the licensed premises with due care and caution and shall keep the said premises in good order and condition and upon the expiry of this licensee, the licensee shall leave the same in as good condition as they are on the date hereof and shall make compensation for any damage done (reasonable wear and tear excepted).</span></td>
+  <td>
+  </td>
+  </tr>
+  <tr valign="top" style="height:4px">
+  <td colspan="39">
+  </td>
+  </tr>
+  <tr valign="top" style="height:30px">
+  <td colspan="9">
+  </td>
+  <td colspan="28" style="text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;">9.The Licensee hereby covenants with the Licensor as follows: -<br/>(Mention the policies of the Licensor)</span></td>
+  <td colspan="2">
+  </td>
+  </tr>
+  <tr valign="top" style="height:6px">
+  <td colspan="39">
+  </td>
+  </tr>
+  <tr valign="top" style="height:60px">
+  <td colspan="8">
+  </td>
+  <td colspan="29" style="text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;">10.In the event of the Licensee committing default in making payment of any of the monthly fees provided under clause 2 on their respective due dates or default in payment of the charges mentioned in clause 3 above, the Licensor shall be entitled to terminate this agreement by giving ... days prior notice in writing and upon the Licensee failing to rectify the breach within the said period.</span></td>
+  <td colspan="2">
+  </td>
+  </tr>
+  <tr valign="top" style="height:8px">
+  <td colspan="39">
+  </td>
+  </tr>
+  <tr valign="top" style="height:30px">
+  <td colspan="7">
+  </td>
+  <td colspan="29" style="text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;">11.The Licensee shall under no circumstances be entitled to assign or transfer the benefit of this agreement to any other person/s on any basis whatsoever.</span></td>
+  <td colspan="3">
+  </td>
+  </tr>
+  <tr valign="top" style="height:10px">
+  <td colspan="39">
+  </td>
+  </tr>
+  <tr valign="top" style="height:30px">
+  <td colspan="7">
+  </td>
+  <td colspan="28" style="text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;">12.The stamp duty, registration charges and all incidental expenses thereof of these presents shall be borne and paid by the Licensee alone.</span></td>
+  <td colspan="4">
+  </td>
+  </tr>
+  <tr valign="top" style="height:11px">
+  <td colspan="39">
+  </td>
+  </tr>
+  <tr valign="top" style="height:31px">
+  <td>
+  </td>
+  <td colspan="34" style="text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;">The parties have read both this entire Agreement, agree to all its terms, and acknowledge receipt of a complete copy of the Agreement signed by both parties.</span></td>
+  <td colspan="4">
+  </td>
+  </tr>
+  <tr valign="top" style="height:8px">
+  <td colspan="39">
+  </td>
+  </tr>
+  <tr valign="top" style="height:1px">
+  <td colspan="23">
+  </td>
+  <td colspan="6" rowspan="2" style="text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;"><input type="text"style="width:70px;height:11px;font-size: 11px;" name='signature_of_licensee'></input></span></td>
+  <td colspan="10">
+  </td>
+  </tr>
+  <tr valign="top" style="height:19px">
+  <td colspan="3">
+  </td>
+  <td colspan="19" rowspan="2" style="text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;">Name and Signature of the Licensee </span></td>
+  <td>
+  </td>
+  <td colspan="10">
+  </td>
+  </tr>
+  <tr valign="top" style="height:1px">
+  <td colspan="3">
+  </td>
+  <td colspan="17">
+  </td>
+  </tr>
+  <tr valign="top" style="height:6px">
+  <td colspan="39">
+  </td>
+  </tr>
+  <tr valign="top" style="height:20px">
+  <td colspan="4">
+  </td>
+  <td colspan="12" style="text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;">ABC PVT.LTD</span></td>
+  <td>
+  </td>
+  <td colspan="8" style="text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;"><input type="text"style="width:70px;height:11px;font-size: 11px;" name='abc_signature'></input></span></td>
+  <td colspan="14">
+  </td>
+  </tr>
+  <tr valign="top" style="height:8px">
+  <td colspan="39">
+  </td>
+  </tr>
+  <tr valign="top" style="height:1px">
+  <td colspan="14">
+  </td>
+  <td colspan="6" rowspan="2" style="text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;"><input type="text"style="width:70px;height:11px;font-size: 11px;" name='date_of_signature'></input></span></td>
+  <td colspan="19">
+  </td>
+  </tr>
+  <tr valign="top" style="height:19px">
+  <td colspan="6">
+  </td>
+  <td colspan="7" rowspan="2" style="text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;">Date</span></td>
+  <td>
+  </td>
+  <td colspan="19">
+  </td>
+  </tr>
+  <tr valign="top" style="height:1px">
+  <td colspan="6">
+  </td>
+  <td colspan="26">
+  </td>
+  </tr>
+  <tr valign="top" style="height:9px">
+  <td colspan="39">
+  </td>
+  </tr>
+  <tr valign="top" style="height:20px">
+  <td colspan="24">
+  </td>
+  <td colspan="2" style="text-indent: 0px; text-align: center;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125; font-weight: bold; text-decoration: underline;">Receipt</span></td>
+  <td colspan="13">
+  </td>
+  </tr>
+  <tr valign="top" style="height:17px">
+  <td colspan="39">
+  </td>
+  </tr>
+  <tr valign="top" style="height:1px">
+  <td colspan="2">
+  </td>
+  <td colspan="25" rowspan="2" style="text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;">Received of and from the within named Licensee a sum of Rs. </span></td>
+  <td colspan="12">
+  </td>
+  </tr>
+  <tr valign="top" style="height:19px">
+  <td colspan="2">
+  </td>
+  <td>
+  </td>
+  <td colspan="3" rowspan="2" style="text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;"><input type="text"style="width:40px;height:11px;font-size: 11px;" name='receipt_rs'></span></td>
+  <td rowspan="2" style="text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;">/- (Rupees</span></td>
+  <td>
+  </td>
+  <td colspan="3" rowspan="2" style="text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;"><input type="text"style="width:70px;height:11px;font-size: 11px;" name='receipt_rs_in_words'></input></span></td>
+  <td colspan="3">
+  </td>
+  </tr>
+  <tr valign="top" style="height:1px">
+  <td colspan="28">
+  </td>
+  <td>
+  </td>
+  <td colspan="3">
+  </td>
+  </tr>
+  <tr valign="top" style="height:40px">
+  <td colspan="4">
+  </td>
+  <td colspan="30">
+  <div style="width: 100%; height: 100%; position: relative;">
+  <div style="position: absolute; overflow: hidden; width: 100%; height: 100%; ">
+  <table cellpadding="0" cellspacing="0" border="0" style="empty-cells: show; width: 100%; border-collapse: collapse;">
+  <tr role="none" valign="top" style="height:0">
+  <td style="width:352px"></td>
+  <td style="width:140px"></td>
+  </tr>
+  <tr valign="top" style="height:20px">
+  <td style="pointer-events: auto; text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;">only) being Security Deposit as mentioned hereinabove by cheque No.</span></td>
+  <td>
+  </td>
+  </tr>
+  </table>
+  </div>
+  <div style="position: relative; width: 100%; height: 100%; pointer-events: none; ">
+  <table cellpadding="0" cellspacing="0" border="0" style="empty-cells: show; width: 100%; border-collapse: collapse;">
+  <tr role="none" valign="top" style="height:0">
+  <td style="width:4px"></td>
+  <td style="width:100px"></td>
+  <td style="width:2px"></td>
+  <td style="width:386px"></td>
+  </tr>
+  <tr valign="top" style="height:2px">
+  <td colspan="4">
+  </td>
+  </tr>
+  <tr valign="top" style="height:18px">
+  <td colspan="3">
+  </td>
+  <td rowspan="2">
+  <div style="width: 100%; height: 100%; position: relative;">
+  <div style="position: absolute; overflow: hidden; width: 100%; height: 100%; ">
+  <table cellpadding="0" cellspacing="0" border="0" style="empty-cells: show; width: 100%; border-collapse: collapse;">
+  <tr role="none" valign="top" style="height:0">
+  <td style="width:252px"></td>
+  <td style="width:78px"></td>
+  <td style="width:2px"></td>
+  <td style="width:54px"></td>
+  </tr>
+  <tr valign="top" style="height:20px">
+  <td>
+  </td>
+  <td style="pointer-events: auto; text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;"><input type="text"style="width:50px;height:11px;font-size: 11px;" name='cheque_no'></input></span></td>
+  <td>
+  </td>
+  <td style="pointer-events: auto; text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;">dated</span></td>
+  </tr>
+  </table>
+  </div>
+  <div style="position: relative; width: 100%; height: 100%; pointer-events: none; ">
+  <table cellpadding="0" cellspacing="0" border="0" style="empty-cells: show; width: 100%; border-collapse: collapse;">
+  <tr role="none" valign="top" style="height:0">
+  <td style="width:371px"></td>
+  <td style="width:15px"></td>
+  </tr>
+  <tr valign="top" style="height:18px">
+  <td colspan="2">
+  </td>
+  </tr>
+  <tr valign="top" style="height:20px">
+  <td>
+  <div style="width: 100%; height: 100%; position: relative;">
+  <div style="position: absolute; overflow: hidden; width: 100%; height: 100%; ">
+  <table cellpadding="0" cellspacing="0" border="0" style="empty-cells: show; width: 100%; border-collapse: collapse;">
+  <tr role="none" valign="top" style="height:0">
+  <td style="width:70px"></td>
+  <td style="width:301px"></td>
+  </tr>
+  <tr valign="top" style="height:20px">
+  <td style="pointer-events: auto; text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;"><input type="text"style="width:35px;height:11px;font-size: 11px;" name='cheque_branch'></input></span></td>
+  <td>
+  </td>
+  </tr>
+  </table>
+  </div>
+  <div style="position: relative; width: 100%; height: 100%; pointer-events: none; ">
+  <table cellpadding="0" cellspacing="0" border="0" style="empty-cells: show; width: 100%; border-collapse: collapse;">
+  <tr role="none" valign="top" style="height:0">
+  <td style="width:43px"></td>
+  <td style="width:328px"></td>
+  </tr>
+  <tr valign="top" style="height:20px">
+  <td>
+  </td>
+  <td style="pointer-events: auto; text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;">Branch. (MENTION THE MODE IF DIFFERENT THAN CHEQUE)</span></td>
+  </tr>
+  </table>
+  </div>
+  </div>
+  </td>
+  <td>
+  </td>
+  </tr>
+  </table>
+  </div>
+  </div>
+  </td>
+  </tr>
+  <tr valign="top" style="height:20px">
+  <td>
+  </td>
+  <td>
+  <div style="width: 100%; height: 100%; position: relative;">
+  <div style="position: absolute; overflow: hidden; width: 100%; height: 100%; ">
+  <table cellpadding="0" cellspacing="0" border="0" style="empty-cells: show; width: 100%; border-collapse: collapse;">
+  <tr role="none" valign="top" style="height:0">
+  <td style="width:71px"></td>
+  <td style="width:29px"></td>
+  </tr>
+  <tr valign="top" style="height:20px">
+  <td style="pointer-events: auto; text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;"><input type="text"style="width:40px;height:11px;font-size: 11px;" name='cheque_dated'></input></span></td>
+  <td>
+  </td>
+  </tr>
+  </table>
+  </div>
+  <div style="position: relative; width: 100%; height: 100%; pointer-events: none; ">
+  <table cellpadding="0" cellspacing="0" border="0" style="empty-cells: show; width: 100%; border-collapse: collapse;">
+  <tr role="none" valign="top" style="height:0">
+  <td style="width:50px"></td>
+  <td style="width:50px"></td>
+  </tr>
+  <tr valign="top" style="height:20px">
+  <td>
+  </td>
+  <td style="pointer-events: auto; text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;">drawn on </span></td>
+  </tr>
+  </table>
+  </div>
+  </div>
+  </td>
+ 
+  </td>
+  </tr>
+  </table>
+  </div>
+  </div>
+  </td>
+  <td colspan="5">
+  </td>
+  </tr>
+  <tr valign="top" style="height:15px">
+  <td colspan="39">
+  </td>
+  </tr>
+  <tr valign="top" style="height:64px">
+  <td colspan="21">
+  </td>
+  <td colspan="9" style="text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;">WE SAY RECEIVED<br/>&nbsp; &nbsp; ABC PVT. LTD.<br/>(AUTHORISED SIGNATORY)<br/>&nbsp; &nbsp; &nbsp;(THE LICENSOR)</span></td>
+  <td colspan="9">
+  </td>
+  </tr>
+  <tr valign="top" style="height:20px">
+  <td colspan="39">
+  </td>
+  </tr>
+  <tr valign="top" style="height:20px">
+  <td colspan="4">
+  </td>
+  <td colspan="11" style="text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;">WITNESS:</span></td>
+  <td colspan="24">
+  </td>
+  </tr>
+  <tr valign="top" style="height:1px">
+  <td colspan="2">
+  </td>
+  <td colspan="9" rowspan="2" style="text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 10px; line-height: 1.2578125;">1.</span></td>
+  <td colspan="28">
+  </td>
+  </tr>
+  <tr valign="top" style="height:19px">
+  <td colspan="2">
+  </td>
+  <td>
+  </td>
+  <td colspan="6" rowspan="2" style="text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;"><input type="text"style="width:50px;height:11px;font-size: 11px;" name='witness1'></input></span></td>
+  <td colspan="21">
+  </td>
+  </tr>
+  <tr valign="top" style="height:1px">
+  <td colspan="12">
+  </td>
+  <td colspan="21">
+  </td>
+  </tr>
+  <tr valign="top" style="height:2px">
+  <td colspan="39">
+  </td>
+  </tr>
+  <tr valign="top" style="height:20px">
+  <td colspan="4">
+  </td>
+  <td colspan="6" style="text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 10px; line-height: 1.2578125;">2.</span></td>
+  <td colspan="2">
+  </td>
+  <td colspan="7" style="text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 11px; line-height: 1.2578125;"><input type="text"style="width:50px;height:11px;font-size: 11px;" name='witness2'></input></span></td>
+  <td colspan="20">
+  </td>
+  </tr>
+  <tr valign="top" style="height:11px">
+  <td colspan="39">
+  </td>
+  </tr>
+  <tr valign="top" style="height:46px">
+  <td colspan="5">
+  </td>
+  <td colspan="29" style="text-indent: 0px; text-align: left;">
+  <span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 10px; line-height: 1.2578125;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br/>1 Under the Registration Act, 1908, it is mandatory to register a rental agreement if period is more than 12 months. Hence, to avoid stamp duty and registration charges, leave and license agreements are usually for 11 </span></td>
+  <td colspan="5">
+  </td>
+  </tr>
+  <tr valign="top" style="height:122px">
+  <td colspan="39">
+  </td>
+  </tr>
+  </table>
+  
+  </td><td width="50%">&nbsp;</td></tr>
+  </table>
+  <div><input type="submit"></input></div>
+</form>
+  </body>
+  </html>
+  

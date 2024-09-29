@@ -43,6 +43,22 @@ class GeneratePSR(MethodResource, Resource):
 api.add_resource(GeneratePSR,'/generatePSR')        
 docs.register(GeneratePSR)
 
-
+class GenerateOSAD(MethodResource,Resource):
+    @doc(description="Office sharing  Drafting",tags=['Office sharing  Drafting API'])
+    @use_kwargs(schema.OSADRequest,location=('json'))
+    @marshal_with(schema.APIResponse)
+    def post(self ,**kwargs):
+         try:
+            print("generateSDD")
+            parameters=kwargs  
+            db_conn=""
+            utility.generateReport("Office_Sharing_Agreement_Drafting.jrxml","Office_Sharing_Agreement_Drafting",parameters,db_conn) 
+            return schema.APIResponse().dump(dict(message="Report generated successfully")), 200
+         except Exception as e:
+            print(str(e))
+            return schema.APIResponse().dump(dict(message="not generated")), 404
+        
+api.add_resource(GenerateOSAD,'/generateOSAD')        
+docs.register(GenerateOSAD)
 
             
