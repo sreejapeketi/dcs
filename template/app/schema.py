@@ -89,5 +89,17 @@ class SDDRequest(Schema):
    purchaser_builder_reg_num=fields.Str(default='')
    purchaser_builder_fulladdress=fields.Str(default='')
 
+class PSRRequest(Schema):
+   agreement_date=fields.Str(default='')
+   parking_amount=fields.Str(default='')
+   effective_date=fields.Str(default='')
+   seller_name=fields.Str(default='')
+   lessor=fields.Str(default='')
+   lessee=fields.Str(default='')
+   parking_adress=fields.Str(default='')
+   payment_method=fields.Str(default='')
+   payment_day=fields.Str(default='')
+   notice_period=fields.Str(default='')
+
 class APIResponse(Schema):
    message=fields.String(default="")

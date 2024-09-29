@@ -25,7 +25,23 @@ class GenerateSDD(MethodResource,Resource):
 api.add_resource(GenerateSDD,'/generateSDD')        
 docs.register(GenerateSDD)
 
-
+class GeneratePSR(MethodResource, Resource):
+    @doc(description="Parking space rental Deed Drafting", tags=['Parking space rental Deed Drafting API'])
+    @use_kwargs(schema.PSRRequest, location=('json'))
+    @marshal_with(schema.APIResponse)
+    def post(self, **kwargs):
+        try:
+            print("generatePSR")
+            parameters=kwargs  
+            db_conn=""
+            utility.generateReport("Parking_space_rental_Deed_Drafting.jrxml","Parking_space_rental_Deed_Drafting",parameters,db_conn) 
+            return schema.APIResponse().dump(dict(message="Report generated successfully")), 200
+        except Exception as e:
+            print(str(e))
+            return schema.APIResponse().dump(dict(message="not generated")), 404
+        
+api.add_resource(GeneratePSR,'/generatePSR')        
+docs.register(GeneratePSR)
 
 
 
