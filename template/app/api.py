@@ -69,10 +69,8 @@ class GenerateHRD(MethodResource,Resource):
                }
 
             )
-            #db_conn=utility.getDbConnection("lessor.json","lessor","purchasers",parameters['sellers'],parameters['purchasers'])
-            #del parameters['sellers']
-            #del parameters['purchasers']
-            utility.generateReport("Renting_in_a_Mall_Drafting_A4.jrxml","Renting_in_a_Mall_Drafting_A4",parameters,db_conn) 
+        
+            utility.generateReport("Renting_in_a_Mall_Drafting_A4.jrxml","Renting_in_a_Mall_Drafting_A4",parameters,db_connection) 
             return schema.APIResponse().dump(dict(message="Report generated successfully")), 200
          except Exception as e:
             print(str(e))
