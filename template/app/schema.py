@@ -11,6 +11,30 @@ class HRDRequest(Schema):
    to=fields.Str(default="1-09-2024")
    monthlyrent=fields.Str(default="30000")
    deposit=fields.Str(default="100000") 
+   #Below Schema is related to renting a mall drafting starting from City to witness2address
+   city=fields.Str(default="city")
+   day_montha=fields.Str(default="day_montha")
+   year=fields.Str(default="year")
+   lessor_list=fields.List(fields.Nested(lessor_list),required=True)
+   leasee_list=fields.List(fields.Nested(leasee_list),required=True)
+   address1=fields.Str(default="address1")
+   address2=fields.Str(default="address2")
+   leasepropertyaddress=fields.Str(default="leasepropertyaddress")
+   leasepropertyarea=fields.Str(default="leasepropertyarea")
+   leaseterm=fields.Str(default="leaseterm")
+   leasedeedstartdate=fields.Str(default="leasedeedstartdate")
+   leasedeedsigndate=fields.Str(default="leasedeedsigndate")
+   leaseamount=fields.Str(default="leaseamount")
+   monthlypaymentdate=fields.Str(default="monthlypaymentdate")
+   twomonths=fields.Str(default="twomonths")
+   onemonth=fields.Str(default="onemonth")
+
+
+   witness1name=fields.Str(default="witness1name")
+   witness2name=fields.Str(default="witness2name")
+   witness1address=fields.Str(default="witness1address")
+   witness2address=fields.Str(default="witness2address")
+
 
 class Seller(Schema):
    seller_name=fields.Str(default='')
@@ -130,6 +154,19 @@ class OSADRequest(Schema):
    witness1=fields.Str(default='')
    witness2=fields.Str(default='')
 
+class lessor_list(Schema):
+   lessorname=fields.Str(default='')
+   lessorfname=fields.Str(default='')
+   lessoraddressline1=fields.Str(default='')
+   lessoraddressline2=fields.Str(default='')
+   lessorcitystatepincode=fields.Str(default='')
+
+class leasee_list(Schema):
+   lesseename=fields.Str(default='')
+   lesseefname=fields.Str(default='')
+   lesseeaddressline1=fields.Str(default='')
+   lesseeaddressline2=fields.Str(default='')
+   lesseecitystatepincode=fields.Str(default='')
 
 class APIResponse(Schema):
    message=fields.String(default="")
