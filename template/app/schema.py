@@ -1,6 +1,19 @@
 from app import *
 from marshmallow import Schema, fields
 
+class lessor_list(Schema):
+   lessorname=fields.Str(default='')
+   lessorfname=fields.Str(default='')
+   lessoraddressline1=fields.Str(default='')
+   lessoraddressline2=fields.Str(default='')
+   lessorcitystatepincode=fields.Str(default='')
+
+class leasee_list(Schema):
+   lesseename=fields.Str(default='')
+   lesseefname=fields.Str(default='')
+   lesseeaddressline1=fields.Str(default='')
+   lesseeaddressline2=fields.Str(default='')
+   lesseecitystatepincode=fields.Str(default='')
 
 class HRDRequest(Schema):
    lname= fields.Str(default="NY")
@@ -154,19 +167,7 @@ class OSADRequest(Schema):
    witness1=fields.Str(default='')
    witness2=fields.Str(default='')
 
-class lessor_list(Schema):
-   lessorname=fields.Str(default='')
-   lessorfname=fields.Str(default='')
-   lessoraddressline1=fields.Str(default='')
-   lessoraddressline2=fields.Str(default='')
-   lessorcitystatepincode=fields.Str(default='')
 
-class leasee_list(Schema):
-   lesseename=fields.Str(default='')
-   lesseefname=fields.Str(default='')
-   lesseeaddressline1=fields.Str(default='')
-   lesseeaddressline2=fields.Str(default='')
-   lesseecitystatepincode=fields.Str(default='')
 
 class APIResponse(Schema):
    message=fields.String(default="")
