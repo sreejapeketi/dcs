@@ -192,7 +192,7 @@ class GenerateOSAD(MethodResource,Resource):
     @marshal_with(schema.APIResponse)
     def post(self ,**kwargs):
          try:
-            print("generateSDD")
+            print("generateOSAD")
             parameters=kwargs  
             db_conn=""
             utility.generateReport("Office_Sharing_Agreement_Drafting.jrxml","Office_Sharing_Agreement_Drafting",parameters,db_conn) 
