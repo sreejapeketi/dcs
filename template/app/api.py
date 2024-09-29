@@ -25,7 +25,11 @@ class GenerateSDD(MethodResource,Resource):
             db_conn=utility.getDbConnection("sellorpurchaser.json","sellers","purchasers",parameters['sellers'],parameters['purchasers'])
             del parameters['sellers']
             del parameters['purchasers']
-            utility.generateReport("Sale_Deed_Drafting.jrxml","Sale_Deed_Drafting",parameters,db_conn) 
+            username=parameters['username']
+            password=parameters['password']  
+            del parameters['username']
+            del parameters['password']
+            utility.generateReport("Sale_Deed_Drafting.jrxml","Sale_Deed_Drafting",parameters,db_conn,username,password) 
             return schema.APIResponse().dump(dict(message="Report generated successfully")), 200
          except Exception as e:
             print(str(e))
