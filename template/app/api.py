@@ -69,15 +69,14 @@ class GenerateHRD(MethodResource,Resource):
                }
 
             )
-            pyreportjasper.process_report()
-            output_file = output_file + '.html'
-            if os.path.isfile(output_file):
-               print('Report generated successfully!')
-          
-            return APIResponse().dump(dict(message="Report generated successfully")), 200
+            #db_conn=utility.getDbConnection("lessor.json","lessor","purchasers",parameters['sellers'],parameters['purchasers'])
+            #del parameters['sellers']
+            #del parameters['purchasers']
+            utility.generateReport("Renting_in_a_Mall_Drafting_A4.jrxml","Renting_in_a_Mall_Drafting_A4",parameters,db_conn) 
+            return schema.APIResponse().dump(dict(message="Report generated successfully")), 200
          except Exception as e:
             print(str(e))
-            return APIResponse().dump(dict(message="not generated")), 404
+            return schema.APIResponse().dump(dict(message="not generated")), 404
 api.add_resource(GenerateHRD,'/generateHRD')        
 docs.register(GenerateHRD)
 
