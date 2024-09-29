@@ -1,0 +1,849 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Renting_Mall_Demo" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="09685ec1-9381-4c57-b6c9-b4f7669d24a3">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Renting_Mall"/>
+	<style name="Table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Dataset1" uuid="05fec8d2-3ced-4e94-9363-a71e488bedfd">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Renting_Mall"/>
+		<queryString language="json">
+			<![CDATA[leasee_list]]>
+		</queryString>
+		<field name="lesseeaddressline1" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="lesseeaddressline1"/>
+			<fieldDescription><![CDATA[lesseeaddressline1]]></fieldDescription>
+		</field>
+		<field name="lesseeaddressline2" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="lesseeaddressline2"/>
+			<fieldDescription><![CDATA[lesseeaddressline2]]></fieldDescription>
+		</field>
+		<field name="lesseecitystatepincode" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="lesseecitystatepincode"/>
+			<fieldDescription><![CDATA[lesseecitystatepincode]]></fieldDescription>
+		</field>
+		<field name="lesseefname" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="lesseefname"/>
+			<fieldDescription><![CDATA[lesseefname]]></fieldDescription>
+		</field>
+		<field name="lesseename" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="lesseename"/>
+			<fieldDescription><![CDATA[lesseename]]></fieldDescription>
+		</field>
+	</subDataset>
+	<subDataset name="Dataset2" uuid="2aae536d-4510-459f-94dd-52554dc108c5">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Renting_Mall"/>
+		<queryString language="json">
+			<![CDATA[leasee_list]]>
+		</queryString>
+		<field name="lesseeaddressline1" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="lesseeaddressline1"/>
+			<fieldDescription><![CDATA[lesseeaddressline1]]></fieldDescription>
+		</field>
+		<field name="lesseeaddressline2" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="lesseeaddressline2"/>
+			<fieldDescription><![CDATA[lesseeaddressline2]]></fieldDescription>
+		</field>
+		<field name="lesseecitystatepincode" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="lesseecitystatepincode"/>
+			<fieldDescription><![CDATA[lesseecitystatepincode]]></fieldDescription>
+		</field>
+		<field name="lesseefname" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="lesseefname"/>
+			<fieldDescription><![CDATA[lesseefname]]></fieldDescription>
+		</field>
+		<field name="lesseename" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="lesseename"/>
+			<fieldDescription><![CDATA[lesseename]]></fieldDescription>
+		</field>
+	</subDataset>
+	<subDataset name="Dataset3" uuid="35a02fac-e88e-4baa-b383-cbb5e7415221">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Renting_Mall"/>
+		<queryString language="json">
+			<![CDATA[lessor_list]]>
+		</queryString>
+		<field name="lessoraddressline1" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="lessoraddressline1"/>
+			<fieldDescription><![CDATA[lessoraddressline1]]></fieldDescription>
+		</field>
+		<field name="lessoraddressline2" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="lessoraddressline2"/>
+			<fieldDescription><![CDATA[lessoraddressline2]]></fieldDescription>
+		</field>
+		<field name="lessorcitystatepincode" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="lessorcitystatepincode"/>
+			<fieldDescription><![CDATA[lessorcitystatepincode]]></fieldDescription>
+		</field>
+		<field name="lessorfname" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="lessorfname"/>
+			<fieldDescription><![CDATA[lessorfname]]></fieldDescription>
+		</field>
+		<field name="lessorname" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="lessorname"/>
+			<fieldDescription><![CDATA[lessorname]]></fieldDescription>
+		</field>
+	</subDataset>
+	<subDataset name="Dataset4" uuid="81429ab8-7564-4387-ae1f-7363cb1c3107">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Renting_Mall"/>
+		<queryString language="json">
+			<![CDATA[lessor_list]]>
+		</queryString>
+		<field name="lessorname" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="lessorname"/>
+			<fieldDescription><![CDATA[lessorname]]></fieldDescription>
+		</field>
+		<field name="lessorfname" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="lessorfname"/>
+			<fieldDescription><![CDATA[lessorfname]]></fieldDescription>
+		</field>
+		<field name="lessoraddressline1" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="lessoraddressline1"/>
+			<fieldDescription><![CDATA[lessoraddressline1]]></fieldDescription>
+		</field>
+		<field name="lessoraddressline2" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="lessoraddressline2"/>
+			<fieldDescription><![CDATA[lessoraddressline2]]></fieldDescription>
+		</field>
+		<field name="lessorcitystatepincode" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="lessorcitystatepincode"/>
+			<fieldDescription><![CDATA[lessorcitystatepincode]]></fieldDescription>
+		</field>
+	</subDataset>
+	<subDataset name="Dataset5" uuid="d0e9b5ae-df38-482d-9a8e-5dc36c2f7072">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Renting_Mall"/>
+		<queryString language="json">
+			<![CDATA[leasee_list]]>
+		</queryString>
+		<field name="lesseename" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="lesseename"/>
+			<fieldDescription><![CDATA[lesseename]]></fieldDescription>
+		</field>
+		<field name="lesseefname" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="lesseefname"/>
+			<fieldDescription><![CDATA[lesseefname]]></fieldDescription>
+		</field>
+		<field name="lesseeaddressline1" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="lesseeaddressline1"/>
+			<fieldDescription><![CDATA[lesseeaddressline1]]></fieldDescription>
+		</field>
+		<field name="lesseeaddressline2" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="lesseeaddressline2"/>
+			<fieldDescription><![CDATA[lesseeaddressline2]]></fieldDescription>
+		</field>
+		<field name="lesseecitystatepincode" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="lesseecitystatepincode"/>
+			<fieldDescription><![CDATA[lesseecitystatepincode]]></fieldDescription>
+		</field>
+	</subDataset>
+	<parameter name="[City]" class="java.lang.String"/>
+	<parameter name="[DayMonth]" class="java.lang.String"/>
+	<parameter name="[Year]" class="java.lang.String"/>
+	<parameter name="[Lessor Name]" class="java.lang.String"/>
+	<parameter name="[Lessor&apos;s Father Name]" class="java.lang.String"/>
+	<parameter name=" [Address1]" class="java.lang.String"/>
+	<parameter name="[Lessee Name]" class="java.lang.String"/>
+	<parameter name="[Lessee’s Father Name]" class="java.lang.String"/>
+	<parameter name="[Address2]" class="java.lang.String"/>
+	<parameter name="[Lease Property Address]" class="java.lang.String"/>
+	<parameter name="[Lease Property Area]" class="java.lang.String"/>
+	<parameter name="[Lease Term in Months or Years]" class="java.lang.String"/>
+	<parameter name="[Lease Deed Start Date]" class="java.lang.String"/>
+	<parameter name="[Lease Deed Signing Date]" class="java.lang.String"/>
+	<parameter name="[Lease Amount Per Month]" class="java.lang.String"/>
+	<parameter name="[Date of Monthly Payment]" class="java.lang.String"/>
+	<parameter name="[two months]" class="java.lang.String"/>
+	<parameter name="[one month]" class="java.lang.String"/>
+	<parameter name="Lessee Name" class="java.lang.String"/>
+	<parameter name="Lessor Name" class="java.lang.String"/>
+	<parameter name="Lessor Address Line 1" class="java.lang.String"/>
+	<parameter name="Lessee Address Line 1" class="java.lang.String"/>
+	<parameter name="Lessor Address Line 2" class="java.lang.String"/>
+	<parameter name="Lessee Address Line 2" class="java.lang.String"/>
+	<parameter name="[City, State Pincode (Lessor)]" class="java.lang.String"/>
+	<parameter name="[City, State, Pincode (Lessee)]" class="java.lang.String"/>
+	<parameter name="Witness 1 Name" class="java.lang.String"/>
+	<parameter name="Witness 2 Name" class="java.lang.String"/>
+	<parameter name="Witness 1 Address" class="java.lang.String"/>
+	<parameter name="Witness 2 Address" class="java.lang.String"/>
+	<queryString language="json">
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="217" splitType="Stretch">
+			<staticText>
+				<reportElement x="100" y="170" width="340" height="31" uuid="b814e71b-4b5d-4f44-86fd-518628bc1ed1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Commercial Property Rental Agreement]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="802" splitType="Immediate">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField>
+				<reportElement x="183" y="19" width="81" height="20" uuid="1e85dc27-a949-479d-b636-a576ae9ca8a7"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA[$P{[City]}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="3" y="20" width="180" height="19" uuid="93f8137f-0ed2-4999-a10d-fbdef7e8acc1"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[THIS INDENTURE of lease is made at]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="263" y="19" width="30" height="20" uuid="4f489a7a-b8a7-46c5-8f54-bf1f86b8c658"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[this]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="293" y="19" width="115" height="20" uuid="0e7eee91-3c29-48d2-93c3-33fc533cb40a"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA[$P{[DayMonth]}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="408" y="20" width="30" height="19" uuid="26064cf0-b3e3-41cc-8eef-b76f121a9b43"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[of]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="489" y="20" width="64" height="19" uuid="d11a5e69-b851-468c-aade-4a88cd67c36b"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[, between]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="103" y="39" width="40" height="19" uuid="83cc1aa9-2145-4800-9bfb-aadaa3e2fa51"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[, Son of]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="438" y="19" width="51" height="20" uuid="47554b2f-52cf-405c-92f9-f8d327cd859b"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA[$P{[Year]}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="3" y="39" width="100" height="20" uuid="83f35df8-83a5-40e4-ac85-72c9b89a7d5a"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA[$P{[Lessor Name]}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="143" y="39" width="70" height="20" uuid="2b3afefc-e824-495f-8362-45015427a969"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA[$P{[Lessor's Father Name]}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="213" y="39" width="50" height="19" uuid="8b846104-92af-4de4-b27a-5ab4cffb857b"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[resident of]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="263" y="39" width="140" height="20" uuid="68528da9-538e-455b-b508-24023b510177"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA[$P{ [Address1]}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="403" y="39" width="150" height="20" uuid="325d965b-a583-49d4-964a-46c41e0d8c72"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[, (hereinafter called “the Lessor”, ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="3" y="58" width="550" height="20" uuid="55730dd2-ac53-405a-af41-66983823a877"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[which expression shall, unless repugnant to the context and meaning include his heirs, successors, administrators and ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="79" width="150" height="20" uuid="e23e78c1-b436-4083-be89-e0d14f1dbf00"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[ assigns) of the ONE PART and]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="152" y="79" width="110" height="20" uuid="723ed0e0-7c10-47ce-87da-bca915faf1c7"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA[$P{[Lessee Name]}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="262" y="79" width="40" height="19" uuid="a10f690e-3b8f-48a2-9933-6685722d9522"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[, Son of]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="302" y="79" width="160" height="20" uuid="293ada01-935d-49be-95fc-41c92e0b2b4b"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA[$P{[Lessee’s Father Name]}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="462" y="79" width="90" height="19" uuid="791ef23b-9e8e-445e-9cf9-9cc774c0433c"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[resident of]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="3" y="100" width="190" height="20" uuid="96341e97-a0ca-4adf-805e-c31c2161e1a9"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA[$P{[Address2]}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="193" y="99" width="360" height="20" uuid="383d5494-c55d-42fa-b2cb-0e482c5109f9"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[, (hereinafter called “the Lessee”, which expression shall, unless repugnant to the]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="3" y="120" width="360" height="19" uuid="dab93008-d37d-48d8-aa8a-bc274d40aac0"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[context and meaning, include its successors and assigns) of the OTHER PART.]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement x="4" y="170" width="543" height="271" uuid="bad2a722-5d84-409b-bb80-7fd572e8be15">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Dataset5" uuid="ead3c29a-4707-4e83-bfa7-8e10f0ffd945">
+						<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("leasee_list")]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="104" uuid="4f5c4411-0534-42d5-9016-df1b0d863022">
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="104" height="30" uuid="05f10c45-9cd2-44ab-b15c-b126db93a3ee"/>
+								<text><![CDATA[lesseename]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="104" height="30" uuid="d7741277-3ed9-4eb8-8d1b-b9a6fcbd5281"/>
+								<textFieldExpression><![CDATA[$F{lesseename}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="104" uuid="4f79b17f-ab17-4425-94e7-b59d06dc5196">
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="104" height="30" uuid="73e4f0ba-9ecf-401c-b909-9cc5fd2d20cc"/>
+								<text><![CDATA[lesseefname]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="104" height="30" uuid="829fce69-8fb2-4db3-8409-da39e85330b9"/>
+								<textFieldExpression><![CDATA[$F{lesseefname}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="104" uuid="47524d61-1390-4bec-8e55-4faad0b92a5f">
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="104" height="30" uuid="b528f96a-4998-4a9a-a7e9-dc7e9b2c3787"/>
+								<text><![CDATA[lesseeaddressline1]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="104" height="30" uuid="81e74b48-9e06-45b2-901c-4bb86d4e2f48"/>
+								<textFieldExpression><![CDATA[$F{lesseeaddressline1}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="104" uuid="86149afe-cd7a-444c-ab27-4b272f747dd5">
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="104" height="30" uuid="40ba3067-a4fb-41ff-8eb8-8ee7d8ff6dd4"/>
+								<text><![CDATA[lesseeaddressline2]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="104" height="30" uuid="142bca41-0f23-47f0-96f5-373437639aad"/>
+								<textFieldExpression><![CDATA[$F{lesseeaddressline2}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="104" uuid="6da43bd5-28b4-4cc0-acea-813c6c56b66d">
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="104" height="30" uuid="98d1a405-6ec1-4702-9466-a9f0b9c66d3d"/>
+								<text><![CDATA[lesseecitystatepincode]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="104" height="30" uuid="1a32ac0e-eb7c-4616-a8e4-70c8b89b5a96"/>
+								<textFieldExpression><![CDATA[$F{lesseecitystatepincode}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<staticText>
+				<reportElement x="5" y="600" width="360" height="19" uuid="e95b7962-21ba-4b03-838a-01e633fe871e"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[Lessor Details]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="150" width="360" height="19" uuid="4f725859-7670-4a3b-926b-874c1dadb3e9"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[Lessee Details]]></text>
+			</staticText>
+		</band>
+		<band height="802">
+			<textField>
+				<reportElement x="300" y="310" width="250" height="20" uuid="96186318-3612-45b2-a432-f1b46c130533"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA[$P{[Lease Property Area]}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="260" width="430" height="20" uuid="0bbd6413-aace-47f9-829d-b78108d85b12"/>
+				<text><![CDATA[NOW THIS DEED WITNESSETH AS FOLLOWS:
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="120" y="410" width="430" height="20" uuid="1859c66b-5678-4548-b4a1-711f28fbe781"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[but determinable earlier as hereinafter provided PAYING therefor unto the Lessor during the said]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="490" y="200" width="60" height="20" uuid="0e8634d3-2136-4a04-bb72-1e3f71f80481"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[square feet.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="300" y="430" width="90" height="20" uuid="55c09e0a-86c7-45e7-9013-0813ab2cfae3"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA[$P{[Date of Monthly Payment]}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="310" width="300" height="20" uuid="9114fbfc-af5e-4e9a-84f4-a7aa167add71"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[DEMISES UNTO THE LESSEE ALL THAT the building situated at]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="300" y="390" width="120" height="20" uuid="1dec420d-39b6-4297-99e9-00c4ba213adb"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA[$P{[Lease Deed Start Date]}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="230" y="430" width="70" height="20" uuid="415d2bef-afe7-4fbd-ae5b-e44b5277b86d"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[payable by the]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="220" width="555" height="20" uuid="2302993a-2ef3-4233-aa92-83e768e0b250"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[AND WHEREAS on the request of the Lessee, the Lessor has agreed to grant lease in respect of the demised premises for]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="450" width="100" height="20" uuid="f1545d5b-97a9-4758-8058-159ba796678a"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[to which it relates. ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="280" width="550" height="30" uuid="898fded9-e4cd-4c07-87f8-83f71d185418"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[1. In pursuance of the said agreement and in consideration of the rent hereby reserved and of the covenants, conditions and stipulations hereinafter contained and on the Lessee’s part to be paid, observed and performed, THE LESSOR HEREBY]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="410" y="201" width="80" height="21" uuid="37e62d91-ac2c-4b7b-b954-eac6ca3addb8"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA[$P{[Lease Property Area]}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="390" y="430" width="160" height="20" uuid="5c1761ce-7026-4d29-96fe-85d89d4af1c6"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[of each succeeding calendar month]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="200" width="320" height="21" uuid="d9ea2a51-e7cb-4b00-8055-a9282b7a00c2"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA[$P{[Lease Property Address]}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="420" y="390" width="130" height="20" uuid="24e53724-8185-4d05-93fa-94894b1b7468"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[and determined on]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="175" y="390" width="125" height="20" uuid="ac4599b5-7aed-4516-b948-1432692eba28"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[only commencing from the]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="120" y="240" width="430" height="20" uuid="686aa0f2-fa73-4a67-99a3-1e2fd054a18f"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[ in the manner hereinafter appearing.
+]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="50" y="241" width="70" height="20" uuid="bd1e9a54-46bf-4fcd-a58d-aada0244a35e"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA[$P{[Lease Term in Months or Years]}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="330" width="550" height="60" uuid="d7a38481-12fa-4e06-84d7-5ee8d1dcea9d"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[and hereinafter called as the demised premises, TOGETHER WITH ALL the fixtures and fitting therein, TOGETHER WITH the electrical installations and together with the right for the Leesse, its employees, servants, agents, customers and persons authorized by the lessor to use the entrances, doorways, entrance hall, staircases, landings and passages in the demised premises for the purpose of ingress thereto, TO HOLD the demised premises unto the Lessee for the period of
+TO HOLD the demised premises unto the Lessee for the period of]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="179" width="550" height="21" uuid="8022d8fe-4ec6-4c03-a850-1bce61906811"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[WHEREAS the lessor is absolutely seized and possessed or otherwise well and sufficiently entitled to the premises at]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="320" y="201" width="90" height="20" uuid="58b5bcd4-2692-4df9-ae62-507cb7e8b442"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[with a total area of]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="110" y="430" width="120" height="20" uuid="c2b68764-a044-494f-b77d-9b825b2ce63b"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA[$P{[Lease Amount Per Month]}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="241" width="50" height="20" uuid="1a7a51f1-51b3-406d-baf5-244132d44465"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[a term of ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="410" width="120" height="20" uuid="4cc2f5a8-3940-484e-a807-b4c28f0bd87e"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA[$P{[Lease Deed Signing Date]}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="390" width="175" height="20" uuid="a1a66ac0-6dd3-45e0-835b-e7597dc284d6"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA[$P{[Lease Term in Months or Years]}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="430" width="110" height="20" uuid="f0fd8e03-b30c-4b04-bdbb-a4ad0028d127"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[term monthly rent of Rs.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="480" width="550" height="320" uuid="20911258-6426-4850-a339-4b6c5b772f26"/>
+				<textElement textAlignment="Left"/>
+				<text><![CDATA[2. The lessee hereby covenants with the lessor as follows:
+a. To pay the rent as aforesaid on the days and in the manner aforesaid.
+b. To pay the electricity bills for the electricity consumed for lighting the demised premises and for operation of air conditioners, fans, computers
+and electrical appliances in the demised premises.
+c. Not to make any structural alterations into or upon the demised premises or make any alterations or additions to the external appearance or any part of the demised premises without the previous consent of the Lessor in writing.
+d. To use the demised premises for office purposes of the Lessee.                                                                                                              e. Not to do or suffer to be done in or upon the demised premises or other parts of the said building in common with other persons anything whatsoever, which may be or become a nuisance or annoyance to or in any way interfere with the quite or comfort of the Lessor or other Lessees and occupiers of the said building.
+f. Not to place or keep or permit to be placed or kept on the demised premises any offensive, dangerous or highly inflammable or explosive material or any other article or things, which may constitute a danger, nuisance or annoyance to the demised or surrounding premises or the owners or occupiers thereof.
+g. Not to sub-let, transfer, assign or part with the possession of the demised premises or any part thereof.
+h. To permit the Lessor, his servants, employees or agents duly authorized by him to enter into and upon the demised premises at all reasonable times for viewing the condition of the demised premises or doing such works or things as may be requisite or necessary for any repairs, alterations, servicing or improvements to the demised premises.
+i. To hand over the peaceful possession of the demised premises at the end or the sooner determination of the said term together with all the Lessors fixtures and fittings in as good condition as received, fair wear and tear, damage by fire, acts of God, riots or other civil unrest, war, enemy action and/or other cause not within the control of the Lessee, being excepted.
+j. Not to obstruct or suffer to be obstructed the entrance hall, entrances, doorways, passages, staircase or lifts.
+k. To replace all broken fittings and fixtures by equally good or better substitutes.
+l. To insure and keep the demised premises insured against loss or damages by fire with an insurance company approved in writing by the Lessor for an amount which shall not be less than]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement x="4" y="-172" width="547" height="341" uuid="b60d900f-c825-4c66-8ede-9dfcd74a6158">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table 1_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table 1_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table 1_TD"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Dataset4" uuid="93197fc6-bf28-4365-9af4-885714045765">
+						<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("lessor_list")]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="100" uuid="89f5b620-c947-4148-8c28-b8673f36a959">
+						<jr:columnHeader style="Table 1_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="100" height="30" uuid="2c60dcbe-8121-4257-9b44-091566d171e8"/>
+								<text><![CDATA[lessorname]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table 1_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="100" height="30" uuid="96322914-7e41-46d3-9d5b-85e0b0f464ca"/>
+								<textFieldExpression><![CDATA[$F{lessorname}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="100" uuid="41b2bedc-d764-4dee-851a-2b7cfffe1bb5">
+						<jr:columnHeader style="Table 1_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="100" height="30" uuid="d55cf076-8515-41c7-9424-e22eea6bf7c2"/>
+								<text><![CDATA[lessorfname]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table 1_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="100" height="30" uuid="009b4663-6bed-42a4-8b02-3df16e416a4d"/>
+								<textFieldExpression><![CDATA[$F{lessorfname}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="120" uuid="720c9fc9-8823-487b-bbd5-583ae9486442">
+						<jr:columnHeader style="Table 1_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="120" height="30" uuid="fb5593bd-f58b-4d27-bf82-b4bf41157b1a"/>
+								<text><![CDATA[lessoraddressline1]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table 1_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="120" height="30" uuid="4f913ca2-0123-4427-8e35-1da789b0238c"/>
+								<textFieldExpression><![CDATA[$F{lessoraddressline1}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="110" uuid="c39c4e1f-f5f7-4074-93de-d8519da723d0">
+						<jr:columnHeader style="Table 1_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="110" height="30" uuid="537b7291-1505-4ad2-91cc-169614b9713e"/>
+								<text><![CDATA[lessoraddressline2]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table 1_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="110" height="30" uuid="9ed32d19-c421-4cc3-8a64-a15761c15d85"/>
+								<textFieldExpression><![CDATA[$F{lessoraddressline2}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="eb4e4c1d-50cd-44cd-b0d8-cdfc7fdcbc50">
+						<jr:columnHeader style="Table 1_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="d88b8316-c2b0-4bc0-9a52-fdfe9e45153d"/>
+								<text><![CDATA[lessorcitystatepincode]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table 1_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="30" uuid="c7a6fc5d-ce92-4d61-a246-580410b23588"/>
+								<textFieldExpression><![CDATA[$F{lessorcitystatepincode}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+		<band height="767">
+			<staticText>
+				<reportElement x="1" y="30" width="550" height="140" uuid="c7a82c73-c22b-43c0-b570-2bf209d3a494"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[3. To Lessor doth hereby covenant with the Lessee as follows:
+a. That on the Lessee paying the rent on the due dates thereof and in the manner herein provided and observing and performing the convents, conditions and stipulations herein contained and on his part to be observed and performed, shall peaceably and quietly hold, possess and enjoy the demised premises during the term without any interruption, disturbance, claim and demand by the Lessor or any person lawfully claiming under or trust for the Lessor.
+b. To keep the interior, exterior of the demised premises, the drainage thereof in good and tenable repair and condition.
+c. To keep the entrance, doorways, entrance halls, staircases, lobbies and passages in the said building leading to demised premises well and sufficiently cleaned and lighted at his own expense.
+d. To pay rates, taxes, assessment, duties, cess, impositions, outgoings and
+burdens whatsoever payable to State or local or other authority, which may at any time or from time to time during the term hereby created be imposed or charged upon the demised premises.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="348" y="430" width="79" height="20" uuid="35d94825-ab0c-46de-bf45-048f0dc431fc"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA[$P{[one month]}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="360" y="200" width="80" height="20" uuid="459cf0bb-8ff4-4bd7-a3fa-ef0cc14181c8"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA[$P{[two months]}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="180" width="550" height="20" uuid="8168ec33-da9e-41d5-9b42-013aff44caa5"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[4. It is hereby agreed and declared that these presents are on the express condition, that if the rent or any part thereof]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="452" width="548" height="30" uuid="77da69df-124b-415b-80b0-989d6dcda58b"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[discharge and carry out the same at its own cost and the Lessee may set off the same from the rent payable to the Lessor under these presents.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="421" y="430" width="118" height="20" uuid="d0ecf993-507d-49bc-a231-aed004ac8798"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[ notice in writing, pay,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="350" width="550" height="80" uuid="e3fd8f55-5991-4cc1-bb9e-d57e5da65eff"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[IT IS HEREBY EXPRESSLY AGREED BETWEEN THE PARTIES AS FOLLOWS:
+a. The lessee shall be entitled to erect fittings, fixtures, wooden partitions, cabins or make any such additions or alterations, as may be necessary for its use by the Lessee; provided that the lessee shall remove the said fittings, fixtures, wooden partitions, cabins, additions or alterations and restore the demised premises to the Lessor on the expiry of the term of sooner ermination of the lease in the same condition as existed before making such changes.
+b. If the lessor fails to pay the taxes, charges, assessments payable by him, or fails to carry out the necessary repairs and]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="220" width="548" height="20" uuid="d9195d0b-a0c4-4186-99ab-de4cb7548f07"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[omit to perform or observe any covenants or conditions on the Lessee’s part herein contained, the Lessor may re-enter]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="240" width="458" height="20" uuid="f78aeb8c-fa04-44a1-ba6c-ef85b4400ab6"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[upon the demised premises provided that the Lessor has served a notice to the Lessee and a period of ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="3" y="482" width="548" height="40" uuid="584ffc06-c40a-491e-b21a-2a3dc76e93ef"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[IN WITNESS WHEREOF, the Lessor has set its hands unto these presents and a duplicate hereof and the Lessee has caused its common seal to be affixed hereunder and a duplicate hereof on the day, month and year first herein above written.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="290" width="550" height="60" uuid="8450edb5-3a08-4b01-a807-17f067c3691e"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[5. This Lease Deed shall be executed in duplicate. The original shall be retained by the Lessor and the duplicate by the Lessee.
+6. The marginal notes and the catch lines hereto are meant only for convenience of references and shall not in any way be taken into account in the interpretation of there presents. ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="460" y="240" width="89" height="20" uuid="5a298aba-6182-4296-81f1-71369bb9c515"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA[$P{[one month]}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="2" y="200" width="358" height="20" uuid="adafe766-96cc-45df-acb3-caf199ea3ea7"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[payable in respect of the demised premises shall be in arrears for a period of ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="440" y="200" width="110" height="20" uuid="68910e48-8bec-4c5f-a5dd-d2812d7bfd5d"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[or by if the Lessee shall]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="260" width="550" height="30" uuid="8d1b9fc4-946a-4025-8eb1-fdcdf80d6aa2"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[has elapsed after the issue of such notice, the Lessee does not pay the rent or does not perform or observe the covenant or condition and thereupon this demise and all rights of the Lessee hereunder shall determined.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="432" width="348" height="20" uuid="d3ba1d0d-9834-4586-abc2-87ae5d6af72f"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[other work which he has to carry out as provided herein, the Lessee may after]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="359" y="610" width="159" height="20" uuid="d81fed26-5a81-45f5-b613-98126e0f6698"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA[$P{[City, State, Pincode (Lessee)]}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="10" y="550" width="159" height="20" uuid="e6385421-6d45-41b0-80d6-3d2ba066fc1e"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA[$P{Lessor Name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="9" y="530" width="118" height="20" uuid="642aa0ff-b8eb-447c-8a75-4adb45d23a83"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[For Lessor,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="640" width="118" height="20" uuid="f2a4aa6f-0c5f-4fbe-bcfa-15e639fc6f98"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[Witness 1:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="11" y="690" width="159" height="20" uuid="fba01ae7-ab3f-4241-9141-22a722916837"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA[$P{Witness 1 Address}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="358" y="530" width="118" height="20" uuid="95a68704-f755-419d-b566-156abf14ccf9"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[For Lessee,]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="359" y="670" width="159" height="20" uuid="cbb3d7f3-dce3-4e77-9c4a-2cf54ead0edd"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA[$P{Witness 2 Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="359" y="590" width="159" height="20" uuid="9541ed7c-a4cd-4613-8f13-abd1ee850139"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA[$P{Lessee Address Line 2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="359" y="570" width="159" height="20" uuid="0fc8ca99-ba28-48b0-935e-55b1b5ceee12"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA[$P{Lessee Address Line 1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="360" y="690" width="159" height="20" uuid="236837aa-c4c6-4f8c-a8b8-689d5271a1b1"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA[$P{Witness 2 Address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="358" y="550" width="159" height="20" uuid="86bc308a-d790-48c3-b69e-bafe1b48c9e2"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA[$P{Lessee Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="10" y="570" width="159" height="20" uuid="019594da-321d-4ea2-82e1-b17a927809f7"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA[$P{Lessor Address Line 1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="8" y="590" width="159" height="20" uuid="9566c20c-66cb-444c-8f5c-b3609b78d943"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA[$P{Lessor Address Line 2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="11" y="670" width="159" height="20" uuid="874b23e1-e65c-47cc-ad80-c9a32381c5fd"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA[$P{Witness 1 Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="8" y="610" width="159" height="20" uuid="786f0e3c-3029-44e6-9a5a-14cd622d0f62"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA[$P{[City, State Pincode (Lessor)]}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="359" y="640" width="118" height="20" uuid="fd6c926b-3bad-4397-b275-06d4565f09ce"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[Witness 2:
+]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>
