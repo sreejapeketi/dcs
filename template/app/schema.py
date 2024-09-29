@@ -66,6 +66,8 @@ class Purchaser(Schema):
    purchaser_address=fields.Str(default='')
    
 class SDDRequest(Schema):
+   username=fields.Str(default='')
+   password=fields.Str(default='')
    day=fields.Str(default='')
    month=fields.Str(default='')
    year=fields.Str(default='')

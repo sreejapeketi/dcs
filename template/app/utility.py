@@ -1,5 +1,6 @@
 import json
 import os
+import requests
 from pyreportjasper import PyReportJasper
 
 
@@ -7,7 +8,7 @@ RESOURCES_DIR = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'resour
 REPORTS_DIR = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'reports')
 
 
-def generateReport(input_file,output_file,param,db_connection):
+def generateReport(input_file,output_file,param,db_connection,username,password):
     try:
         input_file = os.path.join(REPORTS_DIR, input_file)
         output_file = os.path.join(REPORTS_DIR, output_file)
@@ -23,6 +24,19 @@ def generateReport(input_file,output_file,param,db_connection):
         output_file = output_file + '.pdf'
         if os.path.isfile(output_file):
             print('Report generated successfully!')
+            # Transfer the report to 
+            print(type(output_file))
+            try:
+                with open(output_file, "rb") as file :
+                    print(type(file))
+                    response = requests.post(url="http://35.169.208.96:8000/api/document-management/upload/",files={"file":file},data={"username":"richa","password":"password"})
+                    print(response.status_code)
+                    data=response.json()
+                    print(data['docnum'])
+            except FileNotFoundError:
+                print("The file was not found.")
+            except requests.exceptions.RequestException as e:
+                print("There was an exception that occurred while handling your request.", e)
     except Exception as e:
         print(str(e))
         raise e
