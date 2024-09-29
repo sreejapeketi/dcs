@@ -62,6 +62,50 @@ class GenerateHRD(MethodResource,Resource):
             witness2name=kwargs['witness2name']
             witness1address=kwargs['witness1address']
             witness2address=kwargs['witness2address']
+
+            json_file = os.path.join(RESOURCES_DIR, 'lessor.json')
+            f = open(json_file, "w")
+            f.write("{ \"lessor_list\" : "+json.dumps(lessor_list)+", \"leasee_list\" :"+json.dumps(leasee_list)+"}")
+            f.close()
+
+            input_file = os.path.join(REPORTS_DIR, 'Renting_in_a_Mall_Drafting_A4.jrxml')
+            output_file = os.path.join(REPORTS_DIR, 'Renting_in_a_Mall_Drafting_A4')
+            pyreportjasper = PyReportJasper()
+            pyreportjasper.config(
+            input_file,
+            output_file,
+            output_formats=["html"],
+            parameters={
+               "[City]":city,
+               "[DayMonth]":day_montha,
+               "[Year]":year,
+               #"[Lessor Name]":lessorname,
+               #"[Lessor&apos;s Father Name]":lessorfname,
+               "[Address1]":address1,
+               #"[Lessee Name]":lesseename,
+               #"[Lessee’s Father Name]":lesseefname,
+               "[Address2]":address2,
+               "[Lease Property Address]":leasepropertyaddress,
+               "[Lease Property Area]":leasepropertyarea,
+               "[Lease Term in Months or Years]":leaseterm,
+               "[Lease Deed Start Date]":leasedeedstartdate,
+               "[Lease Deed Signing Date]":leasedeedsigndate,
+               "[Lease Amount Per Month]":leaseamount,
+               "[Date of Monthly Payment]":monthlypaymentdate,
+               "[two months]":twomonths,
+               "[one month]":onemonth,
+               #"Lessor Address Line 1":lessoraddressline1,
+               #"Lessee Address Line 1":lesseeaddressline2,
+               #"Lessor Address Line 2":lessoraddressline2,
+               #"Lessee Address Line 2":lesseeaddressline2,
+               #"[City, State Pincode (Lessor)]":lessorcitystatepincode,
+               #"[City, State, Pincode (Lessee)]":lesseecitystatepincode,
+               "Witness 1 Name":witness1name,
+               "Witness 2 Name":witness2name,
+               "Witness 1 Address":witness1address,
+               "Witness 2 Address":witness2address,
+               },
+                
             db_connection={
                'driver': 'json',
                'data_file': os.path.join(RESOURCES_DIR, 'lessor.json')
