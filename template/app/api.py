@@ -171,7 +171,7 @@ class GenerateHRD(MethodResource,Resource):
 api.add_resource(GenerateHRD,'/generateHRD')        
 docs.register(GenerateHRD)
 
-
+#Car Parking Drafting
 class GeneratePSR(MethodResource, Resource):
     @doc(description="Parking space rental Deed Drafting", tags=['Parking space rental Deed Drafting API'])
     @use_kwargs(schema.PSRRequest, location=('json'))
@@ -205,6 +205,10 @@ class GenerateOSAD(MethodResource,Resource):
             print(str(e))
             return schema.APIResponse().dump(dict(message="not generated")), 404
 
+api.add_resource(GenerateOSAD,'/generateOSAD')        
+docs.register(GenerateOSAD)
+
+#One And The Same Person Affidavit
 class GenerateSPA(MethodResource, Resource):
     @doc(description="One And The Same Person Affidavit Drafting", tags=['One And The Same Person Affidavit Drafting API'])
     @use_kwargs(schema.SPARequest, location=('json'))
@@ -223,7 +227,24 @@ class GenerateSPA(MethodResource, Resource):
 api.add_resource(GenerateSPA,'/generateSPA')        
 docs.register(GenerateSPA)
 
-api.add_resource(GenerateOSAD,'/generateOSAD')        
-docs.register(GenerateOSAD)
 
+#Adress Proof Affidavit
+class GenerateAPA(MethodResource, Resource):
+    @doc(description="Address Proof Affidavit Drafting", tags=['Address Proof Affidavit Drafting API'])
+    @use_kwargs(schema.APARequest, location=('json'))
+    @marshal_with(schema.APIResponse)
+    def post(self, **kwargs):
+        try:
+            print("generateAPA")
+            parameters=kwargs  
+            db_conn=""
+         
+            utility.generateReport("Address_Proof_Affidavit_Drafting.jrxml","Address_Proof_Affidavit_Drafting",parameters,db_conn) 
+            return schema.APIResponse().dump(dict(message="Report generated successfully")), 200
+        except Exception as e:
+            print(str(e))
+            return schema.APIResponse().dump(dict(message="not generated")), 404
+        
+api.add_resource(GenerateAPA,'/generateAPA')        
+docs.register(GenerateAPA)
             
