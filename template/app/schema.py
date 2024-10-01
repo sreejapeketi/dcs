@@ -218,6 +218,31 @@ class CNMARequest(Schema):
    affidavit_date=fields.Str(default='')
    adress_line1=fields.Str(default='')
    city=fields.Str(default='')
+   
+class licensor(Schema):
+   licensor=fields.Str(default='')
+   licensor_address=fields.Str(default='')
+
+class licensee(Schema):
+   licensee=fields.Str(default='')
+   licensee_address=fields.Str(default='')
+   
+class LLARequest(Schema):
+    location = fields.Str(default="")
+    day = fields.Str(default="")
+    month = fields.Str(dafault="")
+    licensors = fields.List(fields.Nested(licensor),required=True)
+    licensees = fields.List(fields.Nested(licensee),required=True)
+    licensed_premise = fields.Str(default="")
+    period = fields.Str(default="")
+    deposit_amount = fields.Str(default="")
+    license_fee = fields.Str(default="")
+    purpose = fields.Str(default="")
+    licensor_address = fields.Str(default="")
+    licensee_address = fields.Str(default="")
+    license_fee_in_words = fields.Str(default="")
+    witness1 = fields.Str(default="")
+    witness2 = fields.Str(default="")
 
 class APIResponse(Schema):
    message=fields.String(default="")
