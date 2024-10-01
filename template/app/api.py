@@ -249,9 +249,26 @@ class GenerateAPA(MethodResource, Resource):
 api.add_resource(GenerateAPA,'/generateAPA')        
 docs.register(GenerateAPA)
 
+
+# Affidavit For Change Of Name Of Minor Drafting
+class GenerateCNMA(MethodResource, Resource):
+    @doc(description="Change Of Name Of Minor Affidavit Drafting", tags=['Change Of Name Of Minor Affidavit Drafting  API'])
+    @use_kwargs(schema.CNMARequest, location=('json'))
+    @marshal_with(schema.APIResponse)
+    def post(self, **kwargs):
+        try:
+            print("generateCNMAA")
+            parameters=kwargs  
+            db_conn=""
+         
+            utility.generateReport("Change_Of_Name_Of_Minor_Affidavit_Drafting .jrxml","Change_Of_Name_Of_Minor_Affidavit_Drafting ",parameters,db_conn) 
+            return schema.APIResponse().dump(dict(message="Report generated successfully")), 200
+        except Exception as e:
+            print(str(e))
+            return schema.APIResponse().dump(dict(message="not generated")), 404
         
-api.add_resource(GenerateOSAD,'/generateOSAD')        
-docs.register(GenerateOSAD)
+api.add_resource(GenerateCNMA,'/generateCNMA')        
+docs.register(GenerateCNMA)
 
 
             
