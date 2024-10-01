@@ -130,7 +130,7 @@ class SDDRequest(Schema):
 
 
 
-
+#Parking Space Rental Deed
 class PSRRequest(Schema):
    agreement_date=fields.Str(default='')
    parking_amount=fields.Str(default='')
@@ -201,6 +201,23 @@ class APARequest(Schema):
    adress_line1=fields.Str(default='')
    city=fields.Str(default='')
 
+# Affidavit For Change Of Name Of Minor Drafting
+class CNMARequest(Schema):
+   notary_public=fields.Str(default='')
+   notary_country=fields.Str(default='')
+   notary_state=fields.Str(default='')
+   minor_newname=fields.Str(default='')
+   minor_oldname=fields.Str(default='')
+   guardian_name=fields.Str(default='')
+   guardian_age=fields.Str(default='')
+   state=fields.Str(default='')
+   minor_dob=fields.Str(default='')
+   reason=fields.Str(default='')
+   minor_pob=fields.Str(default='')
+   zip_code=fields.Str(default='')
+   affidavit_date=fields.Str(default='')
+   adress_line1=fields.Str(default='')
+   city=fields.Str(default='')
 
 class APIResponse(Schema):
    message=fields.String(default="")
