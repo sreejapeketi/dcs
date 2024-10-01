@@ -261,7 +261,7 @@ class GenerateCNMA(MethodResource, Resource):
             parameters=kwargs  
             db_conn=""
          
-            utility.generateReport("Change_Of_Name_Of_Minor_Affidavit_Drafting .jrxml","Change_Of_Name_Of_Minor_Affidavit_Drafting ",parameters,db_conn) 
+            utility.generateReport("Change_Of_Name_Of_Minor_Affidavit_Drafting.jrxml","Change_Of_Name_Of_Minor_Affidavit_Drafting",parameters,db_conn) 
             return schema.APIResponse().dump(dict(message="Report generated successfully")), 200
         except Exception as e:
             print(str(e))
