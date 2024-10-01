@@ -218,7 +218,22 @@ class CNMARequest(Schema):
    affidavit_date=fields.Str(default='')
    adress_line1=fields.Str(default='')
    city=fields.Str(default='')
-   
+
+#Proof Of Date Of Birth Affidavit Drafting
+class DOBARequest(Schema):
+   tob=fields.Str(default='')
+   name_real=fields.Str(default='')
+   document_2=fields.Str(default='')
+   document_1=fields.Str(default='')
+   hospital=fields.Str(default='')
+   dob=fields.Str(default='')
+   father_name=fields.Str(default='')
+   mother_name=fields.Str(default='')
+   adress=fields.Str(default='')
+   verification_day=fields.Str(default='')
+   relation=fields.Str(default='')
+   verification_city=fields.Str(default='')
+
 class licensor(Schema):
    licensor=fields.Str(default='')
    licensor_address=fields.Str(default='')
