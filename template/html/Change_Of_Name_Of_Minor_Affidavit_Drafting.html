@@ -1,0 +1,281 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+  <title></title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <style type="text/css">
+    a {text-decoration: none}
+  </style>
+</head>
+<script>
+
+    window.addEventListener("DOMContentLoaded", (event) => {
+    const el = document.getElementById('myform');
+    if (el) {
+      el.addEventListener('submit', async function(event) {
+      event.preventDefault(); // Prevent the default form submission
+    
+      const form = event.target;
+      const formData = new FormData(form);
+    
+        // Convert FormData to JSON
+      const jsonData = {};
+      formData.forEach((value, key) => {
+      jsonData[key] = value;
+      
+      }
+      );
+      try {
+      const response =await fetch('http://127.0.0.1:5000/generateCNMA', {
+        method: "POST",
+        mode:"cors",
+        headers: {
+      "Content-Type": "application/json",
+    "accept": "application/json"
+    
+    
+    
+    
+    },
+    
+        body: JSON.stringify(jsonData)
+      })
+      if(response.ok){
+        //parent.document.getElementById("preview").style.visibility="visible";
+        const targetFrame=window.parent.document.getElementById('preview').contentWindow;
+        targetFrame.postMessage('changeStyle', '*');
+      }
+          } catch (error) {
+        console.error('Error:', error);
+          }
+      });
+    }
+    });
+    </script>
+<body text="#000000" link="#000000" alink="#000000" vlink="#000000"><form id= "myform" method="POST">
+<table role="none" width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr><td width="50%">&nbsp;</td><td align="center">
+
+<table id="JR_PAGE_ANCHOR_0_1" role="none" class="jrPage" data-jr-height="842" cellpadding="0" cellspacing="0" border="0" style="empty-cells: show; width: 595px; border-collapse: collapse; background-color: white;">
+<style type="text/css">
+  #JR_PAGE_ANCHOR_0_1 th {font-weight: normal;}
+  #JR_PAGE_ANCHOR_0_1 ul {list-style-type: disc; padding-inline-start: 40px; margin: 0px;}
+  #JR_PAGE_ANCHOR_0_1 ol {list-style-type: decimal; padding-inline-start: 40px; margin: 0px;}
+</style>
+<tr role="none" valign="top" style="height:0">
+<td style="width:23px"></td>
+<td style="width:3px"></td>
+<td style="width:4px"></td>
+<td style="width:540px"></td>
+<td style="width:3px"></td>
+<td style="width:22px"></td>
+</tr>
+<tr valign="top" style="height:30px">
+<td colspan="6">
+</td>
+</tr>
+<tr valign="top" style="height:80px">
+<td colspan="3">
+</td>
+<td style="text-indent: 0px; text-align: center;">
+<span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 26px; line-height: 1.2578125; font-weight: bold;">AFFIDAVIT OF NAME CHANGE OF MINOR</span></td>
+<td colspan="2">
+</td>
+</tr>
+<tr valign="top" style="height:14px">
+<td colspan="6">
+</td>
+</tr>
+<tr valign="top" style="height:210px">
+<td>
+</td>
+<td colspan="3" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 18px; line-height: 1.2578125;"><input type="text" id="guardian_name" name="guardian_name" placeholder="Guardian Name" required><br/><input type="text" id="adress_line1" name="adress_line1" placeholder="Adress Line 1" required><br/><input type="text" id="city" name="city" placeholder="City" required>, <input type="text" id="state" name="state" placeholder="State" required><br/><input type="text" id="zip_code" name="zip_code" placeholder="Zip Code" required><br/><br/><input type="text" id="affidavit_date" name="affidavit_date" placeholder="Affidavit Date" required><br/><br/><br/>To Whom This May Concern,</span></td>
+<td colspan="2">
+</td>
+</tr>
+<tr valign="top" style="height:20px">
+<td colspan="6">
+</td>
+</tr>
+<tr valign="top" style="height:466px">
+<td colspan="2">
+</td>
+<td colspan="3" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 18px; line-height: 1.2578125;">I, <input type="text" disabled>, aged <input type="text" id="guardian_age" name="guardian_age" placeholder="Guardian age" required>, residing at above mentioned address, do hereby solemnly affirm and declare as follows:<br/><br/>1. That I am the natural guardian of the minor child, <input type="text" id="minor_oldname" name="minor_oldname" placeholder="Minor Old Name" required>, born on <input type="text" id="minor_dob" name="minor_dob" placeholder="Minor DOB" required> at <input type="text" id="minor_pob" name="minor_pob" placeholder="Minor Place of Birth" required><br/>2. That for reasons of <input type="text" id="reason" name="reason" placeholder="Reason" required>, it is necessary to change the name of the minor from <input type="text" disabled> to <input type="text" id="minor_newname" name="minor_newname" placeholder="Minor New Name" required>.<br/>3. That henceforth, for all legal and official purposes, the minor shall be known by the name <input type="text" disabled>.<br/>4. That this affidavit is made for the purpose of registering the change of name of the minor child and for all other lawful purposes.<br/>5. That the contents of this affidavit are true to the best of my knowledge.<br/><br/>Sincerely,<br/><br/>______________________</span></td>
+<td>
+</td>
+</tr>
+<tr valign="top" style="height:22px">
+<td colspan="6">
+</td>
+</tr>
+</table>
+<br/>
+<br/>
+
+<table id="JR_PAGE_ANCHOR_0_2" role="none" class="jrPage" data-jr-height="842" cellpadding="0" cellspacing="0" border="0" style="empty-cells: show; width: 595px; border-collapse: collapse; background-color: white;">
+<style type="text/css">
+  #JR_PAGE_ANCHOR_0_2 th {font-weight: normal;}
+  #JR_PAGE_ANCHOR_0_2 ul {list-style-type: disc; padding-inline-start: 40px; margin: 0px;}
+  #JR_PAGE_ANCHOR_0_2 ol {list-style-type: decimal; padding-inline-start: 40px; margin: 0px;}
+</style>
+<tr role="none" valign="top" style="height:0">
+<td style="width:20px"></td>
+<td style="width:1px"></td>
+<td style="width:2px"></td>
+<td style="width:7px"></td>
+<td style="width:180px"></td>
+<td style="width:64px"></td>
+<td style="width:46px"></td>
+<td style="width:1px"></td>
+<td style="width:39px"></td>
+<td style="width:190px"></td>
+<td style="width:22px"></td>
+<td style="width:2px"></td>
+<td style="width:21px"></td>
+</tr>
+<tr valign="top" style="height:102px">
+<td colspan="13">
+</td>
+</tr>
+<tr valign="top" style="height:80px">
+<td>
+</td>
+<td colspan="10">
+<div style="width: 100%; height: 100%; position: relative;">
+<div style="position: absolute; overflow: hidden; width: 100%; height: 100%; ">
+<table cellpadding="0" cellspacing="0" border="0" style="empty-cells: show; width: 100%; border-collapse: collapse;">
+<tr role="none" valign="top" style="height:0">
+<td style="width:1px"></td>
+<td style="width:551px"></td>
+</tr>
+<tr valign="top" style="height:28px">
+<td colspan="2">
+</td>
+</tr>
+<tr valign="top" style="height:51px">
+<td>
+</td>
+<td style="pointer-events: auto; background-color: #FFFFFF; border: 1px solid #000000; ">
+</td>
+</tr>
+</table>
+</div>
+<div style="position: relative; width: 100%; height: 100%; pointer-events: none; ">
+<table cellpadding="0" cellspacing="0" border="0" style="empty-cells: show; width: 100%; border-collapse: collapse;">
+<tr role="none" valign="top" style="height:0">
+<td style="width:10px"></td>
+<td style="width:290px"></td>
+<td style="width:244px"></td>
+<td style="width:8px"></td>
+</tr>
+<tr valign="top" style="height:30px">
+<td colspan="2" style="pointer-events: auto; text-indent: 0px; text-align: justify;">
+<span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 18px; line-height: 1.2578125; font-weight: bold;">Notary Acknowledgment</span></td>
+<td colspan="2">
+</td>
+</tr>
+<tr valign="top" style="height:50px">
+<td>
+</td>
+<td colspan="2" style="pointer-events: auto; text-indent: 0px; text-align: justify;">
+<span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 12px; line-height: 1.2578125;">A Notary Public or other officer completing this certificate verifies only the identity of the individual who signed the document to which this certificate is attached, and not the truthfulness, accuracy, or validity of that document.</span></td>
+<td>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</td>
+<td colspan="2">
+</td>
+</tr>
+<tr valign="top" style="height:7px">
+<td colspan="13">
+</td>
+</tr>
+<tr valign="top" style="height:30px">
+<td>
+</td>
+<td colspan="6" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 18px; line-height: 1.2578125;">State of  <input type="text" id="notary_state" name="notary_state" placeholder="Notary State" required></span></td>
+<td colspan="6">
+</td>
+</tr>
+<tr valign="top" style="height:30px">
+<td colspan="2">
+</td>
+<td colspan="6" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 18px; line-height: 1.2578125;">Country of <input type="text" id="notary_country" name="notary_country" placeholder="Notary Country" required></span></td>
+<td colspan="5">
+</td>
+</tr>
+<tr valign="top" style="height:20px">
+<td colspan="13">
+</td>
+</tr>
+<tr valign="top" style="height:280px">
+<td colspan="3">
+</td>
+<td colspan="9" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 18px; line-height: 1.2578125;">On 10/06/2024, before me, <input type="text" id="notary_public" name="notary_public" placeholder="Notary Public" required>, Notary Public, personally appeared <input type="text" disabled> who proved to me on the basic of satisfactory evidence to be the person(s) whose name(s) is/are subscribed to the within instrument and acknowledged to me that he/she/they executed the same in his/her/their authorized capacity(ies), and that by his/her/their signature(s) on the instrument the person(s), or the entity upon behalf of which the person(s) acted, executed the instrument.<br/><br/>I certify under PENALTY OF PERJURY under the laws of in the State of <input type="text" disabled> that the foregoing paragraph is true and correct.</span></td>
+<td>
+</td>
+</tr>
+<tr valign="top" style="height:30px">
+<td colspan="6">
+</td>
+<td colspan="6" style="text-indent: 0px; text-align: right;">
+<span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 18px; line-height: 1.2578125;">WITNESS my hand and official seal</span></td>
+<td>
+</td>
+</tr>
+<tr valign="top" style="height:20px">
+<td colspan="13">
+</td>
+</tr>
+<tr valign="top" style="height:30px">
+<td colspan="6">
+</td>
+<td colspan="6" style="text-indent: 0px; text-align: right;">
+<span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 18px; line-height: 1.2578125;">Signature_________________</span></td>
+<td>
+</td>
+</tr>
+<tr valign="top" style="height:10px">
+<td colspan="4">
+</td>
+<td rowspan="2" style="text-indent: 0px; text-align: center;">
+<span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #877373; font-size: 11px; line-height: 1.2578125;">Place Notary Seal Above</span></td>
+<td colspan="8">
+</td>
+</tr>
+<tr valign="top" style="height:20px">
+<td colspan="4">
+</td>
+<td colspan="4">
+</td>
+<td rowspan="2" style="text-indent: 0px; text-align: right;">
+<span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 18px; line-height: 1.2578125;"><input type="text" disabled></span></td>
+<td colspan="3">
+</td>
+</tr>
+<tr valign="top" style="height:10px">
+<td colspan="9">
+</td>
+<td colspan="3">
+</td>
+</tr>
+<tr valign="top" style="height:173px">
+<td colspan="13">
+</td>
+</tr>
+</table>
+<div style="text-align: center; margin-top: 50px;">
+    <input type="submit" value="Submit Affidavit" style="font-size: 20px; padding: 10px 20px;">
+  </div>
+</td><td width="50%">&nbsp;</td></tr>
+</table></form> 
+</body>
+</html>
