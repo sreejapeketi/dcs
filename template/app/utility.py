@@ -40,6 +40,28 @@ def generateReport(input_file,output_file,param,db_connection,username,password)
     except Exception as e:
         print(str(e))
         raise e
+
+def generateReport(input_file,output_file,param,db_connection):
+    try:
+        input_file = os.path.join(REPORTS_DIR, input_file)
+        output_file = os.path.join(REPORTS_DIR, output_file)
+        pyreportjasper = PyReportJasper()
+        pyreportjasper.config(
+        input_file,
+        output_file,
+        output_formats=["pdf"],
+        parameters= param,
+        db_connection=db_connection)
+            
+        pyreportjasper.process_report()
+        output_file = output_file + '.pdf'
+        if os.path.isfile(output_file):
+            print('Report generated successfully!')
+            # Transfer the report to 
+            print(type(output_file))
+    except Exception as e:
+        print(str(e))
+        raise e    
     
 def getDbConnection(filename,party1key,party2key,listofparty1,listofparty2):
     json_file = os.path.join(RESOURCES_DIR, filename)

@@ -270,5 +270,26 @@ class GenerateCNMA(MethodResource, Resource):
 api.add_resource(GenerateCNMA,'/generateCNMA')        
 docs.register(GenerateCNMA)
 
+class GenerateLLA(MethodResource, Resource):
+    @doc(description="Leave & License Agreement", tags=['Leave License Agreement API'])
+    @use_kwargs(schema.LLARequest, location=('json'))
+    @marshal_with(schema.APIResponse)
+    def post(self, **kwargs):
+       try:
+          print("generateLLA")
+          parameters=kwargs  
+          db_conn=utility.getDbConnection("json_request.json","licensors","licensees",parameters['licensors'],parameters['licensees'])
+          del parameters['licensors']
+          del parameters['licensees']
+          utility.generateReport("leave_license_agrmt.jrxml","Leave_and_License_Agreement",parameters,db_conn) 
+          return schema.APIResponse().dump(dict(message="Report generated successfully")), 200
+       except Exception as e:
+          print(str(e))
+          return schema.APIResponse().dump(dict(message="not generated")), 404
+
+
+api.add_resource(GenerateLLA, '/generateLLA')
+docs.register(GenerateLLA)
+
 
             
