@@ -171,7 +171,7 @@ class GenerateHRD(MethodResource,Resource):
 api.add_resource(GenerateHRD,'/generateHRD')        
 docs.register(GenerateHRD)
 
-#Car Parking Drafting
+
 class GeneratePSR(MethodResource, Resource):
     @doc(description="Parking space rental Deed Drafting", tags=['Parking space rental Deed Drafting API'])
     @use_kwargs(schema.PSRRequest, location=('json'))
@@ -204,6 +204,7 @@ class GenerateOSAD(MethodResource,Resource):
          except Exception as e:
             print(str(e))
             return schema.APIResponse().dump(dict(message="not generated")), 404
+
 
 api.add_resource(GenerateOSAD,'/generateOSAD')        
 docs.register(GenerateOSAD)
@@ -247,4 +248,10 @@ class GenerateAPA(MethodResource, Resource):
         
 api.add_resource(GenerateAPA,'/generateAPA')        
 docs.register(GenerateAPA)
+
+        
+api.add_resource(GenerateOSAD,'/generateOSAD')        
+docs.register(GenerateOSAD)
+
+
             

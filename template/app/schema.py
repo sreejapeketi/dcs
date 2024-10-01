@@ -128,7 +128,9 @@ class SDDRequest(Schema):
    purchaser_builder_reg_num=fields.Str(default='')
    purchaser_builder_fulladdress=fields.Str(default='')
 
-#Car Parking Drafting
+
+
+
 class PSRRequest(Schema):
    agreement_date=fields.Str(default='')
    parking_amount=fields.Str(default='')
@@ -170,6 +172,7 @@ class OSADRequest(Schema):
    witness1=fields.Str(default='')
    witness2=fields.Str(default='')
 
+
 #One And The Same Person Affidavit
 class SPARequest(Schema):
    name_real=fields.Str(default='')
@@ -198,9 +201,7 @@ class APARequest(Schema):
    adress_line1=fields.Str(default='')
    city=fields.Str(default='')
 
+
 class APIResponse(Schema):
    message=fields.String(default="")
-
-
-
 
