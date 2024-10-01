@@ -128,6 +128,9 @@ class SDDRequest(Schema):
    purchaser_builder_reg_num=fields.Str(default='')
    purchaser_builder_fulladdress=fields.Str(default='')
 
+
+
+
 class PSRRequest(Schema):
    agreement_date=fields.Str(default='')
    parking_amount=fields.Str(default='')
@@ -169,6 +172,34 @@ class OSADRequest(Schema):
    witness1=fields.Str(default='')
    witness2=fields.Str(default='')
 
+
+#One And The Same Person Affidavit
+class SPARequest(Schema):
+   name_real=fields.Str(default='')
+   verification_state=fields.Str(default='')
+   guardian_name=fields.Str(default='')
+   verification_day=fields.Str(default='')
+   name_2=fields.Str(default='')
+   adress=fields.Str(default='')
+   name_1=fields.Str(default='')
+   relation=fields.Str(default='')
+
+# Address Proof Affidavit
+class APARequest(Schema):
+   notary_public=fields.Str(default='')
+   notary_country=fields.Str(default='')
+   notary_state=fields.Str(default='')
+   witness_2=fields.Str(default='')
+   witness_1=fields.Str(default='')
+   name=fields.Str(default='')
+   state=fields.Str(default='')
+   residency_start_date=fields.Str(default='')
+   document_2=fields.Str(default='')
+   document_1=fields.Str(default='')
+   zip_code=fields.Str(default='')
+   affidavit_date=fields.Str(default='')
+   adress_line1=fields.Str(default='')
+   city=fields.Str(default='')
 
 
 class APIResponse(Schema):

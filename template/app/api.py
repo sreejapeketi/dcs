@@ -204,8 +204,54 @@ class GenerateOSAD(MethodResource,Resource):
          except Exception as e:
             print(str(e))
             return schema.APIResponse().dump(dict(message="not generated")), 404
+
+
+api.add_resource(GenerateOSAD,'/generateOSAD')        
+docs.register(GenerateOSAD)
+
+#One And The Same Person Affidavit
+class GenerateSPA(MethodResource, Resource):
+    @doc(description="One And The Same Person Affidavit Drafting", tags=['One And The Same Person Affidavit Drafting API'])
+    @use_kwargs(schema.SPARequest, location=('json'))
+    @marshal_with(schema.APIResponse)
+    def post(self, **kwargs):
+        try:
+            print("generateSPA")
+            parameters=kwargs  
+            db_conn=""
+            utility.generateReport("One_And_The_Same_Person_Affidavit_Drafting.jrxml","One_And_The_Same_Person_Affidavit_Drafting",parameters,db_conn) 
+            return schema.APIResponse().dump(dict(message="Report generated successfully")), 200
+        except Exception as e:
+            print(str(e))
+            return schema.APIResponse().dump(dict(message="not generated")), 404
+        
+api.add_resource(GenerateSPA,'/generateSPA')        
+docs.register(GenerateSPA)
+
+
+#Adress Proof Affidavit
+class GenerateAPA(MethodResource, Resource):
+    @doc(description="Address Proof Affidavit Drafting", tags=['Address Proof Affidavit Drafting API'])
+    @use_kwargs(schema.APARequest, location=('json'))
+    @marshal_with(schema.APIResponse)
+    def post(self, **kwargs):
+        try:
+            print("generateAPA")
+            parameters=kwargs  
+            db_conn=""
+         
+            utility.generateReport("Address_Proof_Affidavit_Drafting.jrxml","Address_Proof_Affidavit_Drafting",parameters,db_conn) 
+            return schema.APIResponse().dump(dict(message="Report generated successfully")), 200
+        except Exception as e:
+            print(str(e))
+            return schema.APIResponse().dump(dict(message="not generated")), 404
+        
+api.add_resource(GenerateAPA,'/generateAPA')        
+docs.register(GenerateAPA)
+
         
 api.add_resource(GenerateOSAD,'/generateOSAD')        
 docs.register(GenerateOSAD)
+
 
             

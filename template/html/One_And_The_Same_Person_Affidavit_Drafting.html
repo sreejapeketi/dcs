@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+  <title></title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <style type="text/css">
+    a {text-decoration: none}
+  </style>
+</head>
+<script>
+
+    window.addEventListener("DOMContentLoaded", (event) => {
+    const el = document.getElementById('myform');
+    if (el) {
+      el.addEventListener('submit', async function(event) {
+      event.preventDefault(); // Prevent the default form submission
+    
+      const form = event.target;
+      const formData = new FormData(form);
+    
+        // Convert FormData to JSON
+      const jsonData = {};
+      formData.forEach((value, key) => {
+      jsonData[key] = value;
+      
+      }
+      );
+      try {
+      const response =await fetch('http://127.0.0.1:5000/generateSPA', {
+        method: "POST",
+        mode:"cors",
+        headers: {
+      "Content-Type": "application/json",
+    "accept": "application/json"
+    
+    
+    
+    
+    },
+    
+        body: JSON.stringify(jsonData)
+      })
+      if(response.ok){
+        //parent.document.getElementById("preview").style.visibility="visible";
+        const targetFrame=window.parent.document.getElementById('preview').contentWindow;
+        targetFrame.postMessage('changeStyle', '*');
+      }
+          } catch (error) {
+        console.error('Error:', error);
+          }
+      });
+    }
+    });
+    </script>
+<body text="#000000" link="#000000" alink="#000000" vlink="#000000"><form id= "myform" method="POST">
+<table role="none" width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr><td width="50%">&nbsp;</td><td align="center">
+
+<table id="JR_PAGE_ANCHOR_0_1" role="none" class="jrPage" data-jr-height="842" cellpadding="0" cellspacing="0" border="0" style="empty-cells: show; width: 595px; border-collapse: collapse; background-color: white;">
+<style type="text/css">
+  #JR_PAGE_ANCHOR_0_1 th {font-weight: normal;}
+  #JR_PAGE_ANCHOR_0_1 ul {list-style-type: disc; padding-inline-start: 40px; margin: 0px;}
+  #JR_PAGE_ANCHOR_0_1 ol {list-style-type: decimal; padding-inline-start: 40px; margin: 0px;}
+</style>
+<tr role="none" valign="top" style="height:0">
+<td style="width:23px"></td>
+<td style="width:27px"></td>
+<td style="width:140px"></td>
+<td style="width:10px"></td>
+<td style="width:201px"></td>
+<td style="width:39px"></td>
+<td style="width:130px"></td>
+<td style="width:4px"></td>
+<td style="width:21px"></td>
+</tr>
+<tr valign="top" style="height:12px">
+<td colspan="9">
+</td>
+</tr>
+<tr valign="top" style="height:40px">
+<td colspan="4">
+</td>
+<td style="text-indent: 0px; text-align: center;">
+<span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 24px; line-height: 1.2578125; font-weight: bold;">AFFIDAVIT</span></td>
+<td colspan="4">
+</td>
+</tr>
+<tr valign="top" style="height:9px">
+<td colspan="9">
+</td>
+</tr>
+<tr valign="top" style="height:69px">
+<td>
+</td>
+<td colspan="6" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 18px; line-height: 1.2578125;">I, <input type="text" id="name_real" name="name_real" placeholder="Real Name" required> <label for="relation">Relation with Guardian:</label>
+<select id="relation" name="relation" required>
+  <option value="" disabled selected>Select Relation</option>
+  <option value="son">Son</option>
+  <option value="daughter">Daughter</option>
+  <option value="wife">Wife</option>
+</select>
+ of <input type="text" id="guardian_name" name="guardian_name" placeholder="Guardian Name" required> R/O <input type="text" id="adress" name="adress" placeholder="Adress" required> hereby solemnly affirm and declare as under: </span></td>
+<td colspan="2">
+</td>
+</tr>
+<tr valign="top" style="height:3px">
+<td colspan="9">
+</td>
+</tr>
+<tr valign="top" style="height:230px">
+<td colspan="2">
+</td>
+<td colspan="5" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 18px; line-height: 1.2578125;">1. That I am the citizen of India.<br/><br/>2. That I hereby declare that my name mentioned in some documents written as <input type="text" id="name_1" name="name_1" placeholder="Name 1" required> and in some documents name written as <input type="text" id="name_2" name="name_2" placeholder="Name 2" required>.<br/><br/>3. I hereby declare that both the name pertain to the one and same person i.e <input type="text" disabled>(REAL NAME)<br/><br/>4. That my real NAME IS <input type="text" disabled>.</span></td>
+<td colspan="2">
+</td>
+</tr>
+<tr valign="top" style="height:37px">
+<td colspan="9">
+</td>
+</tr>
+<tr valign="top" style="height:25px">
+<td colspan="6">
+</td>
+<td colspan="2" style="text-indent: 0px; text-align: right;">
+<span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 18px; line-height: 1.2578125;">DEPONENT</span></td>
+<td>
+</td>
+</tr>
+<tr valign="top" style="height:25px">
+<td colspan="9">
+</td>
+</tr>
+<tr valign="top" style="height:25px">
+<td>
+</td>
+<td colspan="2" style="text-indent: 0px; text-align: left;">
+<span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 18px; line-height: 1.2578125; font-weight: bold;">Verification:</span></td>
+<td colspan="6">
+</td>
+</tr>
+<tr valign="top" style="height:5px">
+<td colspan="9">
+</td>
+</tr>
+<tr valign="top" style="height:130px">
+<td>
+</td>
+<td colspan="6" style="text-indent: 0px; text-align: justify;">
+<span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 18px; line-height: 1.2578125;">Verified at <input type="text" id="verification_state" name="verification_state" placeholder="Verification State" required> on <input type="text" id="verification_day" name="verification_day" placeholder="Verification Date" required> that the contents of the above said affidavit are true and correct to the best of my knowledge and belief and nothing has been concealed therein.</span></td>
+<td colspan="2">
+</td>
+</tr>
+<tr valign="top" style="height:25px">
+<td colspan="6">
+</td>
+<td colspan="2" style="text-indent: 0px; text-align: right;">
+<span style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif; color: #000000; font-size: 18px; line-height: 1.2578125;">DEPONENT</span></td>
+ 
+<td>
+</td>
+</tr>
+<tr valign="top" style="height:207px">
+<td colspan="9">
+</td>
+</tr>
+</table>
+ <div style="text-align: center; margin-top: 50px;">
+    <input type="submit" value="Submit Affidavit" style="font-size: 20px; padding: 10px 20px;">
+  </div>
+</td><td width="50%">&nbsp;</td></tr>
+</table></form> 
+</body>
+</html>
