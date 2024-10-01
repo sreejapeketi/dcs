@@ -252,12 +252,12 @@ docs.register(GenerateAPA)
 
 # Affidavit For Change Of Name Of Minor Drafting
 class GenerateCNMA(MethodResource, Resource):
-    @doc(description="Change Of Name Of Minor Affidavit Drafting", tags=['Change Of Name Of Minor Affidavit Drafting  API'])
+    @doc(description="Change Of Name Of Minor Affidavit Drafting", tags=['Change Of Name Of Minor Affidavit Drafting API'])
     @use_kwargs(schema.CNMARequest, location=('json'))
     @marshal_with(schema.APIResponse)
     def post(self, **kwargs):
         try:
-            print("generateCNMAA")
+            print("generateCNMA")
             parameters=kwargs  
             db_conn=""
          
@@ -269,6 +269,27 @@ class GenerateCNMA(MethodResource, Resource):
         
 api.add_resource(GenerateCNMA,'/generateCNMA')        
 docs.register(GenerateCNMA)
+
+#Proof Of Date Of Birth Affidavit Drafting
+class GenerateDOBA(MethodResource, Resource):
+    @doc(description="Proof Of Date Of Birth Affidavit Drafting", tags=['Proof Of Date Of Birth Affidavit Drafting API'])
+    @use_kwargs(schema.DOBARequest, location=('json'))
+    @marshal_with(schema.APIResponse)
+    def post(self, **kwargs):
+        try:
+            print("generateDOBA")
+            parameters=kwargs  
+            db_conn=""
+         
+            utility.generateReport("Proof_Of_Date_Of_Birth_Affidavit_Drafting.jrxml","Proof_Of_Date_Of_Birth_Affidavit_Drafting",parameters,db_conn) 
+            return schema.APIResponse().dump(dict(message="Report generated successfully")), 200
+        except Exception as e:
+            print(str(e))
+            return schema.APIResponse().dump(dict(message="not generated")), 404
+        
+api.add_resource(GenerateDOBA,'/generateDOBA')        
+docs.register(GenerateDOBA)
+
 
 class GenerateLLA(MethodResource, Resource):
     @doc(description="Leave & License Agreement", tags=['Leave License Agreement API'])
