@@ -338,7 +338,7 @@ class GenerateMCA(MethodResource, Resource):
        try:
           print("generateMCA")
           parameters=kwargs  
-          utility.generateReport("marriage_affidavit.jrxml","Marriage Certificate Affidavit",parameters,None) 
+          utility.generateReport("marriage_affidavit.jrxml","Marriage Certificate Affidavit",parameters,"") 
           return schema.APIResponse().dump(dict(message="Report generated successfully")), 200
        except Exception as e:
           print(str(e))
@@ -370,3 +370,20 @@ class GenerateCSA(MethodResource, Resource):
 api.add_resource(GenerateCSA, '/generateCSA')
 docs.register(GenerateCSA)
             
+class GenerateNAD(MethodResource, Resource):
+    @doc(description="Newspaper Ad Drafting", tags=['Newspaper Ad Drafting-API'])
+    @use_kwargs(schema.NADRequest, location=('json'))
+    @marshal_with(schema.APIResponse)
+    def post(self, **kwargs):
+       try:
+          print("generateNAD")
+          parameters=kwargs  
+          utility.generateReport("newspaper_ad_drafting.jrxml","Newspaper Ad Drafting",parameters,"") 
+          return schema.APIResponse().dump(dict(message="Report generated successfully")), 200
+       except Exception as e:
+          print(str(e))
+          return schema.APIResponse().dump(dict(message="not generated")), 404
+
+
+api.add_resource(GenerateNAD, '/generateNAD')
+docs.register(GenerateNAD)

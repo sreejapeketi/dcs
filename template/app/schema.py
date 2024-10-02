@@ -348,6 +348,12 @@ class CSARequest(Schema):
     witness2 = fields.Str(default="")
     witness2_address = fields.Str(default="")
 
+class NADRequest(Schema):
+    ad_title = fields.Str(default="")
+    page_header = fields.Str(default="")
+    ad_content = fields.Str(dafault="")
+    page_footer = fields.Str(dafault="")
+    
 class APIResponse(Schema):
    message=fields.String(default="")
 
