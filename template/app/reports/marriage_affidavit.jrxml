@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 9.0.0.final using JasperReports Library version 6.21.0-4f56c4f36cd19e17675219a9ac4692d5f0f13b06  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="marriage_affidavit" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3faeef4f-4d16-41ec-844b-ad033ee8355d">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="bridegroom_name" class="java.lang.String"/>
+	<parameter name="bride_name" class="java.lang.String"/>
+	<parameter name="bridegroom_age" class="java.lang.String"/>
+	<parameter name="bride_age" class="java.lang.String"/>
+	<parameter name="bridegroom_address" class="java.lang.String"/>
+	<parameter name="bride_address" class="java.lang.String"/>
+	<parameter name="bridegroom_occupation" class="java.lang.String"/>
+	<parameter name="bride_occupation" class="java.lang.String"/>
+	<parameter name="marriage_date" class="java.lang.String"/>
+	<parameter name="marriage_place" class="java.lang.String"/>
+	<parameter name="affirmation_place" class="java.lang.String"/>
+	<parameter name="affirmation_date" class="java.lang.String"/>
+	<parameter name="date_of_the_month" class="java.lang.String"/>
+	<parameter name="affirmation_month" class="java.lang.String"/>
+	<parameter name="affirmation_year" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="47" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="17" width="550" height="30" uuid="675803d5-483e-4f80-8448-a57b7827251a"/>
+				<textElement textAlignment="Center">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Affidavit For Marriage Registration]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="300" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="10" width="550" height="73" uuid="61f7ee6c-9bf4-43ec-b421-c48db3279d06"/>
+				<textElement textAlignment="Justified">
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<text><![CDATA[We, both the bridegroom and bride the bridegroom viz,                                       aged,              adult, occupation,		RESIDING  AT   
+and the bride viz,                                                       aged,                                   occupation,      
+RESIDING AT                                                                                         do hereby swear solemnly on oath of our religion that;
+]]></text>
+			</staticText>
+			<textField textAdjust="ScaleFont">
+				<reportElement x="256" y="10" width="122" height="26" uuid="168e870f-c145-4eb9-ba29-4eac3abd4eaf"/>
+				<textFieldExpression><![CDATA[$P{bridegroom_name}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont">
+				<reportElement x="425" y="10" width="48" height="23" uuid="0afab817-634d-46b1-8bf9-f5fc73572eab"/>
+				<textFieldExpression><![CDATA[$P{bridegroom_age}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont">
+				<reportElement x="0" y="28" width="70" height="18" uuid="048844d9-25bf-49ed-bf69-912fe89fedaa"/>
+				<textFieldExpression><![CDATA[$P{bridegroom_occupation}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont">
+				<reportElement x="177" y="28" width="343" height="18" uuid="aafa93f5-bd69-44f2-a5a1-000d1d1c401c"/>
+				<textFieldExpression><![CDATA[$P{bridegroom_address}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont">
+				<reportElement x="82" y="46" width="138" height="23" uuid="4fa45084-34f8-40d3-ad70-9b34f2840c9f"/>
+				<textFieldExpression><![CDATA[$P{bride_name}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont">
+				<reportElement x="262" y="47" width="48" height="21" uuid="61fcea2b-2931-4c6f-bf52-ce42219ec72e"/>
+				<textFieldExpression><![CDATA[$P{bride_age}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont">
+				<reportElement x="410" y="46" width="104" height="20" uuid="e4a063a7-e347-4ab7-b33b-7d43469d6089"/>
+				<textFieldExpression><![CDATA[$P{bride_occupation}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont">
+				<reportElement x="82" y="63" width="218" height="20" uuid="7914c9a2-90e7-43c8-aedf-4d5f9c8f4564"/>
+				<textFieldExpression><![CDATA[$P{bride_address}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="100" width="550" height="200" uuid="56061d27-0aa5-4b16-be9f-139b688a6c24"/>
+				<textElement textAlignment="Justified">
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<text><![CDATA[1)	Our wedding was solemnized on                 at                                                  . We re-iterate and confirm and published at the time of our wedding pursuant to this, our wedding was solemnized in presence of our near and dear relatives, friends and guests from both the sides in a very simple way, professing as per HINDU customs, rites and ceremonies and did not printed any invitation card.
+2)	We confirm that our wedding is solemnized with our natural consent, understanding, knowledge, faith belief and without any compulsion, force, inducement, allurement, coercion or influence on us.
+3)	We re-iterate and confirm that this affidavit is being made to get our wedding registered in the office of sub-registrar of marriage.
+4)	To make a false affidavit is a crime which is known to both of us and we are aware of it.
+5)	What is stated above is true and correct to the best of my knowledge and belief to make false affidavit is an offence that I know very well.]]></text>
+			</staticText>
+			<textField textAdjust="ScaleFont">
+				<reportElement x="189" y="101" width="50" height="20" uuid="02ac28fa-9574-4ada-a07c-4ebff3271f7b"/>
+				<textFieldExpression><![CDATA[$P{marriage_date}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont">
+				<reportElement x="256" y="100" width="148" height="21" uuid="35eee8f9-0897-4341-9afa-0708e9dd3ac8"/>
+				<textFieldExpression><![CDATA[$P{marriage_place}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="170">
+			<staticText>
+				<reportElement x="0" y="10" width="550" height="140" uuid="18aa062b-c263-4349-a5d5-558889367bd5"/>
+				<text><![CDATA[		Solemnly affirmed at                            on this	         TH day of	             	                  .
+
+Place: 
+
+Date :									Sign.
+
+								(1)
+
+								(2) ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="30" y="37" width="135" height="17" uuid="bf2f78d8-3e19-4a54-8565-db49327c0adc"/>
+				<textFieldExpression><![CDATA[$P{affirmation_place}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="30" y="60" width="100" height="19" uuid="a900d434-94d6-4654-9ea6-7506df64f742"/>
+				<textFieldExpression><![CDATA[$P{affirmation_date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="177" y="10" width="82" height="20" uuid="6c6be8f4-c99d-4a4e-b210-1b82132d90fa"/>
+				<textFieldExpression><![CDATA[$P{affirmation_place}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="281" y="10" width="39" height="22" uuid="af97411b-b307-40a4-8614-9c07f49dbf95"/>
+				<textFieldExpression><![CDATA[$P{date_of_the_month}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="353" y="10" width="63" height="22" uuid="d74719b8-184a-458e-9a4b-37bd8a57896f"/>
+				<textFieldExpression><![CDATA[$P{affirmation_month}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="416" y="10" width="59" height="23" uuid="d4c39f74-d4a3-47ac-9506-b2886798b828"/>
+				<textFieldExpression><![CDATA[$P{affirmation_year}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

@@ -312,5 +312,61 @@ class GenerateLLA(MethodResource, Resource):
 api.add_resource(GenerateLLA, '/generateLLA')
 docs.register(GenerateLLA)
 
+class GenerateICA(MethodResource, Resource):
+    @doc(description="Income Certificate Affidavit", tags=['Income Certificate Affidavit-API'])
+    @use_kwargs(schema.ICARequest, location=('json'))
+    @marshal_with(schema.APIResponse)
+    def post(self, **kwargs):
+       try:
+          print("generateICA")
+          parameters=kwargs  
+          utility.generateReport("Income_cert_affidavit.jrxml","Income Certificate Affidavit",parameters,"") 
+          return schema.APIResponse().dump(dict(message="Report generated successfully")), 200
+       except Exception as e:
+          print(str(e))
+          return schema.APIResponse().dump(dict(message="not generated")), 404
 
+api.add_resource(GenerateICA, '/generateICA')
+docs.register(GenerateICA)
+
+
+class GenerateMCA(MethodResource, Resource):
+    @doc(description="Marriage Certificate Affidavit", tags=['Marriage Certificate Affidavit-API'])
+    @use_kwargs(schema.MCARequest, location=('json'))
+    @marshal_with(schema.APIResponse)
+    def post(self, **kwargs):
+       try:
+          print("generateMCA")
+          parameters=kwargs  
+          utility.generateReport("marriage_affidavit.jrxml","Marriage Certificate Affidavit",parameters,None) 
+          return schema.APIResponse().dump(dict(message="Report generated successfully")), 200
+       except Exception as e:
+          print(str(e))
+          return schema.APIResponse().dump(dict(message="not generated")), 404
+
+
+api.add_resource(GenerateMCA, '/generateMCA')
+docs.register(GenerateMCA)
+
+
+class GenerateCSA(MethodResource, Resource):
+    @doc(description="Claim Settlement Affidavit in Bank", tags=['Claim Settlement Affidavit in Bank - API'])
+    @use_kwargs(schema.CSARequest, location=('json'))
+    @marshal_with(schema.APIResponse)
+    def post(self, **kwargs):
+       try:
+          print("generateCSA")
+          parameters=kwargs  
+          db_conn=utility.getDbConnection("claimant_json.json","claimants","receiving_claimants",parameters['claimants'],parameters['receiving_claimants'])
+          del parameters['claimants']
+          del parameters['receiving_claimants']
+          utility.generateReport("claim_settlement_affidavit.jrxml","Claim_Settlement_Affidavit",parameters,db_conn) 
+          return schema.APIResponse().dump(dict(message="Report generated successfully")), 200
+       except Exception as e:
+          print(str(e))
+          return schema.APIResponse().dump(dict(message="not generated")), 404
+
+
+api.add_resource(GenerateCSA, '/generateCSA')
+docs.register(GenerateCSA)
             
