@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 9.0.0.final using JasperReports Library version 6.21.0-4f56c4f36cd19e17675219a9ac4692d5f0f13b06  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Income_cert_affidavit" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="dd486774-fe86-4276-84b7-dbf25fbac29c">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="student_name" class="java.lang.String"/>
+	<parameter name="father_or_husband_name" class="java.lang.String"/>
+	<parameter name="age" class="java.lang.String"/>
+	<parameter name="occupation" class="java.lang.String"/>
+	<parameter name="address" class="java.lang.String"/>
+	<parameter name="income" class="java.lang.String"/>
+	<parameter name="income_in_words" class="java.lang.String"/>
+	<parameter name="caste" class="java.lang.String"/>
+	<parameter name="purpose" class="java.lang.String"/>
+	<parameter name="studying" class="java.lang.String"/>
+	<parameter name="study_place" class="java.lang.String"/>
+	<parameter name="date" class="java.lang.String"/>
+	<parameter name="place" class="java.lang.String"/>
+	<parameter name="notary_name" class="java.lang.String"/>
+	<parameter name="student_dob" class="java.lang.String"/>
+	<parameter name="employed_or_not" class="java.lang.String"/>
+	<parameter name="mother_name" class="java.lang.String"/>
+	<parameter name="mother_employed?" class="java.lang.String"/>
+	<parameter name="mother_ccupation" class="java.lang.String"/>
+	<parameter name="mother_income" class="java.lang.String"/>
+	<parameter name="land_on_father" class="java.lang.String"/>
+	<parameter name="land_on_mother" class="java.lang.String"/>
+	<parameter name="crops_in_land" class="java.lang.String"/>
+	<parameter name="nature_of_land" class="java.lang.String"/>
+	<parameter name="agri_income_yearly" class="java.lang.String"/>
+	<parameter name="business_income" class="java.lang.String"/>
+	<parameter name="no_of_family_vehicles" class="java.lang.String"/>
+	<parameter name="personal_use_only?" class="java.lang.String"/>
+	<parameter name="type_of_vehicle" class="java.lang.String"/>
+	<parameter name="vehicle_registered_on" class="java.lang.String"/>
+	<parameter name="type_of_house" class="java.lang.String"/>
+	<parameter name="is_govt_home" class="java.lang.String"/>
+	<parameter name="house_cost" class="java.lang.String"/>
+	<parameter name="homeloan_amount_branch" class="java.lang.String"/>
+	<parameter name="other_house" class="java.lang.String"/>
+	<parameter name="own_rent_house" class="java.lang.String"/>
+	<parameter name="house_rent" class="java.lang.String"/>
+	<parameter name="mobile_no" class="java.lang.String"/>
+	<parameter name="total_family_income" class="java.lang.String"/>
+	<parameter name="ration_card_no" class="java.lang.String"/>
+	<parameter name="aadhar_no" class="java.lang.String"/>
+	<parameter name="email" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="51" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="550" height="50" uuid="3987ffa6-824e-4d25-a4b0-eabd4ea6161b"/>
+				<textElement textAlignment="Center">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[REVENUE - INCOME CERTIFICATE
+AFFIDAVIT
+]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="260" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="10" width="555" height="70" uuid="cd70858f-9a71-45bf-ab35-2169588f703c"/>
+				<textElement textAlignment="Left">
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<text><![CDATA[I, 					, S/o,W/o,Sri  	
+ aged about		years having an occupation of	   	  	 			resident of											do hereby solemnly affirm and state on oath as follows.
+]]></text>
+			</staticText>
+			<textField textAdjust="ScaleFont">
+				<reportElement x="12" y="10" width="168" height="20" uuid="0e552660-8e8b-431f-858c-43c985d9ace3"/>
+				<textFieldExpression><![CDATA[$P{student_name}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont">
+				<reportElement x="280" y="10" width="200" height="21" uuid="05262c77-8cd3-437a-be6f-0a9252e09354"/>
+				<textFieldExpression><![CDATA[$P{father_or_husband_name}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont">
+				<reportElement x="61" y="28" width="50" height="20" uuid="10400998-b575-4bf9-98ea-265212c414c9"/>
+				<textFieldExpression><![CDATA[$P{age}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont">
+				<reportElement x="257" y="28" width="213" height="18" uuid="11775ee1-2560-4150-adc8-06a2b43807e1"/>
+				<textFieldExpression><![CDATA[$P{occupation}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont">
+				<reportElement x="1" y="46" width="429" height="19" uuid="cbcfa9ac-0824-484a-8168-22a741ebf779"/>
+				<textFieldExpression><![CDATA[$P{address}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="90" width="554" height="120" uuid="d171fd01-2700-4a0a-b83c-ebdc5178996f"/>
+				<textElement textAlignment="Left">
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<text><![CDATA[I am the deponent herein as such I am well acquainted with the facts of this affidavit. I submit that I am the resident of above address, I am doing  		 	(Profession) and getting Rs.				in Rupees  				only per annum from all sources mentioned below except the above said income. I belong to		Caste, which comes under SC/ST/BC/Others. The income certificate is necessary for my Son / Daughter  			                                   who is studying			at  	
+He / she required income certificate for getting scholarship / Fee reimbursement, hence I am giving this affidavit along with income declaration.
+]]></text>
+			</staticText>
+			<textField textAdjust="ScaleFont">
+				<reportElement x="95" y="108" width="100" height="20" uuid="0c230932-660b-432a-a453-bacaa45ab787"/>
+				<textFieldExpression><![CDATA[$P{occupation}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont">
+				<reportElement x="334" y="108" width="100" height="22" uuid="b22f3506-f48e-4853-9a1c-71e9b62f5f2b"/>
+				<textFieldExpression><![CDATA[$P{income}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont">
+				<reportElement x="1" y="126" width="159" height="22" uuid="11f7d362-2fba-45e5-aa07-606f960de593"/>
+				<textFieldExpression><![CDATA[$P{income_in_words}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont">
+				<reportElement x="50" y="143" width="70" height="17" uuid="40c6ec77-a205-4157-87de-7796e96a6c9d"/>
+				<textFieldExpression><![CDATA[$P{caste}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont">
+				<reportElement x="47" y="161" width="187" height="21" uuid="a0c84230-0680-4eb5-8c52-ace975a03f06"/>
+				<textFieldExpression><![CDATA[$P{purpose}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont">
+				<reportElement x="332" y="161" width="100" height="20" uuid="f117167a-70d8-4fb3-85c5-ae61d2789b6d"/>
+				<textFieldExpression><![CDATA[$P{studying}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont">
+				<reportElement x="455" y="161" width="100" height="17" uuid="3a97b38b-0d7d-4632-aa95-6389e18cced9"/>
+				<textFieldExpression><![CDATA[$P{study_place}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="219" width="554" height="21" uuid="2bdec973-8544-41aa-a413-4c959904cefa"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[INCOME DECLARATION]]></text>
+			</staticText>
+		</band>
+		<band height="380">
+			<staticText>
+				<reportElement x="1" y="-20" width="554" height="380" uuid="01b3c674-da66-40ca-af10-a00c4330809f"/>
+				<textElement>
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<text><![CDATA[1	Name of the student	:	
+2	Date of Birth	:	
+3	(i) Name of the Father	:	
+	(ii) Whether Employed	:	
+	(iii) If employed designation, if not other profession	:	
+	(iv) Salary per month	:	
+4	(i) Name of the Mother	:	
+	(ii) Whether Employed	:	
+	(iii) If employed, designation, if not other profession	:	
+	(iv). Salary per month	:	
+5	Agricultural holding of the parents mention extent		
+	(i) In the name of Father	:	
+	(ii) In the name of Mother	:	
+	(a) Crops grown in land	:	
+	(b) Whether Dry or wet land	:	
+	I Annual income from agricultural land	:	
+6	Business mention the trade / name of business Income derived from the venture	:	
+7	(i) Number of vehicles owned by the family	:	
+	(ii) Whether used for personal / private use only	:	
+	(iii) Mention type of vehicles ( two wheeler / three wheeler / four wheeler)	:	Regd No.
+	(iv) Vehicle registered on whose name	:	
+ ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="279" y="-19" width="100" height="22" uuid="7b38ac1b-2762-4eeb-9f4f-ca44f466cdac"/>
+				<textFieldExpression><![CDATA[$P{student_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="278" y="-1" width="100" height="22" uuid="8a02a6be-f9d5-477e-b034-f7c246948db1"/>
+				<textFieldExpression><![CDATA[$P{student_dob}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="278" y="12" width="155" height="19" uuid="1bc869b1-de98-4ffc-b699-063d6ba41094"/>
+				<textFieldExpression><![CDATA[$P{father_or_husband_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="278" y="28" width="100" height="19" uuid="eb779ea6-2914-43c0-bb07-74fbd2d8bbc6"/>
+				<textFieldExpression><![CDATA[$P{employed_or_not}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="278" y="50" width="100" height="25" uuid="11315e5d-2676-49a6-bd93-262f38277a12"/>
+				<textFieldExpression><![CDATA[$P{occupation}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="279" y="67" width="100" height="21" uuid="29e7882a-5a49-4e25-9a51-70f95c971727"/>
+				<textFieldExpression><![CDATA[$P{income}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="279" y="83" width="100" height="19" uuid="e5be9eb1-f81d-4510-adeb-44b530ff5bd5"/>
+				<textFieldExpression><![CDATA[$P{mother_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="279" y="98" width="128" height="21" uuid="ea2c107a-c020-42a1-91e9-12830f7c8a7e"/>
+				<textFieldExpression><![CDATA[$P{mother_employed?}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="119" width="100" height="20" uuid="f8629dee-e200-4baf-a7b3-685b692cbdce"/>
+				<textFieldExpression><![CDATA[$P{mother_ccupation}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="137" width="100" height="16" uuid="1d81a0df-6aae-4a27-b9b6-5cb6db85fc13"/>
+				<textFieldExpression><![CDATA[$P{mother_income}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="173" width="100" height="21" uuid="942d0eb1-2f61-4076-90ef-8c32f4168356"/>
+				<textFieldExpression><![CDATA[$P{land_on_father}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="279" y="188" width="100" height="14" uuid="f4dd3eca-ae05-4f50-b2af-ee699d63e36c"/>
+				<textFieldExpression><![CDATA[$P{land_on_mother}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="279" y="205" width="100" height="19" uuid="93e0d469-ded9-4356-a2b0-e3a4bc20abf2"/>
+				<textFieldExpression><![CDATA[$P{crops_in_land}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="279" y="222" width="100" height="22" uuid="d73cd66f-2fad-4b61-a426-a5971151882f"/>
+				<textFieldExpression><![CDATA[$P{nature_of_land}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="279" y="242" width="120" height="21" uuid="e59f7423-2448-487b-aefb-01fc78556f34"/>
+				<textFieldExpression><![CDATA[$P{agri_income_yearly}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="408" y="263" width="100" height="22" uuid="bdbf1aca-4c2c-4ced-b12a-816a97102452"/>
+				<textFieldExpression><![CDATA[$P{business_income}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="279" y="278" width="100" height="22" uuid="0cc1deb7-2ec9-48e8-bf21-361b7f601f35"/>
+				<textFieldExpression><![CDATA[$P{no_of_family_vehicles}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="279" y="298" width="100" height="24" uuid="c77af738-4f8b-4854-8196-8f8386782cdc"/>
+				<textFieldExpression><![CDATA[$P{personal_use_only?}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="382" y="315" width="56" height="19" uuid="7a503f2c-237f-494f-a085-6732662b154e"/>
+				<textFieldExpression><![CDATA[$P{type_of_vehicle}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="281" y="331" width="124" height="22" uuid="d94d0cf6-9cee-4468-b8cc-fc870ffe5587"/>
+				<textFieldExpression><![CDATA[$P{vehicle_registered_on}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="290">
+			<staticText>
+				<reportElement x="0" y="20" width="555" height="270" uuid="39bee1ac-bae5-4e12-aba4-28f1a965da47"/>
+				<textElement>
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<text><![CDATA[8	(i) Type of house mention
+Whether RCC / thatched / Tiled roofed	:	
+	(ii) Mentioned, whether Indiramma House	:	
+	(iii) Cost construction of House	:	
+	(iv) Whether constructed with
+loan, if so amount and bank Branch	:	
+	(v) Any other type of house	:	
+9	(i)Whether living in own house or rented house	:	
+	(ii) If rented, mention rent amount	:	
+10	Telephone/Mobile Number	:	
+11	Total family income from all sources	:	
+12	Ration Card Number	:	
+13	Aadhar Card Number	:	
+14	Email	:	
+]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="281" y="30" width="100" height="24" uuid="a7172a2e-cc11-450c-8c7f-4e2c0f16f472"/>
+				<textFieldExpression><![CDATA[$P{type_of_house}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="281" y="50" width="100" height="20" uuid="b7c11c1e-7757-4742-a797-02d01648d860"/>
+				<textFieldExpression><![CDATA[$P{is_govt_home}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="281" y="67" width="100" height="22" uuid="18b5056b-b44a-4ee7-bda8-0111376f2bb8"/>
+				<textFieldExpression><![CDATA[$P{house_cost}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="281" y="104" width="153" height="17" uuid="a606e1d9-39c6-470d-b569-aad83974644c"/>
+				<textFieldExpression><![CDATA[$P{homeloan_amount_branch}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="281" y="122" width="100" height="23" uuid="01b6ff06-c861-4cbd-9f9b-e081c2344e0e"/>
+				<textFieldExpression><![CDATA[$P{other_house}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="142" width="100" height="20" uuid="a2ab2111-7e01-40fb-b4f9-ffb601f69cba"/>
+				<textFieldExpression><![CDATA[$P{own_rent_house}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="281" y="157" width="100" height="24" uuid="3a3aa3f1-38ef-49cc-ae5b-7ed9cb425b6c"/>
+				<textFieldExpression><![CDATA[$P{house_rent}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="282" y="176" width="100" height="20" uuid="e9647653-0d80-464d-bfbd-b1218b6f7ebf"/>
+				<textFieldExpression><![CDATA[$P{mobile_no}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="281" y="194" width="116" height="22" uuid="9d313c1b-6f74-4eb6-a015-08ade6ec4903"/>
+				<textFieldExpression><![CDATA[$P{total_family_income}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="281" y="214" width="100" height="16" uuid="d28c30d1-ff56-4c50-a1bd-772542a74b57"/>
+				<textFieldExpression><![CDATA[$P{ration_card_no}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="281" y="229" width="129" height="22" uuid="69493179-ac06-437a-a194-4cca63ee33df"/>
+				<textFieldExpression><![CDATA[$P{aadhar_no}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="282" y="246" width="128" height="23" uuid="44a4fec4-1d6c-4db3-928c-fccb2ddf5d7d"/>
+				<textFieldExpression><![CDATA[$P{email}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="400">
+			<staticText>
+				<reportElement x="0" y="4" width="555" height="130" uuid="1aaf56ff-90d5-4ed7-9901-3dd38cc5d0d4"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[I shall be liable for penal action both civil and criminal, if the above facts are false in future besides recovery of the scholarship with penal interest under the revenue recovery act. Therefore, I request the concerned revenue authorities may be pleased to accept this affidavit and issue income certificate to my son/daughter				for scholarship / fee reimbursement purpose.
+
+
+The above facts are true and correct to the best of my knowledge and belief.
+
+
+Name & Signature of the Parent
+]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="41" width="150" height="20" uuid="7e89ee3b-5829-4dbf-99e6-31bf83032d0c"/>
+				<textFieldExpression><![CDATA[$P{student_name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="157" width="554" height="193" uuid="0efbf19e-b310-4a2b-8d51-13901282294b"/>
+				<textElement>
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<text><![CDATA[Name & signature of the student
+
+Date:													    Place:
+ 
+										                DEPONENT
+ 
+Solemnly affirm and signed before me at 		on	
+Attested by:
+
+											Signature of the Notary
+]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="35" y="193" width="100" height="20" uuid="269b1877-f875-4fa7-bfac-5ebba42eabaa"/>
+				<textFieldExpression><![CDATA[$P{date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="34" y="211" width="100" height="19" uuid="0dea1487-a186-4770-a164-1789e867cc77"/>
+				<textFieldExpression><![CDATA[$P{place}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="257" y="281" width="100" height="21" uuid="9dbeff76-ee57-4d7c-bf15-5bd75dd8207f"/>
+				<textFieldExpression><![CDATA[$P{date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="58" y="299" width="183" height="23" uuid="41088fe4-c393-4a83-977a-1be9ac13983f"/>
+				<textFieldExpression><![CDATA[$P{notary_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="186" y="281" width="51" height="17" uuid="13dd980a-4575-4eb5-a284-b92d69016633"/>
+				<textFieldExpression><![CDATA[$P{place}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="152" y="118" width="155" height="22" uuid="9d9a5a63-e7a7-4e97-8c68-b730ef59cf48"/>
+				<textFieldExpression><![CDATA[$P{father_or_husband_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="154" y="157" width="164" height="25" uuid="d0f91f57-e720-4057-8cd5-845ea43341d7"/>
+				<textFieldExpression><![CDATA[$P{student_name}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
