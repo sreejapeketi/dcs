@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 9.0.0.final using JasperReports Library version 6.21.0-4f56c4f36cd19e17675219a9ac4692d5f0f13b06  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="NOC_Landlord_Template" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="fe32deb0-a219-480f-9fdc-45ec51d34177">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="Insert Date" class="java.lang.String"/>
+	<parameter name="Landlords Full Name" class="java.lang.String"/>
+	<parameter name="Landlords Fathers Name" class="java.lang.String"/>
+	<parameter name="Landlords Full Address" class="java.lang.String"/>
+	<parameter name="Rental Property Address" class="java.lang.String"/>
+	<parameter name="Tenants Full Name" class="java.lang.String"/>
+	<parameter name="Tenants Fathers Name" class="java.lang.String"/>
+	<parameter name="Tenants Current Address" class="java.lang.String"/>
+	<parameter name="Start Date of Lease Agreement" class="java.lang.String"/>
+	<parameter name="purpose of the NOC_e.g" class="java.lang.String"/>
+	<parameter name="specific purpose of the NOC_e.g.applying" class="java.lang.String">
+		<defaultValueExpression><![CDATA[$P{specific purpose of the NOC_e.g.applying}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="residential_commercial_office space_etc" class="java.lang.String"/>
+	<parameter name="for a loan_business registration_passport application_etc" class="java.lang.String"/>
+	<parameter name="Contact Information" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="90" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="30" width="150" height="19" uuid="0096b198-8bb4-4a3e-b56a-91e37cf78ff1"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[No Objection Certificate (NOC)	]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="49" width="50" height="21" uuid="303ef798-52bb-4c14-91c0-6c522d87ebd7"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date:  ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="30" y="49" width="90" height="21" uuid="1d2d2262-b997-454f-968e-d91ffc11d0ec"/>
+				<textFieldExpression><![CDATA[$P{Insert Date}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="71" width="200" height="18" uuid="15fd4fc7-fae9-4aad-b064-c94e5141d066"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[To Whom It May Concern, ]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="16" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="40" splitType="Stretch">
+			<textField>
+				<reportElement x="100" y="0" width="120" height="20" uuid="32abbd25-f23d-49a6-9ae3-0f230b9043f6"/>
+				<textFieldExpression><![CDATA[$P{Landlords Full Name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="de43bf97-583b-473a-8afe-dea9bae57a4a"/>
+				<text><![CDATA[This is to certify that I, ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="193" y="0" width="100" height="20" uuid="51f8017c-20c8-4663-9612-c182908b38cf"/>
+				<text><![CDATA[, son/daughter of ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="273" y="0" width="140" height="20" uuid="74931238-8fb5-4f50-bd86-7677c8e123af"/>
+				<textFieldExpression><![CDATA[$P{Landlords Fathers Name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="387" y="0" width="110" height="20" uuid="0f975b5d-424c-43f3-a48d-13801fd3d45b"/>
+				<text><![CDATA[,residing at ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="15" width="120" height="20" uuid="7324ab91-47ad-4eaa-9054-0194215309de"/>
+				<textFieldExpression><![CDATA[$P{Landlords Full Address}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="108" y="15" width="250" height="20" uuid="bdf8395b-4d3c-4a9f-9807-ba8430fe707b"/>
+				<text><![CDATA[am the lawful owner of the property located at]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="317" y="15" width="180" height="15" uuid="0d2d1df0-1dfe-4846-aa47-84759d147a0e"/>
+				<textFieldExpression><![CDATA[$P{Rental Property Address}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="158" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="4" width="210" height="20" uuid="fb8902ac-fc2a-43c9-b896-c89cb2dfd30c"/>
+				<text><![CDATA[I have rented the aforementioned property to ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="200" y="4" width="100" height="20" uuid="60afed49-031f-45e8-a555-3460351ee3b6"/>
+				<textFieldExpression><![CDATA[$P{Tenants Full Name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="288" y="4" width="100" height="22" uuid="c614f5f9-cb14-48cf-996f-c4fdc6a12ca4"/>
+				<text><![CDATA[, son/daughter of ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="368" y="4" width="100" height="19" uuid="0759f28e-55b0-4502-afce-9d0d99667c80"/>
+				<textFieldExpression><![CDATA[$P{Tenants Fathers Name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="432" y="4" width="100" height="17" uuid="fa94ef5c-0635-4f90-b460-d8426017d461"/>
+				<text><![CDATA[, residing at ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="2" y="19" width="138" height="19" uuid="c6d1b877-099e-4a50-a8ad-83120a70a91b"/>
+				<textFieldExpression><![CDATA[$P{Tenants Current Address}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="117" y="19" width="100" height="16" uuid="5a85ea88-119c-4c3c-97a4-d0b805980a4d"/>
+				<text><![CDATA[, since ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="148" y="19" width="195" height="19" uuid="48af5689-8536-4d4c-a5d9-0be5bc9f9822"/>
+				<textFieldExpression><![CDATA[$P{Start Date of Lease Agreement}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="291" y="19" width="180" height="19" uuid="5f03a1ec-6434-44a1-8c14-72d1af28791c"/>
+				<text><![CDATA[under a valid rental agreement.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="45" width="150" height="23" uuid="b6dd85d6-2a82-4f4d-974d-712e6ce50396"/>
+				<text><![CDATA[I hereby have no objection to ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="130" y="45" width="100" height="24" uuid="0e51b01f-b697-4bc5-8184-9633993aefa4"/>
+				<textFieldExpression><![CDATA[$P{Tenants Full Name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="220" y="45" width="147" height="24" uuid="2acf7183-a251-4bd7-a7d6-623fc4b8c0ed"/>
+				<text><![CDATA[ using the said property for ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="343" y="45" width="186" height="18" uuid="1e829854-cd5a-438e-b5da-6c6383dee27f"/>
+				<textFieldExpression><![CDATA[$P{purpose of the NOC_e.g}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="134" y="62" width="410" height="19" uuid="09912745-22ba-401d-94e9-125394cfee9a"/>
+				<text><![CDATA[ as long as the usage aligns with the terms and conditions outlined in]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="109" width="218" height="20" uuid="409ce686-72ec-4e25-abeb-19af5085015e"/>
+				<text><![CDATA[This NOC is issued upon the request of ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="180" y="109" width="100" height="23" uuid="91dcc37c-b546-45ca-893e-25a7584af4e7"/>
+				<textFieldExpression><![CDATA[$P{Tenants Full Name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="271" y="109" width="37" height="20" uuid="fe48be55-35ea-4b94-abaa-587f1860d844"/>
+				<text><![CDATA[ for ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="289" y="109" width="261" height="15" uuid="b08551ab-7933-4181-aafb-2f50e4c7b360"/>
+				<textFieldExpression><![CDATA[$P{specific purpose of the NOC_e.g.applying}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="62" width="170" height="15" uuid="8740b0eb-2fdc-4cbd-84bb-8e98c2b266ce"/>
+				<textFieldExpression><![CDATA[$P{residential_commercial_office space_etc}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="77" width="100" height="21" uuid="458434f6-77b3-4efb-9e1e-49667f090b8c"/>
+				<text><![CDATA[the rental agreement. ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="1" y="125" width="279" height="18" uuid="5c2fcb01-a800-4997-a493-8d25a4ecbe00"/>
+				<textFieldExpression><![CDATA[$P{for a loan_business registration_passport application_etc}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="78" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="6f0fd372-d72a-4932-94f8-8a7224666a3a"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Yours Faithfully,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="28" width="100" height="20" uuid="8d492bd6-36a3-453b-9d96-e56476782f5a"/>
+				<text><![CDATA[Landlord's Signature]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="42" width="120" height="18" uuid="59a8e5e7-642d-43a3-b0a6-d974ffb4645c"/>
+				<textFieldExpression><![CDATA[$P{Contact Information}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="56" width="100" height="22" uuid="c8b85ae1-5f6d-4fb9-a72f-5ac6f66ca383"/>
+				<textFieldExpression><![CDATA[$P{Insert Date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="14" width="100" height="14" uuid="6cf50703-de87-475d-b89b-ed669f196d5d"/>
+				<textFieldExpression><![CDATA[$P{Landlords Full Name}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>
