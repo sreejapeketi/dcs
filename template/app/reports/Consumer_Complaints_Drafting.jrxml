@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 9.0.0.final using JasperReports Library version 6.21.0-4f56c4f36cd19e17675219a9ac4692d5f0f13b06  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Consumer_Complaints_Drafting" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="426fd290-4faa-437c-840a-5cfbb10c0e0f">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="consumer.jrdax"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Dataset1" uuid="82abfbe3-33c5-4c6e-bd78-22e0bd825c97">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="consumer.jrdax"/>
+		<queryString language="json">
+			<![CDATA[complainants]]>
+		</queryString>
+		<field name="name" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="name"/>
+			<fieldDescription><![CDATA[name]]></fieldDescription>
+		</field>
+		<field name="address" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="address"/>
+			<fieldDescription><![CDATA[address]]></fieldDescription>
+		</field>
+		<field name="mobile" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="mobile"/>
+			<fieldDescription><![CDATA[mobile]]></fieldDescription>
+		</field>
+		<field name="email" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="email"/>
+			<fieldDescription><![CDATA[email]]></fieldDescription>
+		</field>
+	</subDataset>
+	<subDataset name="Dataset2" uuid="3aa35bcd-e069-4281-917e-0b5bee629cf1">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="consumer.jrdax"/>
+		<queryString language="json">
+			<![CDATA[opponents]]>
+		</queryString>
+		<field name="name" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="name"/>
+			<fieldDescription><![CDATA[name]]></fieldDescription>
+		</field>
+		<field name="address" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="address"/>
+			<fieldDescription><![CDATA[address]]></fieldDescription>
+		</field>
+		<field name="mobile" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="mobile"/>
+			<fieldDescription><![CDATA[mobile]]></fieldDescription>
+		</field>
+		<field name="email" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="email"/>
+			<fieldDescription><![CDATA[email]]></fieldDescription>
+		</field>
+	</subDataset>
+	<parameter name="court" class="java.lang.String"/>
+	<parameter name="delay" class="java.lang.String"/>
+	<parameter name="claimamount" class="java.lang.String"/>
+	<parameter name="fee" class="java.lang.String"/>
+	<parameter name="ddno" class="java.lang.String"/>
+	<parameter name="date" class="java.lang.String"/>
+	<parameter name="rtgs_neft" class="java.lang.String"/>
+	<parameter name="AdvocateName" class="java.lang.String"/>
+	<parameter name="advocatefulladdress" class="java.lang.String"/>
+	<parameter name="advocatemobilenumber" class="java.lang.String"/>
+	<parameter name="advocateemail" class="java.lang.String"/>
+	<parameter name="place" class="java.lang.String"/>
+	<queryString language="json">
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="107" splitType="Stretch">
+			<staticText>
+				<reportElement x="40" y="10" width="470" height="30" uuid="32c43759-40d1-4974-956a-463f7c7788af"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Before the District Consumer Disputes Redressal Forum at]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="225" y="40" width="100" height="30" uuid="ea0db482-9ccb-48bf-95db-fed1b42db0b9"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{court}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="70" y="77" width="440" height="30" uuid="b433c0fa-19aa-4fa0-a9f4-a3fbeb37d869"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[[Compliant under Section – 35, Consumer Protection Act 2019]]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="499" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="10" width="180" height="30" uuid="f896d847-4eb0-4994-a863-2ebe1e8ef75a"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Details of the Complainant
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="170" width="100" height="30" uuid="ee425a00-6bf1-46b4-82e7-8f9f082c1462"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[V/s]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="230" width="180" height="30" uuid="c2a86fbd-4e4d-46b1-8870-94ff3e7a53e2"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ Details of the Opponent]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement x="38" y="50" width="425" height="63" uuid="ea25ca4f-03f7-4cbc-b58b-d41b97ce3b19">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Dataset1" uuid="462d3d11-6c5f-4185-8a43-669bc9a12137">
+						<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("complainants")]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="90" uuid="f3397dd5-9a53-4165-aacd-e414e7708958">
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="5bca0898-978f-4606-92cf-2c37db736564"/>
+								<textElement textAlignment="Center"/>
+								<text><![CDATA[name]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="30" uuid="05be4095-0b7e-4cac-b183-d448b0ff4d6c"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="110" uuid="9e72116c-b4a0-48c4-a3cc-524491781971">
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="110" height="30" uuid="5eb9f977-9c71-4c69-affb-13193699d709"/>
+								<textElement textAlignment="Center"/>
+								<text><![CDATA[address]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="110" height="30" uuid="a219e554-6cde-4d91-b7c5-30de662042c2"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{address}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="100" uuid="a47a3cdf-7451-4701-9552-0e8c2840d536">
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="100" height="30" uuid="48c8ca5e-f695-4f97-bb63-f6a7cee88ba4"/>
+								<textElement textAlignment="Center"/>
+								<text><![CDATA[mobile]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="100" height="30" uuid="80151390-cf71-49a1-9a73-d0d4eebb81ef"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{mobile}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="100" uuid="c074a6c6-fcf3-486c-ab96-47ed2c39dafa">
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="100" height="30" uuid="5d965d5f-6005-4b98-893b-583434731007"/>
+								<textElement textAlignment="Center"/>
+								<text><![CDATA[email]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="100" height="30" uuid="a74c3302-d9d4-4e4b-957f-afdc0ada7407"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement x="35" y="300" width="428" height="81" uuid="bb939f55-8fa7-402d-a2f2-2b0fecf7b295">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table 1_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table 1_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table 1_TD"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Dataset2" uuid="7cb78917-e256-4077-a7a3-4faceb677a02">
+						<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("opponents")]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="110" uuid="c8a9c895-6a2a-454a-a64f-80885e03227a">
+						<jr:columnHeader style="Table 1_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="110" height="30" uuid="20faf6ef-7f4b-4e5b-8ec6-b414ace80b9c"/>
+								<textElement textAlignment="Center"/>
+								<text><![CDATA[name]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table 1_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="110" height="30" uuid="b988b173-0825-4ac6-b215-2f2b36063915"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="110" uuid="f743dd7a-2e75-4c51-8247-eccbfe34762f">
+						<jr:columnHeader style="Table 1_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="110" height="30" uuid="00320c65-52aa-4eda-94e7-fe0660064415"/>
+								<textElement textAlignment="Center"/>
+								<text><![CDATA[address]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table 1_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="110" height="30" uuid="ec35a444-18c5-42c9-92d5-e4ad16ad6d57"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{address}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="93fb7f4c-f161-4f86-9b67-b9af9333c8d4">
+						<jr:columnHeader style="Table 1_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="098aa85d-08e0-48b0-9f63-70967bc7b107"/>
+								<textElement textAlignment="Center"/>
+								<text><![CDATA[mobile]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table 1_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="30" uuid="6944e047-2685-40af-8703-ac607f16e3da"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{mobile}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="ed132b57-3f4f-431f-af21-9dfe22867175">
+						<jr:columnHeader style="Table 1_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="5e256362-7f9a-4418-b4a6-ab0156b967a2"/>
+								<textElement textAlignment="Center"/>
+								<text><![CDATA[email]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table 1_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="30" uuid="d5077f34-bcca-48c1-bc01-0942388eec77"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+		<band height="685">
+			<staticText>
+				<reportElement x="10" y="19" width="540" height="641" uuid="a3f339fd-5210-40a1-b674-274f39f0ce5c"/>
+				<textElement textAlignment="Left">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[I/We, the complainant(s) is/are humbly request to the Hon’ble
+State Commission/District Commission that, (Write down the details shown
+in para (1)
+(1)Submit all the details of the Complaint i.e. how; when and where the
+cause of action arised (The events that took place should be mentioned
+in chronological order, with the details of documents.)
+A. If the complaint is regarding the defect of goods /Items, or about the
+deficiency of service then provide details of deficiency/ type of
+services and date/year of purchase of goods/ service received.
+B. Details of the items/goods (provide information about
+defect/supplying of less quantity of goods/items.)
+C. Details of amount paid(The Xerox copies of Bill, Voucher, receipt, etc.
+be attached)
+D. If any guarantee/ warranty is there, then provide the detailed
+information with Xerox copy.
+(2)If the complaint is about to Unfair Trade Practice –
+A. Show the type of unfair trade practice
+B. Details of the damage suffered by the complainant. (Attach the Xerox
+copy of the bill/voucher/receipt etc.)
+(3)State the details of the complainant’s efforts to resolve his compliant
+with the opponent.
+A. Verbal try
+B. Written correspondence/notice
+C. For E-Commerce related matter, Token number given by the Ecommerce platform.
+D. What was the result of the efforts for solution? Provide documentary
+evidence.
+(4)The District/State Commission has the power to file complaint, because
+of,
+A. Cause of action/residence of the complainant/place of business of
+the other side-opponent/residence is under the jurisdiction of the
+District/State Commission.
+B. The claim amount is up to 1 Crore/ more than Rs. 1 Crore and up to
+Rs. 10 Crore. (Strike out whichever is not applicable)
+6
+(5)Statement of the complainant that he/she has not filed any complaint in
+any other Court/Tribunal/Commission regarding this complaint. And if
+filed, what was the result? If the documentary evidence is there, state
+the details.
+(6)Any other details that consumer want to submit.
+(7)This complaint is filed within the limitation under Section 69 of
+Consumer Protection Act, 2019.
+
+ ]]></text>
+			</staticText>
+		</band>
+		<band height="569">
+			<staticText>
+				<reportElement x="10" y="10" width="535" height="550" uuid="2d8eb852-095e-4a6f-a46b-6e723e1801a1"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[
+ OR
+
+As appeal is time barred, the Delay Condone application for delay of
+________ days is attached with this application. (Strike out whichever is not
+applicable).
+(8)Prayer of the Complainant
+If the complainant wants to get one of the following or any other prayer,
+then mention it.
+A. To get the refund of the price or charges paid.
+B. To replace the goods with new goods.
+C. To remove the defects in goods.
+D. To get compensation for deficiency in service/negligence of the
+opponent.
+E. To get the amount for mental torture and cost of complaint.
+F. To get the unpaid/less paid insurance claim amount with interest
+thereon.
+G. Details of other prayer, if any.
+(If there is case of complainant to get compensation then provide
+the calculation regarding the compensation sought for)
+(9)Details of fees paid at the time of filing the complaint
+Claim amount Rs. ________ Fees Rs.__________
+Demand Draft No. ________ Date _________
+RTGS/NEFT __________
+7
+(10) If the complaint is to be lodged through an authorized
+Representative/ Advocate/ A voluntary Consumer Association registered
+under law then provide following details.
+Name: ______
+Full Address (with PIN code Number): _______
+Mobile No.: __________ E-Mail: _______
+                                                                                                                                                         I/We, hereby declare that the, above mentioned
+information is true and correct to the best of my knowledge and belief.
+                                                                                                                                                                                                          Place: _______                              Sign of Complainant]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="17" y="72" width="100" height="30" uuid="5d662722-c0b9-4608-ad87-2f2a855d43ff"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{delay}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="329" width="100" height="30" uuid="fa5f9d6e-d6aa-460d-98eb-3fc48f24fb3c"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{claimamount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="222" y="329" width="100" height="30" uuid="94da8b2b-d6d7-44a8-8722-52c07ef5e0f6"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{fee}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="109" y="344" width="100" height="30" uuid="5f1ba845-8886-447e-b8dd-4bcbd21e2ac0"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ddno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="344" width="100" height="30" uuid="ff34aa7c-7549-4de6-baa8-f0f4726b637d"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="84" y="359" width="100" height="30" uuid="90082868-6af3-4210-a808-ada8f41fc896"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{rtgs_neft}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="49" y="434" width="100" height="30" uuid="7c8abdf3-a678-4523-868f-26bab18b4582"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{AdvocateName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="219" y="447" width="241" height="30" uuid="855610a5-04a2-42a1-9907-d5bedb8fd96c"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{advocatefulladdress}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="73" y="464" width="100" height="30" uuid="5081a148-957c-4a96-8e82-6458303d4292"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{advocatemobilenumber}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="186" y="464" width="100" height="30" uuid="ab476575-7759-4d76-80d5-175a6497ddc3"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{advocateemail}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="48" y="539" width="100" height="30" uuid="7057f5d3-7dc2-4aa8-859c-f666eadb545e"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{place}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
