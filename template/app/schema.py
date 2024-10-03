@@ -417,6 +417,16 @@ class GDDRequest(Schema):
    witness1 =fields.Str(default="")
    witness2 =fields.Str(default="")
 
+class NDARequest(Schema):
+   effectivedate=fields.Str(default="")
+   party1=fields.Str(default="")
+   party2=fields.Str(default="")
+   party1engages=fields.Str(default="")
+   party2engages=fields.Str(default="")
+   purpose=fields.Str(default="")
+   period=fields.Str(default="")
+   court=fields.Str(default="")
+   witnessdetail=fields.Str(default="")   
     
 class APIResponse(Schema):
    message=fields.String(default="")

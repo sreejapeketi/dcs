@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 9.0.0.final using JasperReports Library version 6.21.0-4f56c4f36cd19e17675219a9ac4692d5f0f13b06  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="NON_DISCLOSURE_AGREEMENT" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="93c38a1f-1475-40bf-9e01-350141e35a55">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="effectivedate" class="java.lang.String"/>
+	<parameter name="party1" class="java.lang.String"/>
+	<parameter name="party2" class="java.lang.String"/>
+	<parameter name="party1engages" class="java.lang.String"/>
+	<parameter name="party2engages" class="java.lang.String"/>
+	<parameter name="purpose" class="java.lang.String"/>
+	<parameter name="period" class="java.lang.String"/>
+	<parameter name="court" class="java.lang.String"/>
+	<parameter name="witnessdetail" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="160" y="20" width="230" height="30" uuid="a6917f16-7e10-4a24-ba77-a8b36cdaf92c"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NON-DISCLOSURE AGREEMENT]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="630" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="20" width="560" height="610" uuid="c1cd462f-88b9-4c76-ab34-ea6fac78deb5"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[This non-disclosure agreement (“Agreement”) is dated ___________ (“Effective Date”) and is entered into by and between:
+[_________________] (“Party 1”)
+AND
+[_________________] (“Party 2”)
+Party 1 and Party 2 are hereinafter referred to individually as a "Party" and collectively as the "Parties". Wherever the
+context requires, the Party disclosing the confidential information shall be referred to as the “Disclosing Party” and
+the Party receiving the confidential information shall be referred to as the “Receiving Party”.
+Whereas:
+A. Party 1 engages in [_________] and Party 2 engages in [_________].
+B. The Parties wish to collaborate and enter into discussions for the purpose of [_______________] (“Purpose”) and wish to
+keep such discussions confidential.
+Now therefore, in consideration for the mutual promises and covenants set forth herein, the Parties agree as follows:
+1. “Confidential Information” shall mean and include all non-public information, written or oral, disclosed,
+directly or indirectly, through any means of communication or observation (including oral, graphic, written
+or electronic form) by the Disclosing Party or any of its affiliates or representatives to or for the benefit of
+the Receiving Party from the Effective Date, irrespective of whether such information: (a) has been
+specifically marked as “confidential” at the time of disclosure; (b) is treated as proprietary information by the
+Disclosing Party; or (c) is owned or developed by the Disclosing Party.
+2. Confidential Information shall include any financial, business, proprietary or technical information of the
+Disclosing Party.
+3. All such Confidential Information shared under this Agreement shall be used by the Parties exclusively for
+the Purpose and neither Party shall disclose or otherwise use the Confidential Information for any other
+purpose or in any other manner without the prior written approval of the Disclosing Party.
+4. The Confidential Information shared under this Agreement may be disclosed by the Receiving Party to other
+employees on a need to know basis, with written consent from the Disclosing Party, in connection with the
+Purpose, and who shall protect the Confidential Information in accordance with the terms of this Agreement.
+5. The Receiving Party shall protect the Confidential Information in the same manner as it would protect its
+own confidential information.]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="291" y="21" width="100" height="30" uuid="1c31e29b-a958-4f52-97be-1d846fd193ef"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{effectivedate}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="8" y="52" width="100" height="30" uuid="25584f52-5069-447c-829b-1baefcc48f88"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{party1}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="10" y="82" width="100" height="30" uuid="b2c772b6-99d1-43c7-b7b0-14911ef9f483"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{party2}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="124" y="184" width="100" height="30" uuid="1b00e51c-2e66-496a-84dd-296f4a4fe44f"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{party1engages}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="323" y="189" width="100" height="30" uuid="bf4247f9-2c25-4511-b1ed-d45c39f86f9b"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{party2engages}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="220" y="296" width="100" height="30" uuid="180d6ebe-c2dc-4953-af09-15caf52e676f"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{purpose}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="435" y="205" width="100" height="30" uuid="7e239b26-3009-46c5-afc4-3fb1a2d48c17"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{purpose}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="802">
+			<staticText>
+				<reportElement x="0" y="20" width="548" height="782" uuid="a2c1b555-0712-4588-ab58-421772267639"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[6. The confidentiality obligations under this Agreement shall not apply to Confidential Information which:
+a. was in the public domain or generally available to the public prior to receipt thereof by Receiving
+Party from the Disclosing Party, or which subsequently becomes part of the public domain or
+generally available to the public other than as a result of a breach of this Agreement by Receiving
+Party;
+b. was in the possession of Receiving Party prior to receipt from the Disclosing Party;
+c. is later lawfully received by Receiving Party from a third party without any confidentiality
+restrictions applicable;
+d. is independently created or developed by the Receiving Party without use or reference of the
+Confidential Information of the Disclosing Party; or,
+e. is required to be disclosed by operation of applicable law.
+7. Notwithstanding anything to the contrary contained in this Agreement, Confidential Information may be
+disclosed as required by applicable law, regulations or governmental procedure, provided the Receiving Party
+notifies the Disclosing Party prior to such disclosure, unless prohibited by law, so as to afford the Disclosing
+
+Party reasonable opportunity to object or seek an appropriate protective order with respect to such
+disclosure.
+8. The Receiving Party agrees not to issue or release for publication any articles or advertising or publicity
+matter relating to this Agreement which mention or imply the name of the Disclosing Party any of its
+affiliates, or subject matter hereof, unless prior written consent is granted by the Disclosing Party subject
+only to Clause 7. The Receiving Party shall make such amendments to any such press release or public
+statement as are reasonably requested by the Disclosing Party.
+9. No transfer of intellectual property right either by way of assignment or license is either granted or implied
+by the disclosure of Confidential Information to the Receiving Party. The fact that Confidential Information
+is disclosed to the Receiving Party shall not be deemed to constitute any representation, warranty or
+inducement by the Disclosing Party of any kind (including of its accuracy or correctness) with respect to the
+Confidential Information, including without limitation, which such use will not infringe on intellectual
+property rights of any third party.
+10. The Receiving Party shall, upon the request of the Disclosing Party or upon the termination of this
+Agreement, return to the Disclosing Party all Confidential Information, including drawings, documents,
+reports and other tangible manifestations of Confidential Information received by the Receiving Party
+pursuant to this Agreement, together with all copies and reproductions thereof.
+11. This Agreement shall be effective as of the Effective Date and shall terminate on the delivery of written
+notice of termination from either Party; provided, however, that the obligations of the Receiving Party under
+this Agreement shall remain in effect for a period of [________] years from the date of termination.
+12. This Agreement shall be governed and construed in accordance with the laws of India. The competent courts at [__________] India shall have the sole and exclusive jurisdiction over any dispute that arises in relation to this Agreement. ]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="118" y="747" width="100" height="30" uuid="53791782-5057-400c-9157-57026909c535"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{court}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="282" y="717" width="100" height="30" uuid="dac7a067-1568-4b37-9bab-94335932fa20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{period}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="533">
+			<staticText>
+				<reportElement x="10" y="30" width="535" height="503" uuid="3c82ce1c-4af2-4da4-9236-64776c6d6f7a"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[13. The Partner represents and covenants that its performance of this Agreement does not and will not breach
+any agreement it has entered into or will enter into with any third party. The Partner agrees not to enter into
+any written or oral agreement that conflicts with the provisions of this Agreement.
+14. The individuals executing this Agreement represent and warrant that they are empowered and duly
+authorized execute this Agreement on behalf of the parties they represent. Each Party represents and
+warrants to the other Party that it is authorised to execute this Agreement and is competent to discharge the
+obligations under this Agreement.
+15. Nothing in this Agreement will be construed to create a partnership, joint venture, franchise, fiduciary,
+employment or agency relationship between the parties. Neither Party has any express or implied authority
+to assume or create any obligations on behalf of the other or to bind the other to any contract, agreement or
+undertaking with any third party.
+16. If any provision of this Agreement shall be held by a court of competent jurisdiction to be illegal, invalid or
+unenforceable, the remaining provisions shall remain in full force and effect.
+17. This Agreement contains the full and complete understanding of the parties with respect to the subject
+matter hereof, and supersedes all prior representations and understandings, whether oral or written. This
+Agreement may be amended only in writing by mutual agreement of the Parties.
+IN WITNESS WHEREOF, the parties have executed this Agreement under seal as of the Effective Date.                                                                                                                                                               Witness Detail :]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="102" y="469" width="100" height="30" uuid="0a47c15c-9e11-479c-beb8-65a2dea3ceca"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{witnessdetail}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
