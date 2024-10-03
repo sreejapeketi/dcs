@@ -387,3 +387,41 @@ class GenerateNAD(MethodResource, Resource):
 
 api.add_resource(GenerateNAD, '/generateNAD')
 docs.register(GenerateNAD)
+
+class GenerateCCD(MethodResource, Resource):
+    @doc(description="Consumer Complaint Drafting", tags=['Consumer Complaint Drafting-API'])
+    @use_kwargs(schema.CCDRequest, location=('json'))
+    @marshal_with(schema.APIResponse)
+    def post(self, **kwargs):
+       try:
+          print("generateCCD")
+          parameters=kwargs             
+          db_conn=utility.getDbConnection("complainantopponent.json","complainants","opponents",parameters['complainants'],parameters['opponents'])
+          del parameters['complainants']
+          del parameters['opponents']
+          utility.generateReport("Consumer_Complaints_Drafting.jrxml","Consumer Complaint Drafting",parameters,db_conn) 
+          return schema.APIResponse().dump(dict(message="Report generated successfully")), 200
+       except Exception as e:
+          print(str(e))
+          return schema.APIResponse().dump(dict(message="not generated")), 404
+
+api.add_resource(GenerateCCD, '/generateCCD')
+docs.register(GenerateCCD)
+
+class GenerateGDD(MethodResource, Resource):
+    @doc(description="Consumer Complaint Drafting", tags=['Consumer Complaint Drafting-API'])
+    @use_kwargs(schema.GDDRequest, location=('json'))
+    @marshal_with(schema.APIResponse)
+    def post(self, **kwargs):
+       try:
+          print("generateGDD")
+          parameters=kwargs             
+          db_conn=""
+          utility.generateReport("Gift_Deed_Drafting.jrxml","Gift_Deed_Drafting",parameters,db_conn) 
+          return schema.APIResponse().dump(dict(message="Report generated successfully")), 200
+       except Exception as e:
+          print(str(e))
+          return schema.APIResponse().dump(dict(message="not generated")), 404
+
+api.add_resource(GenerateGDD, '/generateGDD')
+docs.register(GenerateGDD)

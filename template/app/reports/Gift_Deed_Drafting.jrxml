@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 9.0.0.final using JasperReports Library version 6.21.0-4f56c4f36cd19e17675219a9ac4692d5f0f13b06  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Gift_Deed_Drafting" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7cd81d32-5b36-4879-b7ac-3fb22cfca514">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="day" class="java.lang.String"/>
+	<parameter name="month" class="java.lang.String"/>
+	<parameter name="year" class="java.lang.String"/>
+	<parameter name="location" class="java.lang.String"/>
+	<parameter name="donorname" class="java.lang.String"/>
+	<parameter name="donorfathersname" class="java.lang.String"/>
+	<parameter name="donorsage" class="java.lang.String"/>
+	<parameter name="donormaritalstatus" class="java.lang.String"/>
+	<parameter name="donorprofession" class="java.lang.String"/>
+	<parameter name="donoraadhar" class="java.lang.String"/>
+	<parameter name="doneename" class="java.lang.String"/>
+	<parameter name="donnefathname" class="java.lang.String"/>
+	<parameter name="doneeage" class="java.lang.String"/>
+	<parameter name="doneeMaritalstatus" class="java.lang.String"/>
+	<parameter name="doneeprofession" class="java.lang.String"/>
+	<parameter name="doneeAadhar" class="java.lang.String"/>
+	<parameter name="registrationnum" class="java.lang.String"/>
+	<parameter name="volume" class="java.lang.String"/>
+	<parameter name="topage" class="java.lang.String"/>
+	<parameter name="frompage" class="java.lang.String"/>
+	<parameter name="date" class="java.lang.String"/>
+	<parameter name="sr" class="java.lang.String"/>
+	<parameter name="relation" class="java.lang.String"/>
+	<parameter name="amount" class="java.lang.String"/>
+	<parameter name="series" class="java.lang.String"/>
+	<parameter name="gazatteno" class="java.lang.String"/>
+	<parameter name="dated" class="java.lang.String"/>
+	<parameter name="east" class="java.lang.String"/>
+	<parameter name="west" class="java.lang.String"/>
+	<parameter name="north" class="java.lang.String"/>
+	<parameter name="south" class="java.lang.String"/>
+	<parameter name="witness1" class="java.lang.String"/>
+	<parameter name="witness2" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="220" y="30" width="100" height="30" uuid="50f8f2f6-b10c-47ce-be85-7ccf8ff0f15e"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[GIFT DEED
+]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="570" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="10" width="560" height="40" uuid="0bb845e7-61ab-494b-bb51-1210be5695c3"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[This Gift deed is made and executed on this ……………….day of Month of ………… of the Year …………, at…………………………….]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="220" y="60" width="100" height="30" uuid="2b5f4247-735d-4dfd-953b-97212adb4031"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BETWEEN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="110" width="540" height="70" uuid="c706d6b2-4032-4801-aadd-14c917787fc8"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[__________ son/daughter/wife of __________, Age____Marital Status_______, (Profession :_______),Having Aadhar card No…………………(hereinafter called the Donor) of the one part. ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="220" y="180" width="100" height="20" uuid="b1d02a51-5a1f-4e69-9f69-67efe225a825"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[AND]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="220" width="540" height="70" uuid="9c78754d-7d1b-40e6-83f8-42a98c3e14be"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[__________ son/daughter/wife of __________, Age____Marital Status_______, (Profession :_______)Having Aadhar card No…………………(hereinafter called the Donee) of the other part. ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="308" width="533" height="252" uuid="5cae980e-e6a5-4cba-97d8-ce0a3c837170"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[The expressions of the DONOR PARTY No. 1 and the DONEE PARTY NO.2 shall mean and include their respective heirs, successors, executors, nominees, assignees, administrators and legal representatives etc.AND WHEREAS the DONOR PARTY NO.1 is the owner and in possession of the property having been purchased/acquired vide registered sale deed as document
+No……………………………, Addl. Book-I----, Vol. No…………pages
+...to... ., on date ……………………duly regd. in the office of SR………,( This recital should be about how the vendors have acquired the title of the property.)                                                                                                                                                                                 
+                                                                                                                                                                          AND WHEREAS the above PROPERTY, more particularly described in
+schedule hereinbelow, is free from all sorts of encumbrances such as liens, charges, claim, liabilities, acquisitions, injunctions or attachments from any Court of Law, gifts, mortgages, demands, notices, notifications, legal disputes, difference, prior sale and flaws etc. etc. and the DONOR PARTY No.1 is fully entitled to
+dispose of the same. ]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="243" y="10" width="100" height="30" uuid="e8bb5ce5-d97a-408e-a973-7b0a0f645036"/>
+				<textFieldExpression><![CDATA[$P{day}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="381" y="9" width="100" height="30" uuid="98ba0d95-08d3-4bd0-9f73-859f0b10b37e"/>
+				<textFieldExpression><![CDATA[$P{month}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="481" y="12" width="63" height="30" uuid="f28d2f50-e7df-43d7-8cd2-783e8d0d9c90"/>
+				<textFieldExpression><![CDATA[$P{year}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="15" y="27" width="100" height="30" uuid="64091813-2527-4368-94a0-d5985fa5f089"/>
+				<textFieldExpression><![CDATA[$P{location}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="13" y="111" width="100" height="30" uuid="3d57a725-4ff1-4d9b-8f6c-2897f6916ed1"/>
+				<textFieldExpression><![CDATA[$P{donorname}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="194" y="111" width="100" height="30" uuid="195a1752-8bd4-4be3-9904-e08b9a8bf768"/>
+				<textFieldExpression><![CDATA[$P{donorfathersname}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="290" y="111" width="100" height="30" uuid="935e945b-79f2-4914-9e83-93d41993995c"/>
+				<textFieldExpression><![CDATA[$P{donorsage}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="386" y="110" width="100" height="30" uuid="845cd8be-d13e-4e07-a0e2-affb7422bd0d"/>
+				<textFieldExpression><![CDATA[$P{donormaritalstatus}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="11" y="126" width="100" height="30" uuid="dca598c5-1ffb-4aac-8a90-fc4337addc73"/>
+				<textFieldExpression><![CDATA[$P{donorprofession}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="191" y="128" width="100" height="30" uuid="4fbee22c-aa37-4923-b358-ecf6fd6a1194"/>
+				<textFieldExpression><![CDATA[$P{donoraadhar}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="10" y="219" width="100" height="30" uuid="6168f68b-1b2d-4afe-948a-bb702035c8e1"/>
+				<textFieldExpression><![CDATA[$P{doneename}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="193" y="219" width="100" height="30" uuid="62507a8a-58bc-46c3-9f03-215771b7a770"/>
+				<textFieldExpression><![CDATA[$P{donnefathname}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="287" y="222" width="100" height="30" uuid="f614f36d-6f06-4995-9f6b-ef87a13731ff"/>
+				<textFieldExpression><![CDATA[$P{doneeage}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="392" y="221" width="100" height="30" uuid="a7a7cb3a-45a0-4c5f-8413-1e986d9740b7"/>
+				<textFieldExpression><![CDATA[$P{doneeMaritalstatus}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="12" y="237" width="100" height="30" uuid="f22cfa19-9f58-4ca1-9622-0b8ab72985bf"/>
+				<textFieldExpression><![CDATA[$P{doneeprofession}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="189" y="237" width="100" height="30" uuid="4bc56df2-62c8-40ef-ba5a-b4decffac8ec"/>
+				<textFieldExpression><![CDATA[$P{doneeAadhar}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="38" y="372" width="100" height="30" uuid="21390c68-923e-4d48-bf36-1d054d54c71e"/>
+				<textFieldExpression><![CDATA[$P{registrationnum}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="264" y="371" width="100" height="30" uuid="2322b685-ee84-4138-9c64-91d7516fe2e4"/>
+				<textFieldExpression><![CDATA[$P{volume}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="337" y="374" width="100" height="30" uuid="85d7876e-19fd-4b4d-992a-5260dcc29698"/>
+				<textFieldExpression><![CDATA[$P{frompage}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="39" y="384" width="100" height="30" uuid="cfd011e0-f28c-4e10-aa03-b2d9d06a63e0"/>
+				<textFieldExpression><![CDATA[$P{topage}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="105" y="384" width="100" height="30" uuid="cbc4790e-3279-48a9-b955-a8e9dfecde80"/>
+				<textFieldExpression><![CDATA[$P{date}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="326" y="384" width="100" height="30" uuid="29b8ac5d-a580-4ec9-aeb7-d37003944c0e"/>
+				<textFieldExpression><![CDATA[$P{sr}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="560">
+			<staticText>
+				<reportElement x="20" y="40" width="530" height="520" uuid="80c30230-dd58-416e-86e2-d69d96f40a04"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[AND WHEREAS the DONOR PARTY NO.1 has great love and affection for the DONEE PARTY No. 2 beingHIS/HER _____________(BLOOD RELATION) AND WHEREAS THE DONOR PARTY NO. 1 has agreed to Gift/Donate the property described in Schedule hereinbelow UNTO the DONEE PARTY NO.2 and the DONEE PARTY NO.2 have also agreed to accept the same.        NOW THIS GIFT DEED WITNESSETH AS UNDER:
+(1) That the DONOR PARTY NO.1 does hereby donate/gift the
+property__________________________________________________ __________,
+UNTO_____________________________________________________________
+S/O, D/O, W/O
+_____________________________________________
+on account of great love and affection for THEM being HIS/HER REAL
+______________________ (Relation)
+(2) The possession of the aforesaid PROPERTY UNDER DONATION/GIFT has been handed-over/ delivered to the DONEE PARTY NO2 by the DONOR PARTY NO.1
+(3) That the DONEE PARTY NO. 2 has now become the absolute and
+exclusive Owner with all rights in the aforesaid PROPERTY UNDER
+DONATION/GIFT from today and shall also enjoy all rights of
+Ownership etc. therein..
+(4) The DONOR PARTY NO.1 has now been left with no right, title, interests
+or liens etc. whatsoever of any sort/nature in the aforesaid PROPERTY
+UNDER DONATION/GIFT henceforth after the execution/ registration of this GIFT DEED. The property in question is free from acquisition by the Govt. nor by any other authority.
+(5) That the DONEE PARTY NO.2 with HIS/ HER own funds shall get the PROPERTY UNDER DONATION/GIFT transferred/mutated in his favour in the records of Rights of Revenue Department on the basis of this GIFT DEED and Donor Party No. 1 hereby conveys his No Objection for the mutation of the property herein below mentioned under sch0000edule, in the name of the Donee                                     That the DONEE PARTY NO.2 has accepted the GIFT of the said
+PROPERTY UNDER DONATION / GIFT DEED and has also taken-over the
+possession of the same from the DONOR-PARTY NO.1 ..
+(6) That the market value of the above mentioned PROPERTY UNDER
+DONATION/GIFThasbeen assessed at Rs.___________ (Rupees_______________
+only), as per Notification published in Official Gazettee, Series; _____ No.
+__________. Dated: ___________
+]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="135" y="55" width="100" height="30" uuid="394b5bbe-71b8-4137-b1ed-23042452d2c0"/>
+				<textFieldExpression><![CDATA[$P{relation}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="24" y="207" width="100" height="30" uuid="1fa786e7-0c11-4162-a1f3-3bb0375cb884"/>
+				<textFieldExpression><![CDATA[$P{relation}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="62" y="149" width="100" height="30" uuid="0254394e-95a6-44f1-bf77-c33ecf9b3ffa"/>
+				<textFieldExpression><![CDATA[$P{donorname}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="86" y="131" width="100" height="30" uuid="f49739fa-6078-459c-80eb-4c90e2d1014f"/>
+				<textFieldExpression><![CDATA[$P{registrationnum}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="30" y="175" width="250" height="30" uuid="be28a2c4-6888-472f-a1e3-f06339049461"/>
+				<textFieldExpression><![CDATA[$P{donorfathersname}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="250" y="496" width="100" height="30" uuid="ed249ebe-f157-441d-b78e-cbfd88ecae26"/>
+				<textFieldExpression><![CDATA[$P{amount}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="134" y="522" width="100" height="30" uuid="5540b9b9-d92b-4e21-a7cb-ebebefffa3f7"/>
+				<textFieldExpression><![CDATA[$P{dated}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="19" y="524" width="100" height="30" uuid="4a6f28ff-9314-43b2-b0bf-be8cadc5ae7b"/>
+				<textFieldExpression><![CDATA[$P{gazatteno}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="354" y="509" width="100" height="30" uuid="ac151e46-c642-44da-903b-ed2dcb8204d6"/>
+				<textFieldExpression><![CDATA[$P{series}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="530">
+			<staticText>
+				<reportElement x="30" y="11" width="515" height="309" uuid="f3e6a533-4510-495a-9095-772ec8ba776c"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[(7) That all the expenses of the GIFT DEED such as Stamp Duty,and registration Fees etc. have been borne and paid by the DONOR PARTY NO. 1./ DONEE PARTY NO 2.
+(8) That all future taxes, cesses, rates or any other Govt. or Municipal dues and demands in respect of the above mentioned PROPERTY UNDER DONATION/GIFT shall be borne and paid by the DONEE PARTY NO.2.
+(9) That all the Title Deeds/papers including previous title deed (in originals) relating to the Gifted PROPERTY, herein below mentioned UNDER DONATION/GIFT have been handed-over/delivered to the DONEE PARTY NO.2 by the DONOR PARTY NO.1 SCEHUDULE
+(The complete description of the Property shall be stated here which should include Survey Nos and Sub Division incase of Villages / Chalta Nos, P.T. Sheet Nos incase of
+Cities, Area, and Inscription/Description Nos along with Matriz Nos if avalaible) an
+boundaries of the Properties)
+East:
+West:
+North:
+South:
+In witness whereof, the parties have signed and affixed their signatures thumb
+mark on this Gift Deed after understanding the contents of the same on the day,
+month and year first above written in the presence of the below mentioned witnesses.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="330" width="515" height="70" uuid="2adbb5c8-fa33-4f83-8d39-6d439d9f236d"/>
+				<text><![CDATA[Witness 1:                                                                                      Witness 2:    ]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="80" y="331" width="100" height="30" uuid="a65a4e2d-dbc7-4ee4-b777-fbcb27a5073e"/>
+				<textFieldExpression><![CDATA[$P{witness1}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="367" y="330" width="100" height="30" uuid="492efd1c-2dcd-4434-8c4f-6736a98c5995"/>
+				<textFieldExpression><![CDATA[$P{witness2}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="61" y="194" width="100" height="30" uuid="b9e39e7e-acf7-403b-ac23-0de9f1a291c5"/>
+				<textFieldExpression><![CDATA[$P{east}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="60" y="209" width="100" height="30" uuid="fd5fa3b3-c5dd-451d-afbd-261eac7daf18"/>
+				<textFieldExpression><![CDATA[$P{west}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="65" y="223" width="100" height="30" uuid="98c07373-8afe-47c9-8a36-6a1b97eed610"/>
+				<textFieldExpression><![CDATA[$P{north}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="67" y="238" width="100" height="30" uuid="2e1ae9ab-1b52-4063-9707-98dea4d91480"/>
+				<textFieldExpression><![CDATA[$P{south}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
