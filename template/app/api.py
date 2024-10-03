@@ -345,6 +345,7 @@ class GenerateMCA(MethodResource, Resource):
           return schema.APIResponse().dump(dict(message="not generated")), 404
 
 
+
 api.add_resource(GenerateMCA, '/generateMCA')
 docs.register(GenerateMCA)
 
@@ -365,7 +366,6 @@ class GenerateCSA(MethodResource, Resource):
        except Exception as e:
           print(str(e))
           return schema.APIResponse().dump(dict(message="not generated")), 404
-
 
 api.add_resource(GenerateCSA, '/generateCSA')
 docs.register(GenerateCSA)
@@ -443,3 +443,4 @@ class GenerateNDA(MethodResource, Resource):
 
 api.add_resource(GenerateNDA, '/generateNDA')
 docs.register(GenerateNDA)
+
