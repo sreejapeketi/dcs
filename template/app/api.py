@@ -345,6 +345,7 @@ class GenerateMCA(MethodResource, Resource):
           return schema.APIResponse().dump(dict(message="not generated")), 404
 
 
+
 api.add_resource(GenerateMCA, '/generateMCA')
 docs.register(GenerateMCA)
 
@@ -365,7 +366,6 @@ class GenerateCSA(MethodResource, Resource):
        except Exception as e:
           print(str(e))
           return schema.APIResponse().dump(dict(message="not generated")), 404
-
 
 api.add_resource(GenerateCSA, '/generateCSA')
 docs.register(GenerateCSA)
@@ -409,7 +409,7 @@ api.add_resource(GenerateCCD, '/generateCCD')
 docs.register(GenerateCCD)
 
 class GenerateGDD(MethodResource, Resource):
-    @doc(description="Consumer Complaint Drafting", tags=['Consumer Complaint Drafting-API'])
+    @doc(description="Gift Deed Drafting", tags=['Gift Deed'])
     @use_kwargs(schema.GDDRequest, location=('json'))
     @marshal_with(schema.APIResponse)
     def post(self, **kwargs):
@@ -425,3 +425,22 @@ class GenerateGDD(MethodResource, Resource):
 
 api.add_resource(GenerateGDD, '/generateGDD')
 docs.register(GenerateGDD)
+
+class GenerateNDA(MethodResource, Resource):
+    @doc(description="Non Disclosure Agreement", tags=['NDA Drafting'])
+    @use_kwargs(schema.NDARequest, location=('json'))
+    @marshal_with(schema.APIResponse)
+    def post(self, **kwargs):
+       try:
+          print("generateNDA")
+          parameters=kwargs             
+          db_conn=""
+          utility.generateReport("NON_DISCLOSURE_AGREEMENT.jrxml","NON_DISCLOSURE_AGREEMENT",parameters,db_conn) 
+          return schema.APIResponse().dump(dict(message="Report generated successfully")), 200
+       except Exception as e:
+          print(str(e))
+          return schema.APIResponse().dump(dict(message="not generated")), 404
+
+api.add_resource(GenerateNDA, '/generateNDA')
+docs.register(GenerateNDA)
+
