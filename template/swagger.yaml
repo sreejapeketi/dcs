@@ -244,6 +244,22 @@ paths:
           description: ""
           schema:
             $ref: "#/definitions/APIResponse"
+  /generateQRD:
+    post:
+      tags:
+      - Quick Rental Drafting API
+      description: Quick Rent Agreement Drafting
+      parameters:
+      - in: body
+        name: body
+        required: false
+        schema:
+          $ref: "#/definitions/QRDRequest"
+      responses:
+        default:
+          description: ""
+          schema:
+            $ref: "#/definitions/APIResponse"
   /generateSDD:
     post:
       tags:
@@ -923,6 +939,25 @@ definitions:
       purchaser_name:
         type: string
       purchaser_pan:
+        type: string
+  QRDRequest:
+    type: object
+    properties:
+      address:
+        type: string
+      deposit:
+        type: string
+      fromDt:
+        type: string
+      leaseperiod:
+        type: string
+      lname:
+        type: string
+      monthlyrent:
+        type: string
+      tname:
+        type: string
+      to:
         type: string
   SDDRequest:
     type: object
