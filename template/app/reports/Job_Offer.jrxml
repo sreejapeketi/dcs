@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 9.0.0.final using JasperReports Library version 6.21.0-4f56c4f36cd19e17675219a9ac4692d5f0f13b06  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Job_Offer" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ee9ea36c-b37d-4e99-8f5f-50ab4d1d78f5">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="companyname" class="java.lang.String"/>
+	<parameter name="date" class="java.lang.String"/>
+	<parameter name="startdate" class="java.lang.String"/>
+	<parameter name="deadlinedate" class="java.lang.String"/>
+	<parameter name="typeofemployement" class="java.lang.String"/>
+	<parameter name="position" class="java.lang.String"/>
+	<parameter name="employeename" class="java.lang.String"/>
+	<parameter name="fromname" class="java.lang.String"/>
+	<parameter name="titlefrom" class="java.lang.String"/>
+	<parameter name="employeeaddress" class="java.lang.String"/>
+	<parameter name="signdate" class="java.lang.String"/>
+	<parameter name="witness" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="110" y="24" width="320" height="30" uuid="4e7a600b-3031-4dff-9b19-3bc126835e05"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[                 Job Offer and Employment Agreement
+Private and Confidential 
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="30" uuid="63575000-30d6-48cb-bea2-ae0e66d90734"/>
+				<text><![CDATA[Date :]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="111" y="25" width="100" height="30" uuid="d168006a-d2be-4324-a4fe-b16360b0a471"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{companyname}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="32" y="1" width="100" height="30" uuid="ab8c703d-8517-46b3-8074-416eeba6c218"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{date}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="537" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="20" width="540" height="250" uuid="e3dae7e8-58e3-4c4f-9eb6-966b9afe0ce3"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[
+
+
+Dear                  :
+
+On behalf of  _________    (the “Company”) I am pleased to offer you a ___________ as __________ commencing on _________. As discussed, this offer is conditional upon agreeing to and signing the attached terms and conditions of employment.
+
+_______, we look forward to welcoming you to the ____________ team. Please take the time to carefully review our offer and to return a signed copy to me at your earliest convenience, but no later than deadline – __________.
+
+Sincerely,
+
+
+_______
+_________
+]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="12" y="21" width="100" height="30" uuid="a70a51f3-a91b-418d-a0ab-5d5169c146db"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{employeename}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="12" y="43" width="100" height="30" uuid="a63c3732-86d6-4d6c-8e47-e6b0090c7769"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{employeeaddress}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="14" y="325" width="530" height="185" uuid="508449ef-20e6-48b8-9c50-d0a9db9c0a40"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[I,         , have reviewed and agree to the terms and conditions of employment as set out in this letter. 
+
+I have had an opportunity to ensure that I clearly understand the terms and conditions of my employment with the Company, and I have had the opportunity to confer with an independent legal advisor if I so wished, in advance of accepting these terms and conditions of employment. I confirm that I have not been induced by the Company to leave any prior employment.
+
+
+Employee name						Date
+]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="24" y="328" width="100" height="30" uuid="0fb48636-bac8-45c4-8211-fbdfc2975e82"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{employeename}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="108" y="464" width="100" height="30" uuid="a399de3d-4540-4e43-b0ef-d8108f1d41fe"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{employeename}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="369" y="463" width="100" height="30" uuid="4a66de9f-34ae-457e-baad-d40ec2f35407"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{signdate}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="84" y="95" width="100" height="30" uuid="0fc79126-08be-4215-b8de-ed77124329d3"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{companyname}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="391" y="96" width="100" height="30" uuid="d6a8af5a-fa42-495f-9657-370d1a43da85"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{typeofemployement}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="10" y="111" width="100" height="30" uuid="0106aa7d-57dd-4cfb-933b-0e5466a1314b"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{position}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="169" y="113" width="100" height="30" uuid="4904bed7-7b48-49e2-8d64-aa8f4c08dc76"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{startdate}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="13" y="156" width="100" height="30" uuid="98f40ea7-d32a-43f4-9b86-42c58178207c"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{employeename}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="282" y="158" width="100" height="30" uuid="ef19afa8-2554-49de-8151-7db49c706209"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{companyname}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="99" y="189" width="100" height="30" uuid="4b71e05f-ef8e-42f6-affb-f0d42fcc79d6"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{deadlinedate}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="13" y="236" width="100" height="30" uuid="0d0bc8a4-9f91-49eb-8070-4d3452838a89"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{fromname}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="14" y="254" width="100" height="30" uuid="ec22203b-ad7d-4f00-9d44-9a613826bf88"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{titlefrom}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="802">
+			<staticText>
+				<reportElement x="10" y="41" width="534" height="749" uuid="d0f4ba02-17e9-4b4e-9873-6075309e0aa8"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[                                                  SCHEDULE A
+CONFIDENTIALITY OF INFORMATION AND OWNERSHIP OF PROPRIETARY PROPERTY AGREEMENT
+THIS AGREEMENT is dated effective the date set out on the last page hereof and is between              (the “ Company ”) and                     (the employee, consultant, advisor or independent contractor who is referred to in this Agreement as the “ Worker ”). 
+BACKGROUND: 
+A.	The Company may give, has given and will give the Worker access to proprietary or confidential information of the Company and its affiliates and subsidiaries (if any) (the “ Company Group ”), including information that, by its nature or by the nature of its disclosure, would reasonably be considered to be proprietary or confidential to the Company Group (which information is collectively referred to in this Agreement as “ Confidential Information ”). For greater certainty, Confidential Information includes all employee, customer or client personal information, technical data, unpublished know-how, techniques, records, formulae, processes, sketches, photographs, plans, drawings, specifications, samples, reports, manuals, documents, prototypes, hardware, software and other equipment, working materials, findings, inventions and ideas, whether patentable or not, whether they be trade secrets or not and whether they be in written, graphic, oral, electronic or any other form, that are now or hereafter owned, licensed or otherwise acquired by the Company Group.  
+B.	The Worker may develop, conceive, generate or contribute to, in the course of employment or engagement with the Company, alone and/or jointly with others, tangible and intangible property relating to actual or anticipated business and research and development of the Company Group, or that is suggested by or result from work performed for or on behalf of the Company Group, in any fields, which property includes software, hardware, know-how, designs, techniques, documentation and other material regardless of the form or media in or on which it is stored, some or all of which property may be protected by patents, copyrights, trade secrets, trade-marks, industrial designs or mask works or any common law or statutory right anywhere in the world (which tangible and intangible property is collectively referred to in this Agreement as “ Proprietary Property ”).  
+THEREFORE , in consideration of the Worker’s employment or engagement with the Company and other good and valuable consideration, the receipt and sufficiency of which is acknowledged by the Worker, the parties agree as follows: 
+1. The Worker, both during and after employment or engagement with the Company, shall not disclose or use any Proprietary Property or Confidential Information except in the course of carrying out authorized activities on behalf of the Company or except as expressly authorized by the Company in writing. The Worker may, however, use or disclose: 
+.	(a)   Confidential Information (except personal information) that:  (i) is or becomes public, other than through a breach of this Agreement; or  (ii) is known to the Worker prior to employment or engagement by the Company and with respect to which the Worker does not have any obligation of confidentiality; or  
+.	(b)  Confidential Information that is required to be disclosed, or the disclosure of which to regulators is protected, by law, whether under an order of a court or government tribunal, statutory provision or other legal process, provided that, where such disclosure is required of the Worker, the Worker informs the Company of such requirement as soon as the Worker becomes aware of the requirement and in sufficient time to allow the Company to take such steps as are lawfully available to the Company to avoid or limit such disclosure by the Worker.  
+2.	The Worker, both during and after employment or engagement with the Company, shall not disclose or use any trade secrets, confidential information or proprietary property of a third party obtained by the Worker during the course of or as result of employment or engagement with the Company, except as expressly authorized by the Company or such third party in writing.  
+]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="511" y="88" width="39" height="30" uuid="bd7188f7-4be7-43f5-83e3-cc9e33a72c8d"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{companyname}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="132" y="101" width="100" height="30" uuid="ff230e64-f42f-4127-93cc-b325744e013c"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{employeename}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="705">
+			<staticText>
+				<reportElement x="10" y="23" width="520" height="657" uuid="24b4e6b3-b899-49c5-80b1-544e5aa3c00b"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[3.	All right, title and interest in and to Proprietary Property (including the Proprietary Property described in paragraph 6 below), as between the Worker and the Company, belongs to the Company and the Worker has no rights in any such Proprietary Property. For greater certainty, all right, title and interest (including any intellectual property rights) in and to all Proprietary Property that the Worker may acquire in the course of employment or engagement with the Company are hereby assigned to the Company. The Worker agrees to make full disclosure to the Company of and to properly document each development of any Proprietary Property, and to provide written documentation describing such Proprietary Property to the Company, promptly after its creation. At the request and expense of the Company, both during and after employment or engagement with the Company, the Worker shall do all acts necessary and sign all documentation necessary in order to assign all right, title and interest in and to the Proprietary Property to the Company and to enable the Company to register patents, copyrights, trade-marks, mask works, industrial designs and such other protections as the Company deems advisable anywhere in the world. The Worker irrevocably designates and appoints the Company and its duly authorized officers and agents as the Worker’s agent and attorney-in-fact, to act for and in the Worker’s behalf and stead to execute and file any such instruments and papers and to do all other lawfully permitted acts to further the application for, prosecution, issuance, maintenance or transfer of patents, copyrights, trade-marks, mask works, industrial designs and such other protections related to the Proprietary Property. This power of attorney is coupled with an interest and shall not be affected by the Worker’s subsequent incapacity or death.  
+4.	If, during and in the course of employment or engagement with the Company, the Worker develops any Proprietary Property that is protected by copyright, the Worker hereby waives unconditionally any “moral rights” the Worker may have in such Proprietary Property. 
+5.	The Worker, both during and after employment or engagement with the Company, shall not make any unauthorized use of the Company’s computer systems, communications networks, databases or files. The Worker shall adhere to all Company policies regarding the use of such computer systems, communications networks, databases or files.  
+6.	All notes, data, tapes, reference items, sketches, drawings, memoranda, records, documentation and other material regardless of the form or media in or on which it is stored, that is in or comes into the possession or control of the Worker, and that is in any way obtained, conceived, developed, generated or contributed to by the Worker, alone and/or jointly with others during or as a result of the Worker’s employment or engagement with the Company, is and remains Confidential Information and/or Proprietary Property within the meaning of this Agreement.  
+7.	The Worker shall return or destroy, as directed by the Company, Confidential Information or Proprietary Property to the Company upon request by the Company at any time, and upon the cessation of employment or engagement with the Company, regardless of how that cessation occurs. Such return or destruction shall include all originals and all copies of the Confidential Information and Proprietary Property, in whatever medium or form, that is then in the control or possession of the Worker. Upon request by the Company, the Worker shall certify, by way of affidavit or statutory declaration, that all such Confidential Information and Proprietary Property has been returned or destroyed, as applicable. Both during and after employment or engagement with the Company, the Worker shall not make or retain copies of the Confidential Information or Proprietary Property in the Worker’s possession or control, except for the purpose of carrying out authorized activities on behalf of the Company or except as expressly authorized by the Company in writing. For information stored in electronic form: 
+.	(a)  the Worker shall be deemed to have returned it when the Worker transmits an electronic copy to Company and thereafter destroys it per (b) below; and  
+.	(b)  the Worker shall be deemed to have destroyed it when the Worker performs a commercially reasonable “delete” function with respect to all of its copies of information, notwithstanding that such information may be forensically recoverable or restored from backups (provided always that if, at any time, the Worker performs or permits such recovery or restoration, the Worker shall treat such recovered or restored information as Confidential Information hereunder at all times).  
+8.	The Worker shall not use unauthorized software on the Company’s equipment during the course of employment or engagement with the Company. Furthermore, the Worker shall not incorporate into or link with the Confidential Information or Proprietary Property, any third-party intellectual property (including third party software, images, works or materials, third party patents or trade secrets, and open source software) without first (a) disclosing same to the Company together with the license therefor from such third party, and (b) receiving authorization from the Company for such incorporation or linkage.  ]]></text>
+			</staticText>
+		</band>
+		<band height="802">
+			<staticText>
+				<reportElement x="10" y="20" width="535" height="740" uuid="41b0ed96-aea8-473c-822f-7a6b4c8ce884"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[9.	During the Worker’s employment or engagement with the Company, the Worker shall not make use of or in any manner communicate to the Company any confidential information of any third party (including former employers of the Worker) that may be in or may come into the Worker’s possession or control, other than confidential information disclosed to the Worker in his, her or its capacity as a representative of the Company.  
+10.	The Worker shall, if requested from time to time by the Company, execute such further agreements as to confidentiality and proprietary rights as the Company requires to protect confidential information or proprietary property.  
+11.	Regardless of any changes in role, responsibilities, compensation or otherwise, including cessation of the Worker’s employment or engagement with the Company (regardless of how that cessation occurs), the Worker shall continue to be subject to the terms and conditions of this Agreement and any other(s) executed pursuant to paragraph 10 above.  
+12.	The Worker’s sole and exclusive remedy for any breach of this Agreement by the Company is limited to monetary damages and the Worker shall not make any claim in respect of any rights to or interest in any Confidential Information or Proprietary Property. The Worker hereby waives, relinquishes and conveys to the Company any and all claims of any nature whatsoever, which the Worker now or hereafter has for infringement of any proprietary rights assigned to the Company. The Worker acknowledges that it would be difficult to compute the monetary loss to the Company arising from a breach or threatened breach of this Agreement by the Worker and that, accordingly, the Company shall be entitled to specific performance, injunctive or other equitable relief in addition to or instead of monetary damages, without the necessity of establishing that monetary damages would be inadequate.  
+13.	The Worker’s employment or engagement with the Company is subject to the terms and conditions of this Agreement. This Agreement shall enure to the benefit of the Company and its successors and assigns and be binding on the Worker and the Worker’s heirs, attorneys, guardians, estate trustees, executors, trustees and permitted assigns.  
+14.	This Agreement is a contract made under and shall be governed by and construed in accordance with the laws of the Province of Ontario and the federal laws of Canada applicable in the Province of Ontario.  
+15.	If any provision of this Agreement is held by a court of competent jurisdiction to be invalid or unenforceable, that provision is to be deleted and the other provisions remain in effect and are valid and enforceable to the fullest extent permitted by law.  
+16.	The Worker and the Company each intend and agree that in this Agreement, the terms “ employment ” and “ engagement ” shall be deemed to include any period of time prior to the Worker’s execution of this Agreement and/or prior to the formal execution of any employment or consulting agreement or contract for services relating to the employment or engagement, during which period of time and in connection with or in contemplation of such employment or engagement, the Worker provided services to or performed work of any kind for the Company Group or for the benefit of the Company Group. 
+17.	The Worker confirms that he or she had the opportunity to confer with an independent legal advisor if he or she so wished, in advance of signing this Agreement. The Worker further confirms that he or she has read this Agreement and the Worker accepts and agrees to be bound by its terms.  
+18.	The headings herein are for convenience only and do not interpret this Agreement, the word “ including ” or “ include ”, when following any general statement or term, is not to be construed as limiting the general statement or term to the specific items or matters set forth or to similar items or matters, but rather as permitting the general statement or term to refer to all other items or matters that could reasonably fall within its broadest possible scope, and the word “ or ” does not imply an exclusive relationship between the matters being connected.  
+]]></text>
+			</staticText>
+		</band>
+		<band height="563">
+			<staticText>
+				<reportElement x="18" y="25" width="512" height="385" uuid="d2163466-8162-41a0-b2fa-c2b0e66e936f"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[19.	The Worker hereby authorizes the Company to notify the Worker’s future employers (or other necessary third parties) of the terms of this Agreement and the Worker’s responsibilities hereunder.  
+20.	This Agreement, and the agreements and other documents required to be delivered pursuant to this Agreement, constitute the entire agreement between the Company and the Worker and set out all the covenants, promises, warranties, representations, conditions and agreements between the Company and the Worker in connection with the subject matter of this Agreement and supersede all prior agreements, understandings, negotiations and discussions, whether oral or written, pre-contractual or otherwise.  
+
+DATED _____________________________ 
+
+In the presence of: 
+
+
+____________________________		____________________________
+Witness 						Employee Name
+]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="102" y="173" width="100" height="30" uuid="0916a4e6-e19d-4f5a-85fe-cb0cfc4a66ed"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{signdate}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="272" y="247" width="100" height="30" uuid="c45358a0-24b8-4c6f-aec0-d5449a30701f"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{employeename}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="29" y="254" width="100" height="30" uuid="6fc0fd92-9952-4ae3-bd86-ac4c2c35ca7a"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{witness}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

@@ -21,7 +21,7 @@ class GenerateSDD(MethodResource,Resource):
     def post(self ,**kwargs):
          try:
             print("generateSDD")
-            parameters=kwargs  
+            parameters=kwargs
             db_conn=utility.getDbConnection("sellorpurchaser.json","sellers","purchasers",parameters['sellers'],parameters['purchasers'])
             del parameters['sellers']
             del parameters['purchasers']
@@ -29,8 +29,13 @@ class GenerateSDD(MethodResource,Resource):
             password=parameters['password']  
             del parameters['username']
             del parameters['password']
+            print(username)
+
             utility.generateReport("Sale_Deed_Drafting.jrxml","Sale_Deed_Drafting",parameters,db_conn,username,password) 
             return schema.APIResponse().dump(dict(message="Report generated successfully")), 200
+         except KeyError as ex:
+             utility.generateReport("Sale_Deed_Drafting.jrxml","Sale_Deed_Drafting",parameters,db_conn) 
+             return schema.APIResponse().dump(dict(message="Report generated successfully")), 200
          except Exception as e:
             print(str(e))
             return schema.APIResponse().dump(dict(message="not generated")), 404
@@ -444,3 +449,23 @@ class GenerateNDA(MethodResource, Resource):
 api.add_resource(GenerateNDA, '/generateNDA')
 docs.register(GenerateNDA)
 
+<<<<<<< Updated upstream
+=======
+class GenerateJobOffer(MethodResource, Resource):
+    @doc(description="Job Offer And Agreement", tags=['Job Offer And Agreement Drafting'])
+    @use_kwargs(schema.JobOfferRequest, location=('json'))
+    @marshal_with(schema.APIResponse)
+    def post(self, **kwargs):
+       try:
+          print("generateJobOffer")
+          parameters=kwargs             
+          db_conn=""
+          utility.generateReport("Job_Offer.jrxml","Job_Offer",parameters,db_conn) 
+          return schema.APIResponse().dump(dict(message="Report generated successfully")), 200
+       except Exception as e:
+          print(str(e))
+          return schema.APIResponse().dump(dict(message="not generated")), 404
+
+api.add_resource(GenerateJobOffer, '/generateJobOffer')
+docs.register(GenerateJobOffer)
+>>>>>>> Stashed changes
