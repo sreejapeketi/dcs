@@ -449,8 +449,6 @@ class GenerateNDA(MethodResource, Resource):
 api.add_resource(GenerateNDA, '/generateNDA')
 docs.register(GenerateNDA)
 
-<<<<<<< Updated upstream
-=======
 class GenerateJobOffer(MethodResource, Resource):
     @doc(description="Job Offer And Agreement", tags=['Job Offer And Agreement Drafting'])
     @use_kwargs(schema.JobOfferRequest, location=('json'))
@@ -468,4 +466,3 @@ class GenerateJobOffer(MethodResource, Resource):
 
 api.add_resource(GenerateJobOffer, '/generateJobOffer')
 docs.register(GenerateJobOffer)
->>>>>>> Stashed changes

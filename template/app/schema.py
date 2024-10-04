@@ -428,8 +428,6 @@ class NDARequest(Schema):
    court=fields.Str(default="")
    witnessdetail=fields.Str(default="")   
 
-<<<<<<< Updated upstream
-=======
 class JobOfferRequest(Schema):
    companyname=fields.Str(default="")
    date=fields.Str(default="")
@@ -443,7 +441,6 @@ class JobOfferRequest(Schema):
    employeeaddress=fields.Str(default="")
    signdate=fields.Str(default="")
    witness=fields.Str(default="")   
->>>>>>> Stashed changes
     
 class APIResponse(Schema):
    message=fields.String(default="")
