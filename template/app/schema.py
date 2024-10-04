@@ -442,6 +442,15 @@ class JobOfferRequest(Schema):
    signdate=fields.Str(default="")
    witness=fields.Str(default="")   
 
+class QRDRequest(Schema):
+   lname= fields.Str(default="NY")
+   tname=fields.Str(default="plate_type")
+   address=fields.Str(dafault="10, ABC , Street-1 DEF-110003")
+   leaseperiod=fields.Str(default="1 year")
+   fromDt=fields.Str(default="1-09-2024")
+   to=fields.Str(default="1-09-2024")
+   monthlyrent=fields.Str(default="30000")
+   deposit=fields.Str(default="100000") 
     
 class APIResponse(Schema):
    message=fields.String(default="")

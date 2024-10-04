@@ -467,3 +467,22 @@ class GenerateJobOffer(MethodResource, Resource):
 api.add_resource(GenerateJobOffer, '/generateJobOffer')
 docs.register(GenerateJobOffer)
 
+
+class GenerateQRD(MethodResource,Resource):
+    @doc(description="Quick Rent Agreement Drafting",tags=['Quick Rental Drafting API'])
+    @use_kwargs(schema.QRDRequest,location=('json'))
+    @marshal_with(schema.APIResponse)
+    def post(self ,**kwargs):
+      try:
+         print("generateJobOffer")
+         parameters=kwargs             
+         db_conn=""
+         utility.generateReport("House_Rental_Drafting.jrxml","House_Rental_drafting",parameters,db_conn) 
+         return schema.APIResponse().dump(dict(message="Report generated successfully")), 200
+      except Exception as e:
+          print(str(e))
+          return schema.APIResponse().dump(dict(message="not generated")), 404
+        
+api.add_resource(GenerateQRD,'/generateQRD')        
+docs.register(GenerateQRD)
+

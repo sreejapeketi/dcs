@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 9.0.0.final using JasperReports Library version 6.21.0-4f56c4f36cd19e17675219a9ac4692d5f0f13b06  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Cherry_Table_Based" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4eedbb89-b4f6-4469-9ab6-f642a1688cf7">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="JsonAdapter"/>
+	<parameter name="leaseperiod" class="java.lang.String"/>
+	<parameter name="lname" class="java.lang.String"/>
+	<parameter name="address" class="java.lang.String"/>
+	<parameter name="deposit" class="java.lang.String"/>
+	<parameter name="fromDt" class="java.lang.String"/>
+	<parameter name="monthlyrent" class="java.lang.String"/>
+	<parameter name="tname" class="java.lang.String"/>
+	<parameter name="to" class="java.lang.String"/>
+	<queryString language="json">
+		<![CDATA[contacts]]>
+	</queryString>
+	<field name="lname" class="java.lang.String">
+		<fieldDescription><![CDATA[lname]]></fieldDescription>
+	</field>
+	<field name="tname" class="java.lang.String">
+		<fieldDescription><![CDATA[tname]]></fieldDescription>
+	</field>
+	<field name="address" class="java.lang.String">
+		<fieldDescription><![CDATA[address]]></fieldDescription>
+	</field>
+	<field name="leaseperiod" class="java.lang.String">
+		<fieldDescription><![CDATA[leaseperiod]]></fieldDescription>
+	</field>
+	<field name="from" class="java.lang.String">
+		<fieldDescription><![CDATA[from]]></fieldDescription>
+	</field>
+	<field name="to" class="java.lang.String">
+		<fieldDescription><![CDATA[to]]></fieldDescription>
+	</field>
+	<field name="monthlyrent" class="java.lang.String">
+		<fieldDescription><![CDATA[monthlyrent]]></fieldDescription>
+	</field>
+	<field name="deposit" class="java.lang.String">
+		<fieldDescription><![CDATA[deposit]]></fieldDescription>
+	</field>
+	<title>
+		<band height="50" splitType="Stretch">
+			<staticText>
+				<reportElement x="192" y="20" width="188" height="30" uuid="efbc558f-3fc9-422b-b11d-cbfbd4978389"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RENT AGREEMENT]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="700">
+			<frame>
+				<reportElement mode="Opaque" x="2" y="10" width="500" height="685" forecolor="#003300" backcolor="#FFFFFF" uuid="2857bbc0-51d5-4ed7-b542-cefaeb4bdc36"/>
+				<staticText>
+					<reportElement x="20" y="67" width="100" height="30" uuid="e19a25ea-2674-4787-a043-5f66875c9f4e"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[Landlord Name]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="20" y="97" width="100" height="30" uuid="4d0bc352-2e84-4f43-b08e-f699a4b702d9"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[Tenant Name]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="" x="0" y="0" width="460" height="30" uuid="af0d9d81-7d79-4513-a0bf-421f421eda38"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<text><![CDATA[1. Parties, Leased Property, Terms and Payment]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="37" width="460" height="30" uuid="a0e2f56d-a41e-4e77-b5ab-d47d1fd4fb61"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[This Agreement is made by and between :]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="" x="0" y="140" width="460" height="30" uuid="bea2ab87-3788-4190-89e8-4cf11c415bfa"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[The landlord hereby agrees to rent property located at:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="190" width="140" height="20" uuid="d9ff70c8-62c4-4331-be14-2aa165a1ca5f"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[The lease period shall be]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="210" y="190" width="100" height="20" uuid="d9ff70c8-62c4-4331-be14-2aa165a1ca5f"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[, starting from]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="350" y="190" width="150" height="32" uuid="d9ff70c8-62c4-4331-be14-2aa165a1ca5f"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[and shall end & may renew]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="70" y="210" width="220" height="20" uuid="d9ff70c8-62c4-4331-be14-2aa165a1ca5f"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[ thereafter, on the agreed amount of Rs]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="320" y="210" width="180" height="20" uuid="d9ff70c8-62c4-4331-be14-2aa165a1ca5f"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[to be paid monthly & the amt of Rs]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="120" y="230" width="371" height="20" uuid="d9ff70c8-62c4-4331-be14-2aa165a1ca5f"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[ deposit to be paid upon the execution of this Agreement. ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="250" width="240" height="30" uuid="db32920b-c004-495c-aacc-756ed66948e9"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<text><![CDATA[2. Use of Property]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="299" width="460" height="47" uuid="980bcf68-81f6-4efb-8147-1b856b58af6f"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[The Tenant shall use the Property only for residential purposes. During the term of this Agreement, the Tenant shall act with care and prudence to prevent damage to the Property at all times.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="-1" y="360" width="100" height="20" uuid="71a30913-7d84-4620-aa72-6b00093e4e43"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<text><![CDATA[3.Utilities]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="-1" y="390" width="460" height="40" uuid="b8c892a8-864d-47f2-b3b8-0a5edbe8baf8"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[The Tenant agrees to pay for the utilities and other services used in the Property during the term of this Agreement.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="430" width="241" height="30" uuid="0af3524e-5933-4265-88a4-991addbffe35"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<text><![CDATA[4.Repairs and damages]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="-1" y="470" width="460" height="60" uuid="6e36b9d7-0d7f-445f-bed3-9b379c9dd914"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[Any losses and damages to fixture furnishing shall be defrayed by the Tenant. If any reasonable repair is necessary for the fixture furnishing, the Tenant shall notify it to the Landlord. The Landlord shall defray reasonable repair costs of fixture furnishing. 
+The Tenant is not permitted to modify or paint or materially change any constant part of the Property.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="-1" y="530" width="100" height="30" uuid="76b6a2fc-a944-48bd-99da-16ff24aa8eaa"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<text><![CDATA[5. Termination]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="-1" y="570" width="460" height="40" uuid="e472ab4d-66a5-4b57-99a0-a84517478f67"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[This Agreement automatically expires at the end of the specified period above. However, this Agreement shall be terminated with mutual written consent of the Parties at any time.  
+
+]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="-1" y="610" width="110" height="20" uuid="ef2e45a7-5816-4b53-a0a7-14437f223ab6"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[Signed on:]]></text>
+				</staticText>
+				<textField pattern="MMMMM dd, yyyy">
+					<reportElement x="120" y="610" width="100" height="20" uuid="7d1b12d6-5cc5-4085-b544-64faaa6a5631"/>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="630" width="100" height="30" uuid="db99ec0b-925b-444b-8f71-524f1e0586ef"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[Landlord]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="120" y="67" width="100" height="30" uuid="a177cee7-f463-457a-8edc-d0fac1d80a92"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{lname}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="123" y="101" width="100" height="30" uuid="9188daf3-6930-46d2-bc09-65dd9e2d7e91"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{tname}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="3" y="175" width="100" height="30" uuid="830443d4-6dc3-4dc9-9b60-a119d9cb9f38"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{address}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="11" y="228" width="100" height="30" uuid="1d2023af-b39d-468f-9c6a-5b9e0e734e8c"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{deposit}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="10" y="212" width="100" height="30" uuid="02b9198e-afec-4ed7-a00b-66feef1d5d3b"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{to}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="107" y="633" width="100" height="30" uuid="5fa13a01-2585-45d3-b344-4ded3577f468"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{lname}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="141" y="191" width="100" height="30" uuid="1a0114f8-fa42-4156-82fc-498afbf07272"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{leaseperiod}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="311" y="193" width="100" height="30" uuid="63680710-130b-46e4-a166-81e6335c471b"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{fromDt}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="291" y="213" width="100" height="30" uuid="13c86576-3fd6-4959-bd67-f236013c7f09"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{monthlyrent}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+</jasperReport>
