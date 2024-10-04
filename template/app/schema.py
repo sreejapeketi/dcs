@@ -441,6 +441,7 @@ class JobOfferRequest(Schema):
    employeeaddress=fields.Str(default="")
    signdate=fields.Str(default="")
    witness=fields.Str(default="")   
+
     
 class APIResponse(Schema):
    message=fields.String(default="")

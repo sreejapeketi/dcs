@@ -466,3 +466,4 @@ class GenerateJobOffer(MethodResource, Resource):
 
 api.add_resource(GenerateJobOffer, '/generateJobOffer')
 docs.register(GenerateJobOffer)
+
