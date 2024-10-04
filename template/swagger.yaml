@@ -1,0 +1,1148 @@
+---
+swagger: "2.0"
+info:
+  version: v1
+  title: DCS Generate Doc
+paths:
+  /generateAPA:
+    post:
+      tags:
+      - Address Proof Affidavit Drafting API
+      description: Address Proof Affidavit Drafting
+      parameters:
+      - in: body
+        name: body
+        required: false
+        schema:
+          $ref: "#/definitions/APARequest"
+      responses:
+        default:
+          description: ""
+          schema:
+            $ref: "#/definitions/APIResponse"
+  /generateCCD:
+    post:
+      tags:
+      - Consumer Complaint Drafting-API
+      description: Consumer Complaint Drafting
+      parameters:
+      - in: body
+        name: body
+        required: false
+        schema:
+          $ref: "#/definitions/CCDRequest"
+      responses:
+        default:
+          description: ""
+          schema:
+            $ref: "#/definitions/APIResponse"
+  /generateCNMA:
+    post:
+      tags:
+      - Change Of Name Of Minor Affidavit Drafting API
+      description: Change Of Name Of Minor Affidavit Drafting
+      parameters:
+      - in: body
+        name: body
+        required: false
+        schema:
+          $ref: "#/definitions/CNMARequest"
+      responses:
+        default:
+          description: ""
+          schema:
+            $ref: "#/definitions/APIResponse"
+  /generateCSA:
+    post:
+      tags:
+      - Claim Settlement Affidavit in Bank - API
+      description: Claim Settlement Affidavit in Bank
+      parameters:
+      - in: body
+        name: body
+        required: false
+        schema:
+          $ref: "#/definitions/CSARequest"
+      responses:
+        default:
+          description: ""
+          schema:
+            $ref: "#/definitions/APIResponse"
+  /generateDOBA:
+    post:
+      tags:
+      - Proof Of Date Of Birth Affidavit Drafting API
+      description: Proof Of Date Of Birth Affidavit Drafting
+      parameters:
+      - in: body
+        name: body
+        required: false
+        schema:
+          $ref: "#/definitions/DOBARequest"
+      responses:
+        default:
+          description: ""
+          schema:
+            $ref: "#/definitions/APIResponse"
+  /generateGDD:
+    post:
+      tags:
+      - Gift Deed
+      description: Gift Deed Drafting
+      parameters:
+      - in: body
+        name: body
+        required: false
+        schema:
+          $ref: "#/definitions/GDDRequest"
+      responses:
+        default:
+          description: ""
+          schema:
+            $ref: "#/definitions/APIResponse"
+  /generateHRD:
+    post:
+      tags:
+      - Renting_in_a_Mall_Drafting_A4
+      description: Renting_in_a_Mall_Drafting_A4
+      parameters:
+      - in: body
+        name: body
+        required: false
+        schema:
+          $ref: "#/definitions/HRDRequest"
+      responses:
+        default:
+          description: ""
+          schema:
+            $ref: "#/definitions/APIResponse"
+  /generateICA:
+    post:
+      tags:
+      - Income Certificate Affidavit-API
+      description: Income Certificate Affidavit
+      parameters:
+      - in: body
+        name: body
+        required: false
+        schema:
+          $ref: "#/definitions/ICARequest"
+      responses:
+        default:
+          description: ""
+          schema:
+            $ref: "#/definitions/APIResponse"
+  /generateJobOffer:
+    post:
+      tags:
+      - Job Offer And Agreement Drafting
+      description: Job Offer And Agreement
+      parameters:
+      - in: body
+        name: body
+        required: false
+        schema:
+          $ref: "#/definitions/JobOfferRequest"
+      responses:
+        default:
+          description: ""
+          schema:
+            $ref: "#/definitions/APIResponse"
+  /generateLLA:
+    post:
+      tags:
+      - Leave License Agreement API
+      description: Leave & License Agreement
+      parameters:
+      - in: body
+        name: body
+        required: false
+        schema:
+          $ref: "#/definitions/LLARequest"
+      responses:
+        default:
+          description: ""
+          schema:
+            $ref: "#/definitions/APIResponse"
+  /generateMCA:
+    post:
+      tags:
+      - Marriage Certificate Affidavit-API
+      description: Marriage Certificate Affidavit
+      parameters:
+      - in: body
+        name: body
+        required: false
+        schema:
+          $ref: "#/definitions/MCARequest"
+      responses:
+        default:
+          description: ""
+          schema:
+            $ref: "#/definitions/APIResponse"
+  /generateNAD:
+    post:
+      tags:
+      - Newspaper Ad Drafting-API
+      description: Newspaper Ad Drafting
+      parameters:
+      - in: body
+        name: body
+        required: false
+        schema:
+          $ref: "#/definitions/NADRequest"
+      responses:
+        default:
+          description: ""
+          schema:
+            $ref: "#/definitions/APIResponse"
+  /generateNDA:
+    post:
+      tags:
+      - NDA Drafting
+      description: Non Disclosure Agreement
+      parameters:
+      - in: body
+        name: body
+        required: false
+        schema:
+          $ref: "#/definitions/NDARequest"
+      responses:
+        default:
+          description: ""
+          schema:
+            $ref: "#/definitions/APIResponse"
+  /generateOSAD:
+    post:
+      tags:
+      - Office sharing  Drafting API
+      description: Office sharing  Drafting
+      parameters:
+      - in: body
+        name: body
+        required: false
+        schema:
+          $ref: "#/definitions/OSADRequest"
+      responses:
+        default:
+          description: ""
+          schema:
+            $ref: "#/definitions/APIResponse"
+  /generatePSR:
+    post:
+      tags:
+      - Parking space rental Deed Drafting API
+      description: Parking space rental Deed Drafting
+      parameters:
+      - in: body
+        name: body
+        required: false
+        schema:
+          $ref: "#/definitions/PSRRequest"
+      responses:
+        default:
+          description: ""
+          schema:
+            $ref: "#/definitions/APIResponse"
+  /generateSDD:
+    post:
+      tags:
+      - Sale Deed Drafting API
+      description: Sale Deed Drafting
+      parameters:
+      - in: body
+        name: body
+        required: false
+        schema:
+          $ref: "#/definitions/SDDRequest"
+      responses:
+        default:
+          description: ""
+          schema:
+            $ref: "#/definitions/APIResponse"
+  /generateSPA:
+    post:
+      tags:
+      - One And The Same Person Affidavit Drafting API
+      description: One And The Same Person Affidavit Drafting
+      parameters:
+      - in: body
+        name: body
+        required: false
+        schema:
+          $ref: "#/definitions/SPARequest"
+      responses:
+        default:
+          description: ""
+          schema:
+            $ref: "#/definitions/APIResponse"
+definitions:
+  APARequest:
+    type: object
+    properties:
+      adress_line1:
+        type: string
+      affidavit_date:
+        type: string
+      city:
+        type: string
+      document_1:
+        type: string
+      document_2:
+        type: string
+      name:
+        type: string
+      notary_country:
+        type: string
+      notary_public:
+        type: string
+      notary_state:
+        type: string
+      residency_start_date:
+        type: string
+      state:
+        type: string
+      witness_1:
+        type: string
+      witness_2:
+        type: string
+      zip_code:
+        type: string
+  APIResponse:
+    type: object
+    properties:
+      message:
+        type: string
+  CCDRequest:
+    type: object
+    required:
+    - complainants
+    - opponents
+    properties:
+      AdvocateName:
+        type: string
+      advocateemail:
+        type: string
+      advocatefulladdress:
+        type: string
+      advocatemobilenumber:
+        type: string
+      claimamount:
+        type: string
+      complainants:
+        type: array
+        items:
+          $ref: "#/definitions/Complainant"
+      court:
+        type: string
+      date:
+        type: string
+      ddno:
+        type: string
+      delay:
+        type: string
+      fee:
+        type: string
+      opponents:
+        type: array
+        items:
+          $ref: "#/definitions/Opponent"
+      place:
+        type: string
+      rtgs_neft:
+        type: string
+  CNMARequest:
+    type: object
+    properties:
+      adress_line1:
+        type: string
+      affidavit_date:
+        type: string
+      city:
+        type: string
+      guardian_age:
+        type: string
+      guardian_name:
+        type: string
+      minor_dob:
+        type: string
+      minor_newname:
+        type: string
+      minor_oldname:
+        type: string
+      minor_pob:
+        type: string
+      notary_country:
+        type: string
+      notary_public:
+        type: string
+      notary_state:
+        type: string
+      reason:
+        type: string
+      state:
+        type: string
+      zip_code:
+        type: string
+  CSARequest:
+    type: object
+    required:
+    - claimants
+    - receiving_claimants
+    properties:
+      account_branch:
+        type: string
+      account_number:
+        type: string
+      balance_amount:
+        type: string
+      bank_name:
+        type: string
+      claimants:
+        type: array
+        items:
+          $ref: "#/definitions/claimants"
+      date_of_month:
+        type: string
+      deceased_cust_name:
+        type: string
+      month:
+        type: string
+      payment_date:
+        type: string
+      receiving_claimant:
+        type: string
+      receiving_claimants:
+        type: array
+        items:
+          $ref: "#/definitions/receiving_claimants"
+      witness1:
+        type: string
+      witness1_address:
+        type: string
+      witness2:
+        type: string
+      witness2_address:
+        type: string
+      year:
+        type: string
+  Complainant:
+    type: object
+    properties:
+      address:
+        type: string
+      email:
+        type: string
+      mobile:
+        type: string
+      name:
+        type: string
+  DOBARequest:
+    type: object
+    properties:
+      adress:
+        type: string
+      dob:
+        type: string
+      document_1:
+        type: string
+      document_2:
+        type: string
+      father_name:
+        type: string
+      hospital:
+        type: string
+      mother_name:
+        type: string
+      name_real:
+        type: string
+      relation:
+        type: string
+      tob:
+        type: string
+      verification_city:
+        type: string
+      verification_day:
+        type: string
+  GDDRequest:
+    type: object
+    properties:
+      amount:
+        type: string
+      date:
+        type: string
+      dated:
+        type: string
+      day:
+        type: string
+      doneeAadhar:
+        type: string
+      doneeMaritalstatus:
+        type: string
+      doneeage:
+        type: string
+      doneename:
+        type: string
+      doneeprofession:
+        type: string
+      donnefathname:
+        type: string
+      donoraadhar:
+        type: string
+      donorfathersname:
+        type: string
+      donormaritalstatus:
+        type: string
+      donorname:
+        type: string
+      donorprofession:
+        type: string
+      donorsage:
+        type: string
+      east:
+        type: string
+      frompage:
+        type: string
+      gazatteno:
+        type: string
+      location:
+        type: string
+      month:
+        type: string
+      north:
+        type: string
+      registrationnum:
+        type: string
+      relation:
+        type: string
+      series:
+        type: string
+      south:
+        type: string
+      sr:
+        type: string
+      topage:
+        type: string
+      volume:
+        type: string
+      west:
+        type: string
+      witness1:
+        type: string
+      witness2:
+        type: string
+      year:
+        type: string
+  HRDRequest:
+    type: object
+    required:
+    - leasee_list
+    - lessor_list
+    properties:
+      address:
+        type: string
+      address1:
+        type: string
+      address2:
+        type: string
+      city:
+        type: string
+      day_montha:
+        type: string
+      deposit:
+        type: string
+      fromDt:
+        type: string
+      leaseamount:
+        type: string
+      leasedeedsigndate:
+        type: string
+      leasedeedstartdate:
+        type: string
+      leasee_list:
+        type: array
+        items:
+          $ref: "#/definitions/leasee_list"
+      leaseperiod:
+        type: string
+      leasepropertyaddress:
+        type: string
+      leasepropertyarea:
+        type: string
+      leaseterm:
+        type: string
+      lessor_list:
+        type: array
+        items:
+          $ref: "#/definitions/lessor_list"
+      lname:
+        type: string
+      monthlypaymentdate:
+        type: string
+      monthlyrent:
+        type: string
+      onemonth:
+        type: string
+      tname:
+        type: string
+      to:
+        type: string
+      twomonths:
+        type: string
+      witness1address:
+        type: string
+      witness1name:
+        type: string
+      witness2address:
+        type: string
+      witness2name:
+        type: string
+      year:
+        type: string
+  ICARequest:
+    type: object
+    properties:
+      aadhar_no:
+        type: string
+      address:
+        type: string
+      age:
+        type: string
+      agri_income_yearly:
+        type: string
+      business_income:
+        type: string
+      caste:
+        type: string
+      crops_in_land:
+        type: string
+      date:
+        type: string
+      email:
+        type: string
+      employed_or_not:
+        type: string
+      father_or_husband_name:
+        type: string
+      homeloan_amount_branch:
+        type: string
+      house_cost:
+        type: string
+      house_rent:
+        type: string
+      income:
+        type: string
+      income_in_words:
+        type: string
+      is_govt_home:
+        type: string
+      land_on_father:
+        type: string
+      land_on_mother:
+        type: string
+      mobile_no:
+        type: string
+      mother_ccupation:
+        type: string
+      mother_employed:
+        type: string
+      mother_income:
+        type: string
+      mother_name:
+        type: string
+      nature_of_land:
+        type: string
+      no_of_family_vehicles:
+        type: string
+      notary_name:
+        type: string
+      occupation:
+        type: string
+      other_house:
+        type: string
+      own_rent_house:
+        type: string
+      personal_use_only:
+        type: string
+      place:
+        type: string
+      purpose:
+        type: string
+      ration_card_no:
+        type: string
+      student_dob:
+        type: string
+      student_name:
+        type: string
+      study_place:
+        type: string
+      studying:
+        type: string
+      total_family_income:
+        type: string
+      type_of_house:
+        type: string
+      type_of_vehicle:
+        type: string
+      vehicle_registered_on:
+        type: string
+  JobOfferRequest:
+    type: object
+    properties:
+      companyname:
+        type: string
+      date:
+        type: string
+      deadlinedate:
+        type: string
+      employeeaddress:
+        type: string
+      employeename:
+        type: string
+      fromname:
+        type: string
+      position:
+        type: string
+      signdate:
+        type: string
+      startdate:
+        type: string
+      titlefrom:
+        type: string
+      typeofemployement:
+        type: string
+      witness:
+        type: string
+  LLARequest:
+    type: object
+    required:
+    - licensees
+    - licensors
+    properties:
+      day:
+        type: string
+      deposit_amount:
+        type: string
+      license_fee:
+        type: string
+      license_fee_in_words:
+        type: string
+      licensed_premise:
+        type: string
+      licensee_address:
+        type: string
+      licensees:
+        type: array
+        items:
+          $ref: "#/definitions/licensee"
+      licensor_address:
+        type: string
+      licensors:
+        type: array
+        items:
+          $ref: "#/definitions/licensor"
+      location:
+        type: string
+      month:
+        type: string
+      period:
+        type: string
+      purpose:
+        type: string
+      witness1:
+        type: string
+      witness2:
+        type: string
+  MCARequest:
+    type: object
+    properties:
+      affirmation_date:
+        type: string
+      affirmation_month:
+        type: string
+      affirmation_place:
+        type: string
+      affirmation_year:
+        type: string
+      bride_address:
+        type: string
+      bride_age:
+        type: string
+      bride_name:
+        type: string
+      bride_occupation:
+        type: string
+      bridegroom_address:
+        type: string
+      bridegroom_age:
+        type: string
+      bridegroom_name:
+        type: string
+      bridegroom_occupation:
+        type: string
+      date_of_the_month:
+        type: string
+      marriage_date:
+        type: string
+      marriage_place:
+        type: string
+  NADRequest:
+    type: object
+    properties:
+      ad_content:
+        type: string
+      ad_title:
+        type: string
+      page_footer:
+        type: string
+      page_header:
+        type: string
+  NDARequest:
+    type: object
+    properties:
+      court:
+        type: string
+      effectivedate:
+        type: string
+      party1:
+        type: string
+      party1engages:
+        type: string
+      party2:
+        type: string
+      party2engages:
+        type: string
+      period:
+        type: string
+      purpose:
+        type: string
+      witnessdetail:
+        type: string
+  OSADRequest:
+    type: object
+    properties:
+      Place_A:
+        type: string
+      abc_signature:
+        type: string
+      bearing_no:
+        type: string
+      cheque_branch:
+        type: string
+      cheque_dated:
+        type: string
+      cheque_no:
+        type: string
+      comming_from:
+        type: string
+      date_of_day:
+        type: string
+      date_of_signature:
+        type: string
+      day:
+        type: string
+      deposite_rs:
+        type: string
+      deposite_rs_words:
+        type: string
+      ending_on:
+        type: string
+      per_anum:
+        type: string
+      per_day:
+        type: string
+      period_of_month:
+        type: string
+      place_B:
+        type: string
+      receipt_rs:
+        type: string
+      receipt_rs_in_words:
+        type: string
+      rupess:
+        type: string
+      rupess_in_words:
+        type: string
+      signature_of_licensee:
+        type: string
+      situate_at:
+        type: string
+      week_day:
+        type: string
+      witness1:
+        type: string
+      witness2:
+        type: string
+      year:
+        type: string
+  Opponent:
+    type: object
+    properties:
+      address:
+        type: string
+      email:
+        type: string
+      mobile:
+        type: string
+      name:
+        type: string
+  PSRRequest:
+    type: object
+    properties:
+      agreement_date:
+        type: string
+      effective_date:
+        type: string
+      lessee:
+        type: string
+      lessor:
+        type: string
+      notice_period:
+        type: string
+      parking_adress:
+        type: string
+      parking_amount:
+        type: string
+      payment_day:
+        type: string
+      payment_method:
+        type: string
+      seller_name:
+        type: string
+  Purchaser:
+    type: object
+    properties:
+      purchaser_address:
+        type: string
+      purchaser_age:
+        type: string
+      purchaser_caste:
+        type: string
+      purchaser_father:
+        type: string
+      purchaser_name:
+        type: string
+      purchaser_pan:
+        type: string
+  SDDRequest:
+    type: object
+    required:
+    - purchasers
+    - sellers
+    properties:
+      agreement_date:
+        type: string
+      amount:
+        type: string
+      amount_in_words:
+        type: string
+      beingno:
+        type: string
+      corporation:
+        type: string
+      day:
+        type: string
+      district:
+        type: string
+      division:
+        type: string
+      father_previous_owner:
+        type: string
+      father_previous_owner_det:
+        type: string
+      flatnumber:
+        type: string
+      floorno:
+        type: string
+      frompage:
+        type: string
+      inestate:
+        type: string
+      jlnum:
+        type: string
+      land:
+        type: string
+      land_size:
+        type: string
+      landsqfeet:
+        type: string
+      location:
+        type: string
+      lr_khaitannum:
+        type: string
+      lr_plotnum:
+        type: string
+      month:
+        type: string
+      moza:
+        type: string
+      onEast:
+        type: string
+      onNorth:
+        type: string
+      onSouth:
+        type: string
+      onWest:
+        type: string
+      password:
+        type: string
+      percentage:
+        type: string
+      policastation:
+        type: string
+      previous_owner:
+        type: string
+      previous_sale_deed:
+        type: string
+      property_handover_date:
+        type: string
+      purchaser_builder_fulladdress:
+        type: string
+      purchaser_builder_name:
+        type: string
+      purchaser_builder_reg_num:
+        type: string
+      purchaser_type:
+        type: string
+      purchasers:
+        type: array
+        items:
+          $ref: "#/definitions/Purchaser"
+      recieved_money:
+        type: string
+      reg_office:
+        type: string
+      road:
+        type: string
+      rs_khaitnanum:
+        type: string
+      rs_plotnum:
+        type: string
+      seller_builder_fulladdress:
+        type: string
+      seller_builder_name:
+        type: string
+      seller_builder_reg_num:
+        type: string
+      seller_father_deathdate:
+        type: string
+      seller_type:
+        type: string
+      sellers:
+        type: array
+        items:
+          $ref: "#/definitions/Seller"
+      society:
+        type: string
+      subdistrict:
+        type: string
+      supersqfeet:
+        type: string
+      topage:
+        type: string
+      touzinum:
+        type: string
+      type_of_property:
+        type: string
+      username:
+        type: string
+      volume:
+        type: string
+      witness1:
+        type: string
+      witness2:
+        type: string
+      year:
+        type: string
+      year_prev_saledeed:
+        type: string
+  SPARequest:
+    type: object
+    properties:
+      adress:
+        type: string
+      guardian_name:
+        type: string
+      name_1:
+        type: string
+      name_2:
+        type: string
+      name_real:
+        type: string
+      relation:
+        type: string
+      verification_day:
+        type: string
+      verification_state:
+        type: string
+  Seller:
+    type: object
+    properties:
+      seller_address:
+        type: string
+      seller_age:
+        type: string
+      seller_caste:
+        type: string
+      seller_fathhus:
+        type: string
+      seller_name:
+        type: string
+      seller_pan:
+        type: string
+  claimants:
+    type: object
+    properties:
+      address:
+        type: string
+      age:
+        type: string
+      claimant_name:
+        type: string
+      sof_wof_dof:
+        type: string
+  leasee_list:
+    type: object
+    properties:
+      lesseeaddressline1:
+        type: string
+      lesseeaddressline2:
+        type: string
+      lesseecitystatepincode:
+        type: string
+      lesseefname:
+        type: string
+      lesseename:
+        type: string
+  lessor_list:
+    type: object
+    properties:
+      lessoraddressline1:
+        type: string
+      lessoraddressline2:
+        type: string
+      lessorcitystatepincode:
+        type: string
+      lessorfname:
+        type: string
+      lessorname:
+        type: string
+  licensee:
+    type: object
+    properties:
+      licensee:
+        type: string
+      licensee_address:
+        type: string
+  licensor:
+    type: object
+    properties:
+      licensor:
+        type: string
+      licensor_address:
+        type: string
+  receiving_claimants:
+    type: object
+    properties:
+      claimant_name:
+        type: string
