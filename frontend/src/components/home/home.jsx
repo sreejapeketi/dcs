@@ -7,7 +7,8 @@ function Home() {
   return (
     <div className='home'>
         <Header />
-        <Footer />  
+        <Footer />
+        <button id="theme-toggle">Toggle Dark/Light Mode</button>
         <Theme />  
     </div>
   )
